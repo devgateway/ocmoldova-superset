@@ -1,13 +1,15 @@
 import requests
  
+## sdk id: f167fcca-0312-484c-8364-2a7a377c75d3 
+
 #####
 # 1. first we need to get a token for an account, which has privileges to create guest tokens
 #####
 api_url = "http://localhost:8088/api/v1/security/login"
-payload = {"password":"[password]", 
+payload = {"password":"", 
             "provider":"db",
             "refresh":True,
-            "username":"[user]"
+            "username":""
  }
 response = requests.post(api_url, json=payload)
  
@@ -20,17 +22,16 @@ access_token = response.json()['access_token']
 api_url_for_guesttoken = "http://localhost:8088/api/v1/security/guest_token"
 payload = {
      "user": {
-         "username": "stan_lee",
-         "first_name": "Stan",
-         "last_name": "Lee"
+         "username": "guest",
+         "first_name": "Guest",
+         "last_name": "User"
      },
      "resources": [{
          "type": "dashboard",
-         "id": "13"
+         "id": "7"
      }],
-     "rls": [
-         { "clause": "publisher = 'Nintendo'" }
-     ]
+     "rls": [        
+]
 }
  
  # the crucial part: add the specific auth-header for the python call
