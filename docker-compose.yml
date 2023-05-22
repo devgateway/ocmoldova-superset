@@ -113,6 +113,7 @@ services:
     env_file: docker/.env
     depends_on: *superset-depends-on
     volumes: *superset-volumes
+    ipc: host # Required for cypress to work
 
   superset-worker:
     image: *superset-image
