@@ -111,6 +111,15 @@ SQLLAB_CTAS_NO_LIMIT = True
 PUBLIC_ROLE_LIKE="Gamma"
 GUEST_ROLE_NAME="Gamma"
 WTF_CSRF_ENABLED=False
+ENABLE_PROXY_FIX = True
+HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
+ENABLE_CORS = True
+CORS_OPTIONS = {
+'supports_credentials': True,
+'allow_headers': ['*'],
+'resources':['*'],
+'origins': ['*']
+}
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
