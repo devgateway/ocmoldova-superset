@@ -35,6 +35,8 @@ services:
     restart: unless-stopped
     ports:
       - "127.0.0.1:6379:6379"
+    profiles:
+      - superset
     volumes:
       - redis:/data
 
@@ -43,10 +45,30 @@ services:
     image: postgres:14
     container_name: superset_db
     restart: unless-stopped
+    profiles:
+      - superset
+      - scraper
     ports:
       - "127.0.0.1:5433:5432"
     volumes:
       - db_home:/var/lib/postgresql/data
+
+  ocdsdata:
+    image: ocdsdata:${TAG:-latest-dev}
+    container_name: ocdsdata
+    restart: unless-stopped
+    depends_on:
+      - db
+    build:
+      context: ocdsdata
+    working_dir: /app
+    profiles:
+      - scraper  
+    environment:
+      - DATABASE_URL=postgresql://superset:superset@superset_db:5432/ocmoldova_scrape
+    volumes:
+      - ./ocdsdata:/app
+    command: ["python", "ocdsdata.py", "import-scraper", "moldova", "moldova"]      
 
   superset:
     env_file: docker/.env
@@ -54,6 +76,8 @@ services:
     container_name: superset_app
     command: ["/app/docker/docker-bootstrap.sh", "app"]
     restart: unless-stopped
+    profiles:
+      - superset
     cap_add:
      - SYS_PTRACE
     ports:
@@ -69,6 +93,8 @@ services:
     container_name: superset_websocket
     build: ./superset-websocket
     image: superset-websocket
+    profiles:
+      - superset
     ports:
       - 8080:8080
     depends_on:
@@ -105,6 +131,8 @@ services:
       CYPRESS_CONFIG: "${CYPRESS_CONFIG}"
     healthcheck:
       disable: true
+    profiles:
+      - superset  
 
   superset-node:
     image: node:16
@@ -114,6 +142,8 @@ services:
     depends_on: *superset-depends-on
     volumes: *superset-volumes
     ipc: host # Required for cypress to work
+    profiles:
+      - superset     
 
   superset-worker:
     image: *superset-image
@@ -129,6 +159,8 @@ services:
     # Bump memory limit if processing selenium / thumbnails on superset-worker
     # mem_limit: 2038m
     # mem_reservation: 128M
+    profiles:
+      - superset 
 
   superset-worker-beat:
     image: *superset-image
@@ -141,6 +173,8 @@ services:
     volumes: *superset-volumes
     healthcheck:
       disable: true
+    profiles:
+      - superset       
 
   superset-tests-worker:
     image: *superset-image
@@ -157,6 +191,8 @@ services:
     depends_on: *superset-depends-on
     user: *superset-user
     volumes: *superset-volumes
+    profiles:
+      - superset     
     healthcheck:
       test: ["CMD-SHELL", "celery inspect ping -A superset.tasks.celery_app:app -d celery@$$HOSTNAME"]
 
