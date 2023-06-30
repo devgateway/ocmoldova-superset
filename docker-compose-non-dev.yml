@@ -31,6 +31,8 @@ services:
     restart: unless-stopped
     volumes:
       - redis:/data
+    profiles:
+      - superset
 
   db:
     env_file: docker/.env-non-dev
@@ -41,6 +43,8 @@ services:
       - db_home:/var/lib/postgresql/data
     ports:
       - 5433:5432
+    profiles:
+      - superset, scraper
 
   superset:
     env_file: docker/.env-non-dev
@@ -53,6 +57,8 @@ services:
       - 8088:8088
     depends_on: *superset-depends-on
     volumes: *superset-volumes
+    profiles:
+      - superset
 
   superset-init:
     image: *superset-image
@@ -64,6 +70,25 @@ services:
     volumes: *superset-volumes
     healthcheck:
       disable: true
+    profiles:
+      - superset
+
+  ocdsdata:
+    image: ocdsdata:${TAG:-latest-dev}
+    container_name: ocdsdata
+    restart: unless-stopped
+    depends_on:
+      - db
+    build:
+      context: ocdsdata
+    working_dir: /app
+    profiles:
+      - scraper
+    environment:
+      - DATABASE_URL=postgresql://superset:superset@superset_db:5432/ocmoldova_scrape
+    volumes:
+      - ./ocdsdata:/app
+    command: ["python", "ocdsdata.py", "import-scraper", "moldova", "moldova"]
 
   superset-worker:
     image: *superset-image
@@ -76,6 +101,8 @@ services:
     volumes: *superset-volumes
     healthcheck:
       test: ["CMD-SHELL", "celery inspect ping -A superset.tasks.celery_app:app -d celery@$$HOSTNAME"]
+    profiles:
+      - superset
 
   superset-worker-beat:
     image: *superset-image
@@ -88,6 +115,8 @@ services:
     volumes: *superset-volumes
     healthcheck:
       disable: true
+    profiles:
+      - superset
 
 volumes:
   superset_home:
