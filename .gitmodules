@@ -42,3 +42,6 @@
 [submodule "ocdsdata"]
 	path = ocdsdata
 	url = git@github.com:devgateway/ocdsdata.git
+[submodule "superset-embed"]
+	path = superset-embed
+	url = git@github.com:devgateway/ocmoldova-superset-embed.git
