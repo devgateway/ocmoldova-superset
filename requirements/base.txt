@@ -11,7 +11,7 @@ alembic==1.6.5
     # via flask-migrate
 amqp==5.1.0
     # via kombu
-apispec[yaml]==3.3.2
+apispec[yaml]==6.3.0
     # via flask-appbuilder
 async-timeout==4.0.2
     # via redis
@@ -88,7 +88,7 @@ flask==2.2.5
     #   flask-migrate
     #   flask-sqlalchemy
     #   flask-wtf
-flask-appbuilder==4.3.0
+flask-appbuilder==4.3.3
     # via apache-superset
 flask-babel==1.0.0
     # via flask-appbuilder
@@ -134,6 +134,10 @@ humanize==3.11.0
     # via apache-superset
 idna==3.2
     # via email-validator
+importlib-metadata==6.6.0
+    # via
+    #   apache-superset
+    #   flask
 importlib-resources==5.12.0
     # via limits
 isodate==0.6.0
@@ -168,13 +172,10 @@ markupsafe==2.1.1
     #   mako
     #   werkzeug
     #   wtforms
-marshmallow==3.13.0
+marshmallow==3.19.0
     # via
     #   flask-appbuilder
-    #   marshmallow-enum
     #   marshmallow-sqlalchemy
-marshmallow-enum==1.5.1
-    # via flask-appbuilder
 marshmallow-sqlalchemy==0.23.1
     # via flask-appbuilder
 mdurl==0.1.2
@@ -193,8 +194,10 @@ ordered-set==4.1.0
 packaging==23.1
     # via
     #   apache-superset
+    #   apispec
     #   deprecation
     #   limits
+    #   marshmallow
 pandas==1.5.3
     # via apache-superset
 paramiko==2.11.0
@@ -209,7 +212,7 @@ prison==0.2.1
     # via flask-appbuilder
 prompt-toolkit==3.0.38
     # via click-repl
-pyarrow==10.0.1
+pyarrow==12.0.0
     # via apache-superset
 pycparser==2.20
     # via cffi
@@ -284,7 +287,7 @@ sqlalchemy-utils==0.38.3
     # via
     #   apache-superset
     #   flask-appbuilder
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via apache-superset
 sshtunnel==0.4.0
     # via apache-superset
@@ -322,6 +325,10 @@ wtforms-json==0.3.5
     # via apache-superset
 xlsxwriter==3.0.7
     # via apache-superset
+zipp==3.15.0
+    # via
+    #   importlib-metadata
+    #   importlib-resources
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
