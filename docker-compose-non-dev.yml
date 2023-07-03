@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-x-superset-image: &superset-image apache/superset:${TAG:-latest-dev}
+x-superset-image: &superset-image apache/superset:${TAG:-latest}
 x-superset-depends-on: &superset-depends-on
   - db
   - redis
@@ -44,7 +44,8 @@ services:
     ports:
       - 5433:5432
     profiles:
-      - superset, scraper
+      - superset
+      - scraper
 
   superset:
     env_file: docker/.env-non-dev
@@ -74,7 +75,7 @@ services:
       - superset
 
   ocdsdata:
-    image: ocdsdata:${TAG:-latest-dev}
+    image: ocdsdata:${TAG:-latest}
     container_name: ocdsdata
     restart: unless-stopped
     depends_on:
@@ -89,6 +90,23 @@ services:
     volumes:
       - ./ocdsdata:/app
     command: ["python", "ocdsdata.py", "import-scraper", "moldova", "moldova"]
+
+  superset-embed:
+    image: superset-embed:${TAG:-latest}
+    container_name: superset_embed
+    profiles:
+      - superset-embed
+    build:
+      target: prod
+      context: superset-embed
+    working_dir: /app
+    environment:
+      - REACT_APP_SUPERSET_URL=http://localhost:8088
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./superset-embed:/app
+    command: ["npm", "start"]
 
   superset-worker:
     image: *superset-image

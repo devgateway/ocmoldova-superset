@@ -149,10 +149,9 @@ services:
     image: superset-embed:${TAG:-latest-dev}
     container_name: superset_embed
     profiles:
-      - superset-embed 
-    depends_on:
-      - superset
+      - superset-embed     
     build:
+      target: dev 
       context: superset-embed
     working_dir: /app
     environment:
