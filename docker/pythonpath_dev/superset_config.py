@@ -99,7 +99,7 @@ class CeleryConfig:
 
 CELERY_CONFIG = CeleryConfig
 
-FEATURE_FLAGS = {"ALERT_REPORTS": True}
+FEATURE_FLAGS = {"ALERT_REPORTS": True,  "ENABLE_TEMPLATE_PROCESSING": True }
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"
 # The base URL for the email report hyperlinks.
@@ -119,6 +119,13 @@ CORS_OPTIONS = {
 'allow_headers': ['*'],
 'resources':['*'],
 'origins': ['*']
+}
+
+
+LANGUAGES = {
+    "en": {"flag": "us", "name": "English"},
+    "ru": {"flag": "ru", "name": "Russian"},
+    "ko": {"flag": "ro", "name": "Romanian"}
 }
 
 #
