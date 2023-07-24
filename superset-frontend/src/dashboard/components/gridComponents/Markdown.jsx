@@ -53,6 +53,7 @@ const propTypes = {
   addDangerToast: PropTypes.func.isRequired,
   undoLength: PropTypes.number.isRequired,
   redoLength: PropTypes.number.isRequired,
+  locale: PropTypes.string.isRequired,
 
   // grid related
   availableColumnCount: PropTypes.number.isRequired,
@@ -120,11 +121,12 @@ class Markdown extends React.PureComponent {
     super(props);
     this.state = {
       isFocused: false,
-      markdownSource: props.component.meta.code,
+      markdownSource: props.component.meta.code[props.locale],
       editor: null,
       editorMode: 'preview',
       undoLength: props.undoLength,
       redoLength: props.redoLength,
+      locale: props.locale,
     };
     this.renderStartTime = Logger.getTimestamp();
 
@@ -159,7 +161,7 @@ class Markdown extends React.PureComponent {
         ...state,
         undoLength: nextUndoLength,
         redoLength: nextRedoLength,
-        markdownSource: nextComponent.meta.code,
+        markdownSource: nextComponent.meta.code[nextProps.locale],
         hasError: false,
       };
     }
@@ -170,7 +172,7 @@ class Markdown extends React.PureComponent {
     ) {
       return {
         ...state,
-        markdownSource: nextComponent.meta.code,
+        markdownSource: nextComponent.meta.code[nextProps.locale],
       };
     }
 
@@ -235,14 +237,17 @@ class Markdown extends React.PureComponent {
   }
 
   updateMarkdownContent() {
-    const { updateComponents, component } = this.props;
+    const { updateComponents, component, locale } = this.props;
     if (component.meta.code !== this.state.markdownSource) {
       updateComponents({
         [component.id]: {
           ...component,
           meta: {
             ...component.meta,
-            code: this.state.markdownSource,
+            code: {
+              ...component.meta.code,
+              [locale]: this.state.markdownSource
+            }
           },
         },
       });
@@ -413,6 +418,7 @@ function mapStateToProps(state) {
     redoLength: state.dashboardLayout.future.length,
     htmlSanitization: state.common.conf.HTML_SANITIZATION,
     htmlSchemaOverrides: state.common.conf.HTML_SANITIZATION_SCHEMA_EXTENSIONS,
+    locale: state.common.locale
   };
 }
 export default connect(mapStateToProps)(Markdown);
