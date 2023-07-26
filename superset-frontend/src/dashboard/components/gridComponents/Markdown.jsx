@@ -246,8 +246,8 @@ class Markdown extends React.PureComponent {
             ...component.meta,
             code: {
               ...component.meta.code,
-              [locale]: this.state.markdownSource
-            }
+              [locale]: this.state.markdownSource,
+            },
           },
         },
       });
@@ -418,7 +418,7 @@ function mapStateToProps(state) {
     redoLength: state.dashboardLayout.future.length,
     htmlSanitization: state.common.conf.HTML_SANITIZATION,
     htmlSchemaOverrides: state.common.conf.HTML_SANITIZATION_SCHEMA_EXTENSIONS,
-    locale: state.common.locale
+    locale: state.common.locale,
   };
 }
 export default connect(mapStateToProps)(Markdown);
