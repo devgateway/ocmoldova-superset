@@ -121,11 +121,12 @@ CORS_OPTIONS = {
 'origins': ['*']
 }
 
+HORIZONTAL_FILTER_BAR = False
 
 LANGUAGES = {
     "en": {"flag": "us", "name": "English"},
     "ru": {"flag": "ru", "name": "Russian"},
-    "ko": {"flag": "ro", "name": "Romanian"}
+    "ro": {"flag": "ro", "name": "Romanian"}
 }
 
 #
