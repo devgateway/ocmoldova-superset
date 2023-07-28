@@ -48,22 +48,22 @@ services:
       - scraper
 
 
-  # pgadmin4:
-  #   image: dpage/pgadmin4
-  #   container_name: pgadmin4
-  #   restart: unless-stopped
-  #   ports:
-  #     - 8089:80
-  #   environment:
-  #     - PGADMIN_DEFAULT_EMAIL=domains@developmentgateway.org
-  #     - PGADMIN_DEFAULT_PASSWORD=RDyXbvUmCvBV9y6B
-  #     - SCRIPT_NAME=/pgadmin
-  #     - "traefik.frontend.rule=PathPrefix:/pgadmin"
-  #   depends_on: *superset-depends-on
-  #   profiles:
-  #     - superset
-  #   volumes:
-  #     - /opt/work/pgadmin4/data:/var/lib/pgadmin
+  #pgadmin4:
+  #  image: dpage/pgadmin4
+  #  container_name: pgadmin4
+  #  restart: unless-stopped
+  #  ports:
+  #    - 8089:80
+  #  environment:
+  #    - PGADMIN_DEFAULT_EMAIL=domains@developmentgateway.org
+  #    - PGADMIN_DEFAULT_PASSWORD=
+  #    - SCRIPT_NAME=/pgadmin
+  #    - "traefik.frontend.rule=PathPrefix:/pgadmin"
+  #  depends_on: *superset-depends-on
+  #  profiles:
+  #    - superset
+  #  volumes:
+  #    - /opt/work/pgadmin4/data:/var/lib/pgadmin
 
   superset:
     env_file: docker/.env-non-dev
