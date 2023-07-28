@@ -121,6 +121,7 @@ CORS_OPTIONS = {
 'origins': ['*']
 }
 
+HORIZONTAL_FILTER_BAR = False
 
 LANGUAGES = {
     "en": {"flag": "us", "name": "English"},
