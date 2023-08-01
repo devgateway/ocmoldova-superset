@@ -53,7 +53,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"            Eroare: %(text) s\n"
+"            Eroare: %(text)s\n"
 "            "
 
 #: superset-frontend/src/filters/components/Select/SelectFilterPlugin.tsx:130
@@ -135,7 +135,7 @@ msgstr "! = (Nu este egal)"
 #: superset/security/analytics_db_safety.py:48
 #, python-format
 msgid "%(dialect)s cannot be used as a data source for security reasons."
-msgstr "%(dialectul) s nu poate fi utilizat ca sursă de date din motive de securitate."
+msgstr "%(dialect)s nu poate fi utilizat ca sursă de date din motive de securitate."
 
 #: superset-frontend/src/components/ErrorMessage/DatabaseErrorMessage.tsx:83
 #, python-format
@@ -144,51 +144,51 @@ msgid ""
 "This may be triggered by: \n"
 "%(issues)s"
 msgstr ""
-"%(mesaj) s\n"
+"%(message)s \n"
 "Acest lucru poate fi declanșat de: \n"
-"%(probleme) s"
+"%(issues)s"
 
 #: superset/reports/notifications/email.py:171
 #, python-format
 msgid "%(name)s.csv"
-msgstr "%(nume) s.csv"
+msgstr "%(name)s.csv"
 
 #: superset/db_engine_specs/snowflake.py:112
 #, python-format
 msgid "%(object)s does not exist in this database."
-msgstr "%(obiect) s nu există în această bază de date."
+msgstr "%(object)s nu există în această bază de date."
 
 #: superset-frontend/src/features/home/EmptyState.tsx:43
 #, python-format
 msgid "%(other)s charts will appear here"
-msgstr "%(alte) s -ar apărea graficele aici"
+msgstr "%(other)s ar apărea graficele aici"
 
 #: superset-frontend/src/features/home/EmptyState.tsx:45
 #, python-format
 msgid "%(other)s dashboards will appear here"
-msgstr "%(altele) s -au apărut de borduri"
+msgstr "%(other)s au apărut de borduri"
 
 #: superset-frontend/src/features/home/EmptyState.tsx:47
 #, python-format
 msgid "%(other)s recents will appear here"
-msgstr "%(alte) s -au apărut recente"
+msgstr "%(other)s au apărut recente"
 
 #: superset-frontend/src/features/home/EmptyState.tsx:49
 #, python-format
 msgid "%(other)s saved queries will appear here"
-msgstr "%(alte) s -ar apărea întrebări salvate"
+msgstr "%(other)s ar apărea întrebări salvate"
 
 #: superset/reports/notifications/email.py:180
 #, python-format
 msgid "%(prefix)s %(title)s"
-msgstr "%(prefix) s %(titlu) s"
+msgstr "%(prefix)s %(titlu)s"
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:338
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:356
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:370
 #, python-format
 msgid "%(rows)d rows returned"
-msgstr "%(rânduri) d rânduri returnate"
+msgstr "%(rows)d rânduri returnate"
 
 #: superset-frontend/src/components/ErrorMessage/TimeoutErrorMessage.tsx:93
 #, python-format
@@ -197,25 +197,25 @@ msgid ""
 "This may be triggered by:\n"
 " %(issue)s"
 msgstr ""
-"%(subtitrare) s\n"
+"%(subtitle)s\n"
 "Acest lucru poate fi declanșat de: \n"
-" %(problemă) s"
+" %(issue)s"
 
 #: superset-frontend/src/components/ErrorMessage/ParameterErrorMessage.tsx:88
 #, python-format
 msgid "%(suggestion)s instead of \"%(undefinedParameter)s?\""
 msgid_plural "%(firstSuggestions)s or %(lastSuggestion)s instead of \"%(undefinedParameter)s\"?"
-msgstr[0] "%(sugestie) s în loc de „%(nedefinitparameter) s?”"
+msgstr[0] "%(suggestion)s în loc de „%(undefinedParameter)s?”"
 
 #: superset/views/core.py:385
 #, python-format
 msgid "%(user)s was granted the role %(role)s that gives access to the %(datasource)s"
-msgstr "%(utilizator) s a primit rolul %(rol) s care oferă acces la %(data de date) s"
+msgstr "%(user)s a primit rolul %(role)s care oferă acces la %(datasource)s"
 
 #: superset/views/core.py:2709
 #, python-format
 msgid "%(user)s's profile"
-msgstr "%(utilizator) profilul s"
+msgstr "profilul %(user)s"
 
 #: superset/databases/commands/validate_sql.py:73 superset/views/core.py:2369
 #, python-format
@@ -226,7 +226,7 @@ msgid ""
 msgstr ""
 "%(validator) s nu a putut să vă verifice interogarea.\n"
 "Vă rugăm să verificați întrebarea dvs.\n"
-"Excepție: %(ex) s"
+"Excepție: %(ex)s"
 
 #: superset-frontend/src/components/ErrorMessage/DatabaseErrorMessage.tsx:89
 #, python-format
@@ -370,13 +370,13 @@ msgid ""
 "%(table)s\n"
 ""
 msgstr ""
-"*%(nume) s*\n"
+"*%(nume)s*\n"
 "\n"
-"%(descriere) s\n"
+"%(descriere)s\n"
 "\n"
-"<%(url) s | explorați în superset> \n"
+"<%(url)s | explorați în superset> \n"
 "\n"
-"%(tabel) s\n"
+"%(tabel)s\n"
 ""
 
 #: superset/reports/notifications/slack.py:82
@@ -389,11 +389,11 @@ msgid ""
 "Error: %(text)s\n"
 ""
 msgstr ""
-"*%(nume) s*\n"
+"*%(nume)s*\n"
 "\n"
-"%(descriere) s\n"
+"%(descriere)s\n"
 "\n"
-"Eroare: %(text) s\n"
+"Eroare: %(text)s\n"
 ""
 
 #: superset-frontend/src/components/ListView/CrossLinksTooltip.tsx:64
@@ -861,7 +861,7 @@ msgstr "O referire la configurația [timp], luând în considerare granularitate
 #: superset/reports/commands/exceptions.py:186
 #, python-format
 msgid "A report named \"%(name)s\" already exists"
-msgstr "Există deja un raport numit „%(nume) s”"
+msgstr "Există deja un raport numit „%(name)s”"
 
 #: superset-frontend/src/explore/components/SaveModal.tsx:368
 msgid "A reusable dataset will be saved with your chart."
@@ -1649,7 +1649,7 @@ msgstr "A aparut o eroare"
 #: superset/reports/commands/exceptions.py:188
 #, python-format
 msgid "An alert named \"%(name)s\" already exists"
-msgstr "Există deja o alertă numită „%(nume) s”"
+msgstr "Există deja o alertă numită „%(name)s”"
 
 #: superset/common/query_context_processor.py:326 superset/viz.py:1352
 msgid "An enclosed time range (both start and end) must be specified when using a Time Comparison."
@@ -2749,7 +2749,7 @@ msgstr "Încărcare CSV"
 #: superset/views/database/views.py:290
 #, python-format
 msgid "CSV file \"%(csv_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\""
-msgstr "Fișierul CSV \"%(CSV_FileName) s\" Încărcat în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\""
+msgstr "Fișierul CSV \"%(csv_filename)s\" Încărcat în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\""
 
 #: superset/views/database/views.py:161
 msgid "CSV to Database configuration"
@@ -2892,7 +2892,7 @@ msgid ""
 "Cannot import dashboard: %(db_error)s.\n"
 "Make sure to create the database before importing the dashboard."
 msgstr ""
-"Nu se poate importa tabloul de bord: %(db_error) s.\n"
+"Nu se poate importa tabloul de bord: %(db_error)s.\n"
 "Asigurați -vă că creați baza de date înainte de importul tabloului de bord."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterControls/FilterValue.tsx:302
@@ -2903,7 +2903,7 @@ msgstr "Nu se poate încărca filtrul"
 #: superset/charts/commands/exceptions.py:51
 #, python-format
 msgid "Cannot parse time string [%(human_readable)s]"
-msgstr "Nu se poate analiza șirul de timp [%(Human_Readable) S]"
+msgstr "Nu se poate analiza șirul de timp [%(human_readable)s]"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/index.js:30
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:38
@@ -3129,7 +3129,7 @@ msgstr "Diagramă"
 #: superset/views/core.py:1762
 #, python-format
 msgid "Chart %(id)s not found"
-msgstr "Grafic %(ID) nu s -a găsit"
+msgstr "Grafic %(id)s nu s-a găsit"
 
 #: superset/views/database/mixins.py:192
 msgid "Chart Cache Timeout"
@@ -3721,7 +3721,7 @@ msgstr "Coloană"
 #: superset/utils/pandas_postprocessing/contribution.py:59
 #, python-format
 msgid "Column \"%(column)s\" is not numeric or does not exists in the query results."
-msgstr "Coloana \"%(coloana) s\" nu este numerică sau nu există în rezultatele interogării."
+msgstr "Coloana \"%(column)s\" nu este numerică sau nu există în rezultatele interogării."
 
 #: superset-frontend/src/explore/components/controls/TimeSeriesColumnControl/index.jsx:361
 msgid "Column Configuration"
@@ -3784,7 +3784,7 @@ msgstr "Numele coloanei [%s] este duplicat"
 #: superset/utils/pandas_postprocessing/utils.py:151
 #, python-format
 msgid "Column referenced by aggregate is undefined: %(column)s"
-msgstr "Coloana la care se face referire de agregat este nedefinită: %(coloană) s"
+msgstr "Coloana la care se face referire de agregat este nedefinită: %(column)s"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/ColumnSelect.tsx:123
 msgid "Column select"
@@ -3805,7 +3805,7 @@ msgstr "Fișier columnar"
 #: superset/views/database/views.py:568
 #, python-format
 msgid "Columnar file \"%(columnar_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\""
-msgstr "Fișier columnar \"%(columnar_filename) s\" încărcat în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\""
+msgstr "Fișier columnar \"%(columnar_filename)s\" încărcat în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\""
 
 #: superset/views/database/views.py:443
 msgid "Columnar to Database configuration"
@@ -3838,12 +3838,12 @@ msgstr "Coloane de citit"
 #: superset/common/query_context_processor.py:132
 #, python-format
 msgid "Columns missing in dataset: %(invalid_columns)s"
-msgstr "Coloane care lipsesc în setul de date: %(Invalid_columns) s"
+msgstr "Coloane care lipsesc în setul de date: %(invalid_columns)s"
 
 #: superset/viz.py:593
 #, python-format
 msgid "Columns missing in datasource: %(invalid_columns)s"
-msgstr "Coloane care lipsesc în DataSource: %(Invalid_Columns) s"
+msgstr "Coloane care lipsesc în DataSource: %(invalid_columns)s"
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:367
 msgid "Columns subtotal position"
@@ -4205,7 +4205,7 @@ msgstr "Cost estimat"
 #: superset/db_engine_specs/ocient.py:259
 #, python-format
 msgid "Could not connect to database: \"%(database)s\""
-msgstr "Nu s -a putut conecta la baza de date: \"%(baza de date) s\""
+msgstr "Nu s -a putut conecta la baza de date: \"%(database)s\""
 
 #: superset/views/utils.py:496
 msgid "Could not determine datasource type"
@@ -4227,7 +4227,7 @@ msgstr "Nu a putut încărca driverul bazei de date"
 #: superset/views/core.py:1454
 #, python-format
 msgid "Could not load database driver: %(driver_name)s"
-msgstr "Nu s -a putut încărca driverul bazei de date: %(driver_name) s"
+msgstr "Nu s -a putut încărca driverul bazei de date: %(driver_name)s"
 
 #: superset/databases/commands/test_connection.py:180
 msgid "Could not load database driver: {}"
@@ -4236,7 +4236,7 @@ msgstr "Nu s -a putut încărca driverul bazei de date: {}"
 #: superset/db_engine_specs/ocient.py:264
 #, python-format
 msgid "Could not resolve hostname: \"%(host)s\"."
-msgstr "Nu s -a putut rezolva numele de gazdă: \"%(gazdă) s\"."
+msgstr "Nu s -a putut rezolva numele de gazdă: \"%(host)s\"."
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:179
 msgid "Count"
@@ -4514,7 +4514,7 @@ msgstr "DateTime"
 #: superset/utils/encrypt.py:117
 #, python-format
 msgid "DB column %(col_name)s has unknown type: %(value_type)s"
-msgstr "Coloana DB %(Col_Name) s are un tip necunoscut: %(value_type) s"
+msgstr "Coloana DB %(col_name)s are un tip necunoscut: %(value_type)s"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:102
 msgid "DEC"
@@ -4725,17 +4725,17 @@ msgstr "Bază de date"
 #: superset/views/database/views.py:481
 #, python-format
 msgid "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for columnar uploads. Please contact your Superset Admin."
-msgstr "Baza de date \"%(batabase_name) s\" schema \"%(schema_name) s\" nu este permisă pentru încărcarea coloanei. Vă rugăm să contactați administratorul superset."
+msgstr "Baza de date \"%(batabase_name)s\" schema \"%(schema_name)s\" nu este permisă pentru încărcarea coloanei. Vă rugăm să contactați administratorul superset."
 
 #: superset/views/database/views.py:180
 #, python-format
 msgid "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for csv uploads. Please contact your Superset Admin."
-msgstr "Baza de date \"%(batabase_name) s\" schema \"%(schema_name) s\" nu este permisă pentru încărcarea CSV. Vă rugăm să contactați administratorul superset."
+msgstr "Baza de date \"%(batabase_name)s\" schema \"%(schema_name)s\" nu este permisă pentru încărcarea CSV. Vă rugăm să contactați administratorul superset."
 
 #: superset/views/database/views.py:321
 #, python-format
 msgid "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for excel uploads. Please contact your Superset Admin."
-msgstr "Baza de date \"%(batabase_name) s\" schema \"%(schema_name) s\" nu este permisă pentru încărcări excelate. Vă rugăm să contactați administratorul superset."
+msgstr "Baza de date \"%(batabase_name)s\" schema \"%(schema_name)s\" nu este permisă pentru încărcări excelate. Vă rugăm să contactați administratorul superset."
 
 #: superset/initialization/__init__.py:243
 msgid "Database Connections"
@@ -4815,7 +4815,7 @@ msgstr "Baza de date nu a fost găsită."
 #: superset/views/core.py:1201
 #, python-format
 msgid "Database not found: %(id)s"
-msgstr "Baza de date nu a fost găsită: %(ID) s"
+msgstr "Baza de date nu a fost găsită: %(id)s"
 
 #: superset/databases/commands/exceptions.py:32
 msgid "Database parameters are invalid."
@@ -4861,7 +4861,7 @@ msgstr "Set de date"
 #: superset/datasets/commands/exceptions.py:32
 #, python-format
 msgid "Dataset %(name)s already exists"
-msgstr "Set de date %(nume) s există deja"
+msgstr "Set de date %(name)s există deja"
 
 #: superset-frontend/src/explore/components/SaveModal.tsx:366
 msgid "Dataset Name"
@@ -4924,7 +4924,7 @@ msgstr "Parametrii setului de date nu sunt invali."
 #: superset/dashboards/api.py:415
 #, python-format
 msgid "Dataset schema is invalid, caused by: %(error)s"
-msgstr "Schema de date este nevalide, cauzată de: %(eroare) s"
+msgstr "Schema de date este nevalide, cauzată de: %(error)s"
 
 #: superset/datasets/commands/exceptions.py:186
 msgid "Dataset(s) could not be bulk deleted."
@@ -5284,55 +5284,55 @@ msgstr "Șters"
 #, python-format
 msgid "Deleted %(num)d annotation"
 msgid_plural "Deleted %(num)d annotations"
-msgstr[0] "Șters %(num) d Anotare"
+msgstr[0] "Șters %(num)d Anotare"
 
 #: superset/annotation_layers/api.py:355
 #, python-format
 msgid "Deleted %(num)d annotation layer"
 msgid_plural "Deleted %(num)d annotation layers"
-msgstr[0] "Șters %(NUM) D strat de adnotare"
+msgstr[0] "Șters %(num)d strat de adnotare"
 
 #: superset/charts/api.py:521
 #, python-format
 msgid "Deleted %(num)d chart"
 msgid_plural "Deleted %(num)d charts"
-msgstr[0] "Șters %(num) D grafic"
+msgstr[0] "Șters %(num) grafic"
 
 #: superset/css_templates/api.py:139
 #, python-format
 msgid "Deleted %(num)d css template"
 msgid_plural "Deleted %(num)d css templates"
-msgstr[0] "Ștergeți %(Num) D CSS șablon"
+msgstr[0] "Ștergeți %(num) CSS șablon"
 
 #: superset/dashboards/api.py:745
 #, python-format
 msgid "Deleted %(num)d dashboard"
 msgid_plural "Deleted %(num)d dashboards"
-msgstr[0] "Tablou de bord șters %(Num) D"
+msgstr[0] "Tablou de bord șters %(num)d"
 
 #: superset/datasets/api.py:789
 #, python-format
 msgid "Deleted %(num)d dataset"
 msgid_plural "Deleted %(num)d datasets"
-msgstr[0] "Șters %(num) D set de date"
+msgstr[0] "Șters %(num)d set de date"
 
 #: superset/reports/api.py:502
 #, python-format
 msgid "Deleted %(num)d report schedule"
 msgid_plural "Deleted %(num)d report schedules"
-msgstr[0] "Programul de raport șters %(Num) D"
+msgstr[0] "Programul de raport șters %(num)d"
 
 #: superset/row_level_security/api.py:349
 #, python-format
 msgid "Deleted %(num)d rules"
 msgid_plural "Deleted %(num)d rules"
-msgstr[0] "Reguli șterse %(Num) D"
+msgstr[0] "Reguli șterse %(num)d"
 
 #: superset/queries/saved_queries/api.py:222
 #, python-format
 msgid "Deleted %(num)d saved query"
 msgid_plural "Deleted %(num)d saved queries"
-msgstr[0] "Șters %(NUM) D interogare salvată"
+msgstr[0] "Șters %(num)d interogare salvată"
 
 #: superset-frontend/src/pages/RowLevelSecurityList/index.tsx:94
 #, python-format
@@ -5732,12 +5732,12 @@ msgstr "Duplicat"
 #: superset/views/datasource/views.py:124
 #, python-format
 msgid "Duplicate column name(s): %(columns)s"
-msgstr "Numele (coloanele duplicat): %(coloane) s"
+msgstr "Numele (coloanele duplicat): %(columns)s"
 
 #: superset/common/query_object.py:291
 #, python-format
 msgid "Duplicate column/metric labels: %(labels)s. Please make sure all columns and metrics have a unique label."
-msgstr "Coloană duplicată/etichete metrice: %(etichete) s. Vă rugăm să vă asigurați că toate coloanele și valorile au o etichetă unică."
+msgstr "Coloană duplicată/etichete metrice: %(labels)s. Vă rugăm să vă asigurați că toate coloanele și valorile au o etichetă unică."
 
 #: superset-frontend/src/features/datasets/DuplicateDatasetModal.tsx:61
 msgid "Duplicate dataset"
@@ -6039,12 +6039,12 @@ msgstr "Fie baza de date este scrisă incorect, fie nu există."
 #: superset/db_engine_specs/starrocks.py:122
 #, python-format
 msgid "Either the username \"%(username)s\" or the password is incorrect."
-msgstr "Fie numele de utilizator \"%(nume de utilizator) s\", fie parola este incorectă."
+msgstr "Fie numele de utilizator \"%(username)s\", fie parola este incorectă."
 
 #: superset/db_engine_specs/mssql.py:85
 #, python-format
 msgid "Either the username \"%(username)s\", password, or database name \"%(database)s\" is incorrect."
-msgstr "Fie numele de utilizator \"%(nume de utilizator) s\", parola sau numele bazei de date \"%(baza de date) s\" este incorectă."
+msgstr "Fie numele de utilizator \"%(username)s\", parola sau numele bazei de date \"%(database)s\" este incorectă."
 
 #: superset/errors.py:115
 msgid "Either the username or the password is wrong."
@@ -6057,7 +6057,7 @@ msgstr "Înălțime"
 #: superset-frontend/src/components/ReportModal/HeaderReportDropdown/index.tsx:239
 #: superset-frontend/src/components/ReportModal/HeaderReportDropdown/index.tsx:254
 msgid "Email reports active"
-msgstr "Rapoarte de e -mail active"
+msgstr "Rapoarte de e-mail active"
 
 #: superset-frontend/src/dashboard/components/DashboardEmbedControls.tsx:244
 msgid "Embed"
@@ -6207,7 +6207,7 @@ msgstr "Data de încheiere trebuie să fie după data începerii"
 #: superset/databases/commands/validate.py:59
 #, python-format
 msgid "Engine \"%(engine)s\" cannot be configured through parameters."
-msgstr "Motorul \"%(motor) s\" nu poate fi configurat prin parametri."
+msgstr "Motorul \"%(engine)s\" nu poate fi configurat prin parametri."
 
 #: superset-frontend/src/features/databases/DatabaseModal/ExtraOptions.tsx:512
 #: superset-frontend/src/features/databases/DatabaseModal/ExtraOptions.tsx:516
@@ -6253,7 +6253,7 @@ msgstr "Introduceți ecran complet"
 #: superset-frontend/src/features/databases/DatabaseModal/ModalHeader.tsx:184
 #, python-format
 msgid "Enter the required %(dbModelName)s credentials"
-msgstr "Introduceți datele de acreditare la %(DBModelName))"
+msgstr "Introduceți datele de acreditare la %(dbModelName)s)"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:128
 #: superset-frontend/src/explore/controls.jsx:392
@@ -6284,22 +6284,22 @@ msgstr "Eroare"
 #: superset/models/helpers.py:1919
 #, python-format
 msgid "Error in jinja expression in HAVING clause: %(msg)s"
-msgstr "Eroare în expresia Jinja în clauza: %(msg) s"
+msgstr "Eroare în expresia Jinja în clauza: %(msg)s"
 
 #: superset/connectors/sqla/models.py:1105 superset/models/helpers.py:835
 #, python-format
 msgid "Error in jinja expression in RLS filters: %(msg)s"
-msgstr "Eroare în expresia Jinja în filtrele RLS: %(msg) s"
+msgstr "Eroare în expresia Jinja în filtrele RLS: %(msg)s"
 
 #: superset/models/helpers.py:1901
 #, python-format
 msgid "Error in jinja expression in WHERE clause: %(msg)s"
-msgstr "Eroare în expresia Jinja în Where Clauze: %(msg) s"
+msgstr "Eroare în expresia Jinja în Where Clauze: %(msg)s"
 
 #: superset/connectors/sqla/models.py:789
 #, python-format
 msgid "Error in jinja expression in fetch values predicate: %(msg)s"
-msgstr "Eroare în expresia jinja în valorile preluatului predicat: %(msg) s"
+msgstr "Eroare în expresia jinja în valorile preluatului predicat: %(msg)s"
 
 #: superset-frontend/src/dashboard/containers/DashboardPage.tsx:274
 msgid "Error loading chart datasources. Filters may not work correctly."
@@ -6321,17 +6321,17 @@ msgstr "Eroare în timp ce preiați date: %s"
 #: superset/connectors/sqla/models.py:914 superset/models/helpers.py:1072
 #, python-format
 msgid "Error while rendering virtual dataset query: %(msg)s"
-msgstr "Eroare în timp ce redați interogarea setului de date virtual: %(msg) s"
+msgstr "Eroare în timp ce redați interogarea setului de date virtual: %(msg)s"
 
 #: superset/charts/data/commands/get_data_command.py:55
 #, python-format
 msgid "Error: %(error)s"
-msgstr "Eroare: %(eroare) s"
+msgstr "Eroare: %(error)s"
 
 #: superset/views/core.py:842 superset/views/core.py:1955
 #, python-format
 msgid "Error: %(msg)s"
-msgstr "Eroare: %(msg) s"
+msgstr "Eroare: %(msg)s"
 
 #: superset/views/core.py:839
 msgid "Error: permalink state not found"
@@ -6418,7 +6418,7 @@ msgstr "Fisier Excel"
 #: superset/views/database/views.py:427
 #, python-format
 msgid "Excel file \"%(excel_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\""
-msgstr "Fișierul Excel \"%(Excel_FileName) s\" încărcat în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\""
+msgstr "Fișierul Excel \"%(excel_filename)s\" încărcat în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\""
 
 #: superset/views/database/views.py:306
 msgid "Excel to Database configuration"
@@ -6514,7 +6514,7 @@ msgstr "Explora"
 #: superset/views/core.py:1007
 #, python-format
 msgid "Explore - %(table)s"
-msgstr "Explorați - %(tabel) s"
+msgstr "Explorați - %(table)s"
 
 #: superset-frontend/src/SqlLab/components/ExploreCtasResultsButton/index.tsx:84
 #: superset-frontend/src/SqlLab/components/ExploreResultsButton/index.tsx:41
@@ -6621,7 +6621,7 @@ msgstr "Date suplimentare pentru a specifica metadatele tabelului. În prezent, 
 #: superset/views/database/mixins.py:240 superset/views/database/mixins.py:264
 #, python-format
 msgid "Extra field cannot be decoded by JSON. %(msg)s"
-msgstr "Câmpul suplimentar nu poate fi decodat de JSON. %(msg) s"
+msgstr "Câmpul suplimentar nu poate fi decodat de JSON. %(msg)s"
 
 #: superset-frontend/src/explore/controlPanels/sections.tsx:52
 msgid "Extra parameters for use in jinja templated queries"
@@ -6683,7 +6683,7 @@ msgstr "Nu a reușit să creeze raport"
 #: superset/sqllab/exceptions.py:66
 #, python-format
 msgid "Failed to execute %(query)s"
-msgstr "Nu a reușit să execute %(interogare) s"
+msgstr "Nu a reușit să execute %(query)s"
 
 #: superset-frontend/src/components/Chart/DrillBy/DrillByModal.tsx:97
 msgid "Failed to generate chart edit URL"
@@ -6758,12 +6758,12 @@ msgstr "FECTHING"
 #: superset/databases/commands/exceptions.py:63
 #, python-format
 msgid "Field cannot be decoded by JSON. %(json_error)s"
-msgstr "Câmpul nu poate fi decodat de JSON. %(json_error) s"
+msgstr "Câmpul nu poate fi decodat de JSON. %(json_error)s"
 
 #: superset/databases/schemas.py:199 superset/databases/schemas.py:214
 #, python-format
 msgid "Field cannot be decoded by JSON. %(msg)s"
-msgstr "Câmpul nu poate fi decodat de JSON. %(msg) s"
+msgstr "Câmpul nu poate fi decodat de JSON. %(msg)s"
 
 #: superset/databases/commands/exceptions.py:50
 #: superset/databases/ssh_tunnel/commands/exceptions.py:57
@@ -7666,7 +7666,7 @@ msgstr "JSON nevalid"
 #: superset/advanced_data_type/api.py:100
 #, python-format
 msgid "Invalid advanced data type: %(advanced_data_type)s"
-msgstr "Tip de date avansat nevalid: %(avansat_data_type) s"
+msgstr "Tip de date avansat nevalid: %(avansat_data_type)s"
 
 #: superset/databases/schemas.py:186 superset/exceptions.py:196
 msgid "Invalid certificate"
@@ -7695,7 +7695,7 @@ msgstr "Expresie cron nevalide"
 #: superset/utils/pandas_postprocessing/cum.py:55
 #, python-format
 msgid "Invalid cumulative operator: %(operator)s"
-msgstr "Operator cumulativ nevalid: %(operator) s"
+msgstr "Operator cumulativ nevalid: %(operator)s"
 
 #: superset/connectors/sqla/views.py:180 superset/datasets/schemas.py:44
 msgid "Invalid date/timestamp format"
@@ -7708,7 +7708,7 @@ msgstr "Configurare filtru nevalid, vă rugăm să selectați o coloană"
 #: superset/models/helpers.py:1891
 #, python-format
 msgid "Invalid filter operation type: %(op)s"
-msgstr "Tipul de funcționare a filtrului nevalid: %(OP) S"
+msgstr "Tipul de funcționare a filtrului nevalid: %(op)s"
 
 #: superset/utils/pandas_postprocessing/geography.py:118
 msgid "Invalid geodetic string"
@@ -7733,17 +7733,17 @@ msgstr "Longitudine/latitudine nevalide"
 #: superset/utils/core.py:1373
 #, python-format
 msgid "Invalid metric object: %(metric)s"
-msgstr "Obiect metric nevalid: %(metrică) s"
+msgstr "Obiect metric nevalid: %(metric)s"
 
 #: superset/utils/pandas_postprocessing/utils.py:170
 #, python-format
 msgid "Invalid numpy function: %(operator)s"
-msgstr "Funcție nevalide de numpy: %(operator) s"
+msgstr "Funcție nevalide de numpy: %(operator)s"
 
 #: superset/utils/pandas_postprocessing/rolling.py:90
 #, python-format
 msgid "Invalid options for %(rolling_type)s: %(options)s"
-msgstr "Opțiuni nevalide pentru %(Rolling_Type) S: %(Opțiuni) S"
+msgstr "Opțiuni nevalide pentru %(rolling_type)s: %(options)s"
 
 #: superset/key_value/utils.py:60
 msgid "Invalid permalink key"
@@ -7752,17 +7752,17 @@ msgstr "Cheie permanentă nevalide"
 #: superset/db_engine_specs/ocient.py:292
 #, python-format
 msgid "Invalid reference to column: \"%(column)s\""
-msgstr "Referință nevalide la coloana: \"%(coloană) s\""
+msgstr "Referință nevalide la coloana: \"%(column)s\""
 
 #: superset/common/query_actions.py:227
 #, python-format
 msgid "Invalid result type: %(result_type)s"
-msgstr "Tip de rezultat nevalid: %(rezultat_type) s"
+msgstr "Tip de rezultat nevalid: %(result_type)s"
 
 #: superset/utils/pandas_postprocessing/rolling.py:84
 #, python-format
 msgid "Invalid rolling_type: %(type)s"
-msgstr "Rolling_type nevalid: %(tip) s"
+msgstr "Rolling_type nevalid: %(type)s"
 
 #: superset/viz.py:2474
 #, python-format
@@ -7777,7 +7777,7 @@ msgstr "Stare nevalide."
 #: superset/reports/commands/create.py:142
 #, python-format
 msgid "Invalid tab ids: %s(tab_ids)"
-msgstr "ID -uri de file nevalide: %s (Tab_ids)"
+msgstr "ID -uri de file nevalide: %s(tab_ids)"
 
 #: superset-frontend/src/filters/components/Select/controlPanel.ts:123
 msgid "Inverse selection"
@@ -8735,7 +8735,7 @@ msgstr "Metric"
 #: superset/models/helpers.py:1529
 #, python-format
 msgid "Metric '%(metric)s' does not exist"
-msgstr "Metrica „%(metrică) s” nu există"
+msgstr "Metrica „%(metric)s” nu există"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.tsx:39
 msgid "Metric ascending"
@@ -9859,7 +9859,7 @@ msgstr "Doar interogări unice acceptate"
 #: superset/views/database/forms.py:436
 #, python-format
 msgid "Only the following file extensions are allowed: %(allowed_extensions)s"
-msgstr "Sunt permise doar următoarele extensii de fișiere: %(permis_extensions) s"
+msgstr "Sunt permise doar următoarele extensii de fișiere: %(allowed_extensions)s"
 
 #: superset-frontend/packages/superset-ui-core/src/chart/components/FallbackComponent.tsx:45
 msgid "Oops! An error occurred!"
@@ -9917,7 +9917,7 @@ msgstr "Operator"
 #: superset/utils/pandas_postprocessing/utils.py:158
 #, python-format
 msgid "Operator undefined for aggregator: %(name)s"
-msgstr "Operator nedefinit pentru agregator: %(nume) s"
+msgstr "Operator nedefinit pentru agregator: %(name)s"
 
 #: superset-frontend/src/features/databases/DatabaseModal/ExtraOptions.tsx:381
 msgid "Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines."
@@ -10462,12 +10462,12 @@ msgstr "Vă rugăm să verificați întrebarea dvs. și să confirmați că toț
 #: superset/db_engine_specs/snowflake.py:117
 #, python-format
 msgid "Please check your query for syntax errors at or near \"%(syntax_error)s\". Then, try running your query again."
-msgstr "Vă rugăm să verificați interogarea dvs. pentru erori de sintaxă la sau aproape „%(Syntax_error) s”. Apoi, încercați din nou să vă desfășurați interogarea."
+msgstr "Vă rugăm să verificați interogarea dvs. pentru erori de sintaxă la sau aproape „%(syntax_error)s”. Apoi, încercați din nou să vă desfășurați interogarea."
 
 #: superset/db_engine_specs/gsheets.py:82 superset/db_engine_specs/mysql.py:170
 #, python-format
 msgid "Please check your query for syntax errors near \"%(server_error)s\". Then, try running your query again."
-msgstr "Vă rugăm să verificați interogarea pentru erorile de sintaxă în apropierea „%(server_error) s”. Apoi, încercați din nou să vă desfășurați interogarea."
+msgstr "Vă rugăm să verificați interogarea pentru erorile de sintaxă în apropierea „%(server_error)s”. Apoi, încercați din nou să vă desfășurați interogarea."
 
 #: superset/sqllab/query_render.py:38 superset/views/core.py:199
 msgid "Please check your template parameters for syntax errors and make sure they match across your SQL query and Set Parameters. Then, try running your query again."
@@ -10653,7 +10653,7 @@ msgstr "Port"
 #: superset/db_engine_specs/redshift.py:81
 #, python-format
 msgid "Port %(port)s on hostname \"%(hostname)s\" refused the connection."
-msgstr "Port %(port) s pe numele gazdă \" %(hostname) s\" a refuzat conexiunea."
+msgstr "Port %(port)s pe numele gazdă \" %(hostname)s\" a refuzat conexiunea."
 
 #: superset/db_engine_specs/ocient.py:269
 msgid "Port out of range 0-65535"
@@ -11436,7 +11436,7 @@ msgstr "Solicitați permisiuni"
 #: superset/charts/data/api.py:312
 #, python-format
 msgid "Request is incorrect: %(error)s"
-msgstr "Cererea este incorectă: %(eroare) s"
+msgstr "Cererea este incorectă: %(error)s"
 
 #: superset/charts/data/api.py:230
 msgid "Request is not JSON"
@@ -11580,7 +11580,7 @@ msgstr "Rol"
 #: superset/views/core.py:408
 #, python-format
 msgid "Role %(r)s was extended to provide the access to the datasource %(ds)s"
-msgstr "Rolul %(R) s a fost extins pentru a oferi accesul la data de date %(DS)"
+msgstr "Rolul %(r)s s a fost extins pentru a oferi accesul la data de date %(ds)s"
 
 #: superset-frontend/src/dashboard/components/PropertiesModal/PropertiesModal.test.tsx:375
 #: superset-frontend/src/dashboard/components/PropertiesModal/PropertiesModal.test.tsx:389
@@ -11765,7 +11765,7 @@ msgstr "Alergare"
 #: superset/sql_lab.py:480
 #, python-format
 msgid "Running statement %(statement_num)s out of %(statement_count)s"
-msgstr "Rularea declarației %(declarație_num) s din %(declarație_count) s"
+msgstr "Rularea declarației %(statement_num)s din %(statement_count)s"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:87
 msgid "SAT"
@@ -11817,7 +11817,7 @@ msgid ""
 "Note that you will need to close other SQL Lab windows before you do this."
 msgstr ""
 "SQL Lab folosește stocarea locală a browserului dvs. pentru a stoca întrebări și rezultate.\n"
-"În prezent, utilizați %(curentusage) s kb din %(maxstorage) D kb spațiu de stocare.\n"
+"În prezent, utilizați %(curentUsage)s kb din %(maxStorage)d kb spațiu de stocare.\n"
 "Pentru a împiedica SQL Lab să se prăbușească, vă rugăm să ștergeți unele file de interogare.\n"
 "Puteți re-accesa aceste întrebări folosind funcția de salvare înainte de a șterge fila\n"
 "Rețineți că va trebui să închideți alte ferestre SQL Lab înainte de a face acest lucru."
@@ -11899,8 +11899,8 @@ msgstr "Start (inclusiv)"
 #: superset-frontend/src/features/databases/DatabaseModal/ModalHeader.tsx:164
 #: superset-frontend/src/features/databases/DatabaseModal/ModalHeader.tsx:178
 #, python-format
-msgid "STEP %(stepCurr)s OF %(stepLast)s"
-msgstr "Etapa %(Stepcur) s de %(Steplast) s"
+msgid "STEP %(stepCurr)s OF %(stepCurr)s"
+msgstr "Etapa %(stepCurr)s de %(stepCurr)s"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:143
 msgid "STRING"
@@ -12339,7 +12339,7 @@ msgstr "Securitate și acces"
 #: superset-frontend/src/features/home/EmptyState.tsx:183
 #, python-format
 msgid "See all %(tableName)s"
-msgstr "Vezi toate %(tablename) s"
+msgstr "Vezi toate %(tableName)s"
 
 #: superset-frontend/src/components/ErrorMessage/ErrorAlert.tsx:172
 msgid "See less"
@@ -13452,7 +13452,7 @@ msgstr "Stat"
 #: superset/sql_lab.py:503
 #, python-format
 msgid "Statement %(statement_num)s out of %(statement_count)s"
-msgstr "Declarație %(declarație_num) s din %(declarație_count) s"
+msgstr "Declarație %(statement_num)s din %(statement_count)s"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/index.js:30
 #: superset-frontend/plugins/plugin-chart-echarts/src/BoxPlot/index.ts:59
@@ -13718,7 +13718,7 @@ msgstr "Sintaxă"
 #: superset/db_engine_specs/ocient.py:282
 #, python-format
 msgid "Syntax Error: %(qualifier)s input \"%(input)s\" expecting \"%(expected)s"
-msgstr "Eroare de sintaxă:%(calificare) s intrare \"%(intrare) s\" așteptător \"%(așteptat) s"
+msgstr "Eroare de sintaxă:%(qualifier)s intrare \"%(input)s\" așteptător \"%(expected)s"
 
 #: superset-frontend/src/pages/QueryHistoryList/index.tsx:268
 #: superset-frontend/src/pages/SavedQueryList/index.tsx:315
@@ -13765,7 +13765,7 @@ msgstr "Masa"
 #: superset/views/core.py:1775
 #, python-format
 msgid "Table %(table)s wasn't found in the database %(db)s"
-msgstr "Tabelul %(tabelul) nu a fost găsit în baza de date %(db) s"
+msgstr "Tabelul %(table)s nu a fost găsit în baza de date %(db)s"
 
 #: superset/views/database/forms.py:327 superset/views/database/forms.py:458
 msgid "Table Exists"
@@ -13783,11 +13783,11 @@ msgstr "Vizualizare tabel"
 #: superset/datasets/commands/exceptions.py:147
 #, python-format
 msgid "Table [%(table_name)s] could not be found, please double check your database connection, schema, and table name"
-msgstr "Tabelul [%(table_name) s] nu a putut fi găsit, vă rugăm să verificați dublu conexiunea, schema și numele tabelului dvs. de bază de date"
+msgstr "Tabelul [%(table_name)s] nu a putut fi găsit, vă rugăm să verificați dublu conexiunea, schema și numele tabelului dvs. de bază de date"
 
 #: superset/views/base.py:303
 msgid "Table [%{table}s] could not be found, please double check your database connection, schema, and table name, error: {}"
-msgstr "Tabelul [%{tabel} s] nu a putut fi găsit, vă rugăm să verificați dublu conexiunea bazei de date, schema și numele tabelului, eroare: {}"
+msgstr "Tabelul [%{tabel}s] nu a putut fi găsit, vă rugăm să verificați dublu conexiunea bazei de date, schema și numele tabelului, eroare: {}"
 
 #: superset-frontend/src/features/databases/DatabaseModal/ExtraOptions.tsx:278
 msgid "Table cache timeout"
@@ -13813,7 +13813,7 @@ msgstr "Numele tabelului nedefinit"
 #: superset/db_engine_specs/ocient.py:287
 #, python-format
 msgid "Table or View \"%(table)s\" does not exist."
-msgstr "Tabelul sau vizualizarea „%(tabel) s” nu există."
+msgstr "Tabelul sau vizualizarea „%(table)s” nu există."
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/index.js:26
 msgid "Table that visualizes paired t-tests, which are used to understand statistical differences between groups."
@@ -14145,7 +14145,7 @@ msgstr "Obiectul motor_params este despachetat în apelul SQLalchemy.Create_Engi
 #: superset/common/query_object.py:313
 #, python-format
 msgid "The following entries in `series_columns` are missing in `columns`: %(columns)s. "
-msgstr "Următoarele înregistrări în `seria_columns` lipsesc în` coloane`: %(coloane) s."
+msgstr "Următoarele înregistrări în `seria_columns` lipsesc în` coloane`: %(columns)s."
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Heatmap/controlPanel.ts:111
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Hex/controlPanel.ts:67
@@ -14155,7 +14155,7 @@ msgstr "Funcția de utilizat atunci când agregerea punctelor în grupuri"
 #: superset/db_engine_specs/mysql.py:160
 #, python-format
 msgid "The host \"%(hostname)s\" might be down and can't be reached."
-msgstr "Gazda „%(gazdă) s” s -ar putea să fie în scădere și nu poate fi atinsă."
+msgstr "Gazda „%(hostname)s” s -ar putea să fie în scădere și nu poate fi atinsă."
 
 #: superset/db_engine_specs/mssql.py:103
 #: superset/db_engine_specs/postgres.py:139
@@ -14163,7 +14163,7 @@ msgstr "Gazda „%(gazdă) s” s -ar putea să fie în scădere și nu poate fi
 #: superset/db_engine_specs/redshift.py:86
 #, python-format
 msgid "The host \"%(hostname)s\" might be down, and can't be reached on port %(port)s."
-msgstr "Gazda „ %(gazdă) s” s -ar putea scădea și nu poate fi accesată pe portul %(port) s."
+msgstr "Gazda „ %(hostname)s”  s-ar putea scădea și nu poate fi accesată pe portul %(port)."
 
 #: superset/errors.py:110
 msgid "The host might be down, and can't be reached on the provided port."
@@ -14175,7 +14175,7 @@ msgstr "Gazda ar putea fi în jos și nu poate fi accesată pe portul furnizat."
 #: superset/db_engine_specs/redshift.py:76
 #, python-format
 msgid "The hostname \"%(hostname)s\" cannot be resolved."
-msgstr "Numele de gazdă \"%(gazdă) s\" nu poate fi rezolvat."
+msgstr "Numele de gazdă \"%(hostname)s \" nu poate fi rezolvat."
 
 #: superset/errors.py:108
 msgid "The hostname provided can't be resolved."
@@ -14205,12 +14205,12 @@ msgstr "Valoarea maximă a valorilor. Este o configurație opțională"
 #: superset/databases/schemas.py:222
 #, python-format
 msgid "The metadata_params in Extra field is not configured correctly. The key %(key)s is invalid."
-msgstr "Metadata_params în câmpul suplimentar nu este configurat corect. Cheia %(cheie) s este nevalide."
+msgstr "Metadata_params în câmpul suplimentar nu este configurat corect. Cheia %(key)s este nevalide."
 
 #: superset/databases/commands/exceptions.py:80
 #: superset/views/database/mixins.py:248
 msgid "The metadata_params in Extra field is not configured correctly. The key %{key}s is invalid."
-msgstr "Metadata_params în câmpul suplimentar nu este configurat corect. Cheia %{cheie} s este nevalide."
+msgstr "Metadata_params în câmpul suplimentar nu este configurat corect. Cheia %{key}s este nevalide."
 
 #: superset-frontend/src/features/databases/DatabaseModal/ExtraOptions.tsx:505
 msgid "The metadata_params object gets unpacked into the sqlalchemy.MetaData call."
@@ -14236,32 +14236,32 @@ msgstr "Numărul de ore, negativ sau pozitiv, pentru a schimba coloana de timp. 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:301
 #, python-format
 msgid "The number of results displayed is limited to %(rows)d by the configuration DISPLAY_MAX_ROWS. Please add additional limits/filters or download to csv to see more rows up to the %(limit)d limit."
-msgstr "Numărul de rezultate afișate este limitat la %(rânduri) D de configurația afișajului_max_rows. Vă rugăm să adăugați limite/filtre suplimentare sau descărcați la CSV pentru a vedea mai multe rânduri până la limita %(limită) D."
+msgstr "Numărul de rezultate afișate este limitat la %(rows)d de configurația afișajului_max_rows. Vă rugăm să adăugați limite/filtre suplimentare sau descărcați la CSV pentru a vedea mai multe rânduri până la limita %(limită) D."
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:307
 #, python-format
 msgid "The number of results displayed is limited to %(rows)d. Please add additional limits/filters, download to csv, or contact an admin to see more rows up to the %(limit)d limit."
-msgstr "Numărul de rezultate afișate este limitat la %(rânduri) d. Vă rugăm să adăugați limite/filtre suplimentare, descărcați la CSV sau contactați un administrator pentru a vedea mai multe rânduri până la limita %(limită) D."
+msgstr "Numărul de rezultate afișate este limitat la %(rows)d. Vă rugăm să adăugați limite/filtre suplimentare, descărcați la CSV sau contactați un administrator pentru a vedea mai multe rânduri până la limita %(limită) D."
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:358
 #, python-format
 msgid "The number of rows displayed is limited to %(rows)d by the dropdown."
-msgstr "Numărul de rânduri afișate este limitat la %(rânduri) D de dropdown."
+msgstr "Numărul de rânduri afișate este limitat la %(rows)d de dropdown."
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:327
 #, python-format
 msgid "The number of rows displayed is limited to %(rows)d by the limit dropdown."
-msgstr "Numărul de rânduri afișate este limitat la %(rânduri) D de meniul derulant."
+msgstr "Numărul de rânduri afișate este limitat la %(rows)d de meniul derulant."
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:319
 #, python-format
 msgid "The number of rows displayed is limited to %(rows)d by the query"
-msgstr "Numărul de rânduri afișate este limitat la %(rânduri) D prin interogare"
+msgstr "Numărul de rânduri afișate este limitat la %(rows)d prin interogare"
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:332
 #, python-format
 msgid "The number of rows displayed is limited to %(rows)d by the query and limit dropdown."
-msgstr "Numărul de rânduri afișate este limitat la %(rânduri) D prin interogarea și derularea limită."
+msgstr "Numărul de rânduri afișate este limitat la %(rows)d prin interogarea și derularea limită."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:81
 #: superset-frontend/src/explore/controlPanels/sections.tsx:43
@@ -14276,12 +14276,12 @@ msgstr "Obiectul nu există în baza de date dată."
 #, python-format
 msgid "The parameter %(parameters)s in your query is undefined."
 msgid_plural "The following parameters in your query are undefined: %(parameters)s."
-msgstr[0] "Parametrul %(parametrii) din interogarea dvs. este nedefinit."
+msgstr[0] "Parametrul %(parameters)s din interogarea dvs. este nedefinit."
 
 #: superset/db_engine_specs/postgres.py:119
 #, python-format
 msgid "The password provided for username \"%(username)s\" is incorrect."
-msgstr "Parola furnizată pentru numele de utilizator \"%(nume de utilizator) s\" este incorectă."
+msgstr "Parola furnizată pentru numele de utilizator \"%(username)s \" este incorectă."
 
 #: superset/errors.py:114
 msgid "The password provided when connecting to a database is not valid."
@@ -14366,7 +14366,7 @@ msgstr "Interogarea nu a putut fi încărcată"
 #: superset/sqllab/commands/estimate.py:86
 #, python-format
 msgid "The query estimation was killed after %(sqllab_timeout)s seconds. It might be too complex, or the database might be under heavy load."
-msgstr "Estimarea interogării a fost ucisă după %(SQLLAB_TIMEOUT) secunde. S -ar putea să fie prea complex, sau baza de date ar putea fi sub încărcare grea."
+msgstr "Estimarea interogării a fost ucisă după %(sqllab_timeout) secunde. S -ar putea să fie prea complex, sau baza de date ar putea fi sub încărcare grea."
 
 #: superset/errors.py:135
 msgid "The query has a syntax error."
@@ -14379,7 +14379,7 @@ msgstr "Interogarea nu a returnat nicio date"
 #: superset/sql_lab.py:297
 #, python-format
 msgid "The query was killed after %(sqllab_timeout)s seconds. It might be too complex, or the database might be under heavy load."
-msgstr "Interogarea a fost ucisă după %(SQLLAB_TIMEOUT) secunde. S -ar putea să fie prea complex, sau baza de date ar putea fi sub încărcare grea."
+msgstr "Interogarea a fost ucisă după %(sqllab_timeout) secunde. S -ar putea să fie prea complex, sau baza de date ar putea fi sub încărcare grea."
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:97
 msgid "The radius (in pixels) the algorithm uses to define a cluster. Choose 0 to turn off clustering, but beware that a large number of points (>1000) will cause lag."
@@ -14410,12 +14410,12 @@ msgstr "Bogatul Tooltip arată o listă cu toate seriile pentru acel moment în 
 #: superset/db_engine_specs/bigquery.py:203
 #, python-format
 msgid "The schema \"%(schema)s\" does not exist. A valid schema must be used to run this query."
-msgstr "Schema „%(schema) s” nu există. O schemă valabilă trebuie utilizată pentru a rula această interogare."
+msgstr "Schema „%(schema)s” nu există. O schemă valabilă trebuie utilizată pentru a rula această interogare."
 
 #: superset/db_engine_specs/presto.py:673
 #, python-format
 msgid "The schema \"%(schema_name)s\" does not exist. A valid schema must be used to run this query."
-msgstr "Schema \"%(schema_name) s\" nu există. O schemă valabilă trebuie utilizată pentru a rula această interogare."
+msgstr "Schema \"%(schema_name)s\" nu există. O schemă valabilă trebuie utilizată pentru a rula această interogare."
 
 #: superset/errors.py:117
 msgid "The schema was deleted or renamed in the database."
@@ -14441,12 +14441,12 @@ msgstr "Sarcina utilă depusă are schema incorectă."
 #: superset/db_engine_specs/bigquery.py:190
 #, python-format
 msgid "The table \"%(table)s\" does not exist. A valid table must be used to run this query."
-msgstr "Tabelul „%(tabelul) s” nu există. Un tabel valid trebuie utilizat pentru a rula această interogare."
+msgstr "Tabelul „%(table)s” nu există. Un tabel valid trebuie utilizat pentru a rula această interogare."
 
 #: superset/db_engine_specs/presto.py:665
 #, python-format
 msgid "The table \"%(table_name)s\" does not exist. A valid table must be used to run this query."
-msgstr "Tabelul „%(table_name) s” nu există. Un tabel valid trebuie utilizat pentru a rula această interogare."
+msgstr "Tabelul „%(table_name)s” nu există. Un tabel valid trebuie utilizat pentru a rula această interogare."
 
 #: superset/connectors/sqla/views.py:422
 msgid "The table was created. As part of this two-phase configuration process, you should now click the edit button by the new table to configure it."
@@ -14509,7 +14509,7 @@ msgstr "Combinația de utilizator/parolă nu este valabilă (parolă incorectă 
 #: superset/db_engine_specs/postgres.py:114
 #, python-format
 msgid "The username \"%(username)s\" does not exist."
-msgstr "Numele de utilizator \"%(nume de utilizator) s\" nu există."
+msgstr "Numele de utilizator \"%(username)s\" nu există."
 
 #: superset/errors.py:113
 msgid "The username provided when connecting to a database is not valid."
@@ -15145,7 +15145,7 @@ msgstr "Coloană de timp"
 #: superset/models/helpers.py:1659
 #, python-format
 msgid "Time column \"%(col)s\" does not exist in dataset"
-msgstr "Coloana de timp \"%(col) s\" nu există în setul de date"
+msgstr "Coloana de timp \"%(col)s\" nu există în setul de date"
 
 #: superset-frontend/src/filters/components/TimeColumn/index.ts:29
 msgid "Time column filter plugin"
@@ -15176,7 +15176,7 @@ msgstr ""
 #: superset/charts/commands/exceptions.py:66
 #, python-format
 msgid "Time delta is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later]."
-msgstr "Timpul delta este ambiguu. Vă rugăm să specificați în urmă [%(Human_Readable) S] sau [%(Human_Readable) s mai târziu]."
+msgstr "Timpul delta este ambiguu. Vă rugăm să specificați în urmă [%(human_readable)s] sau [%(human_readable)s mai târziu]."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:320
 #: superset-frontend/src/filters/components/Time/index.ts:27
@@ -15247,7 +15247,7 @@ msgstr "Schimbare de timp"
 #: superset/charts/commands/exceptions.py:38
 #, python-format
 msgid "Time string is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later]."
-msgstr "Șirul de timp este ambiguu. Vă rugăm să specificați în urmă [%(Human_Readable) S] sau [%(Human_Readable) s mai târziu]."
+msgstr "Șirul de timp este ambiguu. Vă rugăm să specificați în urmă [%(human_readable)s] sau [%(human_readable)s mai târziu]."
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Area/index.ts:76
 msgid "Time-series Area Chart"
@@ -15416,14 +15416,14 @@ msgstr "Total"
 #: superset/charts/post_processing.py:73
 #, python-format
 msgid "Total (%(aggfunc)s)"
-msgstr "Total (%(Aggfunc) s) s)"
+msgstr "Total (%(aggfunc)s)"
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/react-pivottable/TableRenderers.jsx:496
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/react-pivottable/TableRenderers.jsx:561
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/react-pivottable/TableRenderers.jsx:782
 #, python-format
 msgid "Total (%(aggregatorName)s)"
-msgstr "Total (%(agregatoname) s) s)"
+msgstr "Total (%(aggregatorName)s)"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:68
 msgid "Total value"
@@ -15635,14 +15635,14 @@ msgstr "Imposibil de adăugat o nouă filă la backend. Vă rugăm să contacta�
 #: superset/db_engine_specs/presto.py:704
 #, python-format
 msgid "Unable to connect to catalog named \"%(catalog_name)s\"."
-msgstr "Imposibil de conectat la catalogul numit „%(catalog_name) s”."
+msgstr "Imposibil de conectat la catalogul numit „%(catalog_name)s”."
 
 #: superset/db_engine_specs/mysql.py:165
 #: superset/db_engine_specs/postgres.py:147
 #: superset/db_engine_specs/starrocks.py:127
 #, python-format
 msgid "Unable to connect to database \"%(database)s\"."
-msgstr "Imposibil de conectat la baza de date „%(baza de date) s”."
+msgstr "Imposibil de conectat la baza de date „%(database)s”."
 
 #: superset/db_engine_specs/bigquery.py:178
 msgid "Unable to connect. Verify that the following roles are set on the service account: \"BigQuery Data Viewer\", \"BigQuery Metadata Viewer\", \"BigQuery Job User\" and the following permissions are set \"bigquery.readsessions.create\", \"bigquery.readsessions.getData\""
@@ -15663,7 +15663,7 @@ msgstr "Incapabil să codifice valoarea"
 #: superset/utils/date_parser.py:393
 #, python-format
 msgid "Unable to find such a holiday: [%(holiday)s]"
-msgstr "Imposibil de găsit o astfel de vacanță: [%(vacanță) s]"
+msgstr "Imposibil de găsit o astfel de vacanță: [%(holiday)s]"
 
 #: superset-frontend/src/features/datasets/AddDataset/DatasetPanel/MessageContent.tsx:72
 msgid "Unable to load columns for the selected table. Please select a different table."
@@ -15688,17 +15688,17 @@ msgstr "Incapabil să recupereze culorile tabloului de bord"
 #: superset/views/database/views.py:278
 #, python-format
 msgid "Unable to upload CSV file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\". Error message: %(error_msg)s"
-msgstr "Imposibil de încărcat fișierul CSV \"%(nume de fișier) s\" în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\". Mesaj de eroare: %(error_msg) s"
+msgstr "Imposibil de încărcat fișierul CSV \"%(filename)s\" în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\". Mesaj de eroare: %(error_msg)s"
 
 #: superset/views/database/views.py:556
 #, python-format
 msgid "Unable to upload Columnar file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\". Error message: %(error_msg)s"
-msgstr "Imposibil de încărcat fișierul columnar \"%(nume de fișier) s\" în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\". Mesaj de eroare: %(error_msg) s"
+msgstr "Imposibil de încărcat fișierul columnar \"%(filename)s\" în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\". Mesaj de eroare: %(error_msg)s"
 
 #: superset/views/database/views.py:415
 #, python-format
 msgid "Unable to upload Excel file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\". Error message: %(error_msg)s"
-msgstr "Imposibil de încărcat fișierul excel \"%(nume de fișier) s\" în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\". Mesaj de eroare: %(error_msg) s"
+msgstr "Imposibil de încărcat fișierul excel \"%(filename)s\" în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\". Mesaj de eroare: %(error_msg)s"
 
 #: superset-frontend/src/SqlLab/components/SaveQuery/index.tsx:92
 #: superset-frontend/src/SqlLab/components/ScheduleQueryButton/index.tsx:134
@@ -15743,7 +15743,7 @@ msgstr "Necunoscut"
 #: superset/db_engine_specs/mysql.py:155
 #, python-format
 msgid "Unknown MySQL server host \"%(hostname)s\"."
-msgstr "Gazda necunoscută a serverului MySQL \"%(gazdă) s\"."
+msgstr "Gazda necunoscută a serverului MySQL \"%(hostname)s\"."
 
 #: superset/db_engine_specs/presto.py:1342
 msgid "Unknown Presto Error"
@@ -15756,7 +15756,7 @@ msgstr "Statut necunoscut"
 #: superset/models/helpers.py:1582
 #, python-format
 msgid "Unknown column used in orderby: %(col)s"
-msgstr "Coloană necunoscută folosită în ordin: %(col) s"
+msgstr "Coloană necunoscută folosită în ordin: %(col)s"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:398
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:476
@@ -15778,37 +15778,37 @@ msgstr "Valoare necunoscută"
 #: superset/jinja_context.py:353
 #, python-format
 msgid "Unsafe return type for function %(func)s: %(value_type)s"
-msgstr "Tip de retur nesigur pentru funcție %(func) s: %(value_type) s"
+msgstr "Tip de retur nesigur pentru funcție %(func) s: %(value_type)s"
 
 #: superset/jinja_context.py:380
 #, python-format
 msgid "Unsafe template value for key %(key)s: %(value_type)s"
-msgstr "Valoare de șablon nesigură pentru cheie %(cheie) s: %(value_type) s"
+msgstr "Valoare de șablon nesigură pentru cheie %(cheie) s: %(value_type)s"
 
 #: superset/utils/core.py:1104
 #, python-format
 msgid "Unsupported clause type: %(clause)s"
-msgstr "Tipul clauzei neacceptat: %(clauza) s"
+msgstr "Tipul clauzei neacceptat: %(clause)s"
 
 #: superset/common/query_object.py:440
 #, python-format
 msgid "Unsupported post processing operation: %(operation)s"
-msgstr "Operația post -procesare neacceptată: %(operație) s"
+msgstr "Operația post -procesare neacceptată: %(operation)s"
 
 #: superset/jinja_context.py:364
 #, python-format
 msgid "Unsupported return value for method %(name)s"
-msgstr "Valoarea de retur neacceptată pentru metoda %(nume) s"
+msgstr "Valoarea de retur neacceptată pentru metoda %(name)s"
 
 #: superset/jinja_context.py:391
 #, python-format
 msgid "Unsupported template value for key %(key)s"
-msgstr "Valoarea șablonului neacceptat pentru cheia %(cheie) s"
+msgstr "Valoarea șablonului neacceptat pentru cheia %(key)s"
 
 #: superset/utils/pandas_postprocessing/prophet.py:117
 #, python-format
 msgid "Unsupported time grain: %(time_grain)s"
-msgstr "Cereale de timp neacceptate: %(Time_Grain) s"
+msgstr "Cereale de timp neacceptate: %(time_grain)s"
 
 #: superset-frontend/src/SqlLab/components/SaveDatasetModal/index.tsx:148
 msgid "Untitled Dataset"
@@ -15886,7 +15886,7 @@ msgstr "Utilizare"
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.tsx:799
 #, python-format
 msgid "Use \"%(menuName)s\" menu instead."
-msgstr "Utilizați în schimb meniul „%(menuname) s”."
+msgstr "Utilizați în schimb meniul „%(menuName)s”."
 
 #: superset-frontend/src/dashboard/util/getSliceHeaderTooltip.tsx:31
 #, python-format
@@ -16317,18 +16317,18 @@ msgstr "Nu putem să ne conectăm la baza de date. Faceți clic pe „Vezi mai m
 #: superset/db_engine_specs/bigquery.py:198
 #, python-format
 msgid "We can't seem to resolve column \"%(column)s\" at line %(location)s."
-msgstr "Nu putem părea să rezolvăm coloana „ %(coloană) s” la linia %(locație) s."
+msgstr "Nu putem părea să rezolvăm coloana „ %(column)s” la linia %(location)s."
 
 #: superset/db_engine_specs/duckdb.py:56 superset/db_engine_specs/sqlite.py:65
 #, python-format
 msgid "We can't seem to resolve the column \"%(column_name)s\""
-msgstr "Nu putem părea să rezolvăm coloana „%(nume de colț) s”"
+msgstr "Nu putem părea să rezolvăm coloana „%(column_name)s”"
 
 #: superset/db_engine_specs/postgres.py:152
 #: superset/db_engine_specs/presto.py:657
 #, python-format
 msgid "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s."
-msgstr "Nu putem părea să rezolvăm coloana \" %(nume de colț) s\" la linia %(locație) s."
+msgstr "Nu putem părea să rezolvăm coloana \" %(column_name)s\" la linia %(location)s."
 
 #: superset-frontend/src/visualizations/dashboardComponents/ExampleComponent/ExampleComponent.tsx:29
 #, python-format
@@ -16346,7 +16346,7 @@ msgstr "Nu am putut să transmitem niciun control la trecerea la acest nou set d
 #: superset/db_engine_specs/redshift.py:94
 #, python-format
 msgid "We were unable to connect to your database named \"%(database)s\". Please verify your database name and try again."
-msgstr "Nu am putut să ne conectăm la baza de date numită „%(baze de date) s”. Vă rugăm să verificați numele bazei de date și să încercați din nou."
+msgstr "Nu am putut să ne conectăm la baza de date numită „%(database)s”. Vă rugăm să verificați numele bazei de date și să încercați din nou."
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Arc/index.js:33
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Path/index.js:31
@@ -17077,7 +17077,7 @@ msgstr "Nu aveți permisiunea de a edita acest tablou de bord"
 #: superset/templates/superset/request_access.html:25
 #, python-format
 msgid "You do not have permissions to access the datasource(s): %(name)s."
-msgstr "Nu aveți permisiuni pentru a accesa DataSource (e): %(nume) s."
+msgstr "Nu aveți permisiuni pentru a accesa DataSource (e): %(name)s."
 
 #: superset-frontend/src/dashboard/actions/dashboardState.js:160
 msgid "You do not have permissions to edit this dashboard."
@@ -17111,7 +17111,7 @@ msgstr "Nu aveți permisiunea de a modifica valoarea."
 #: superset/security/manager.py:2262
 #, python-format
 msgid "You don't have the rights to alter %(resource)s"
-msgstr "Nu aveți drepturile de a modifica %(resurse) s"
+msgstr "Nu aveți drepturile de a modifica %(resource)s"
 
 #: superset/views/core.py:945
 msgid "You don't have the rights to alter this chart"
@@ -17152,7 +17152,7 @@ msgstr "Aveți modificări nevăzute."
 #: superset-frontend/src/dashboard/actions/dashboardState.js:650
 #, python-format
 msgid "You have used all %(historyLength)s undo slots and will not be able to fully undo subsequent actions. You may save your current state to reset the history."
-msgstr "Ați utilizat toate sloturile de anulare (istoriclength) și nu veți putea anula pe deplin acțiunile ulterioare. Puteți salva starea actuală pentru a reseta istoricul."
+msgstr "Ați utilizat toate sloturile de anulare %(historyLength)s și nu veți putea anula pe deplin acțiunile ulterioare. Puteți salva starea actuală pentru a reseta istoricul."
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl/index.jsx:300
 #: superset-frontend/src/pages/DatasetList/index.tsx:464
@@ -17255,7 +17255,7 @@ msgstr "[Set de date lipsă]"
 #: superset/utils/core.py:908
 #, python-format
 msgid "[Superset] Access to the datasource %(name)s was granted"
-msgstr "[Superset] Accesul la DataSource %(nume) s a fost acordat"
+msgstr "[Superset] Accesul la DataSource %(name)s a fost acordat"
 
 #: superset-frontend/src/features/home/ActivityTable.tsx:85
 msgid "[Untitled]"
@@ -17497,7 +17497,7 @@ msgstr "coloană"
 #: superset-frontend/src/features/databases/DatabaseModal/ModalHeader.tsx:152
 #, python-format
 msgid "connecting to %(dbModelName)s."
-msgstr "conectarea la %(dbmodelname) s."
+msgstr "conectarea la %(dbModelName)s."
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/Histogram.jsx:117
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Hex/controlPanel.ts:79

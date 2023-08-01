@@ -12,7 +12,7 @@
         "\n                Acest filtru a fost moștenit din contextul tabloului de bord.\n                Nu va fi salvat la salvarea graficului.\n              "
       ],
       "\n            Error: %(text)s\n            ": [
-        "\n            Eroare: %(text) s\n            "
+        "\n            Eroare: %(text)s\n            "
       ],
       " (excluded)": [" (exclus)"],
       " Set the opacity to 0 if you do not want to override the color specified in the GeoJSON": [
@@ -43,39 +43,39 @@
       " to visualize your data.": [" pentru a vă vizualiza datele."],
       "!= (Is not equal)": ["! = (Nu este egal)"],
       "%(dialect)s cannot be used as a data source for security reasons.": [
-        "%(dialectul) s nu poate fi utilizat ca sursă de date din motive de securitate."
+        "%(dialect)s nu poate fi utilizat ca sursă de date din motive de securitate."
       ],
       "%(message)s\nThis may be triggered by: \n%(issues)s": [
-        "%(mesaj) s\nAcest lucru poate fi declanșat de: \n%(probleme) s"
+        "%(message)s \nAcest lucru poate fi declanșat de: \n%(issues)s"
       ],
-      "%(name)s.csv": ["%(nume) s.csv"],
+      "%(name)s.csv": ["%(name)s.csv"],
       "%(object)s does not exist in this database.": [
-        "%(obiect) s nu există în această bază de date."
+        "%(object)s nu există în această bază de date."
       ],
       "%(other)s charts will appear here": [
-        "%(alte) s -ar apărea graficele aici"
+        "%(other)s ar apărea graficele aici"
       ],
       "%(other)s dashboards will appear here": [
-        "%(altele) s -au apărut de borduri"
+        "%(other)s au apărut de borduri"
       ],
-      "%(other)s recents will appear here": ["%(alte) s -au apărut recente"],
+      "%(other)s recents will appear here": ["%(other)s au apărut recente"],
       "%(other)s saved queries will appear here": [
-        "%(alte) s -ar apărea întrebări salvate"
+        "%(other)s ar apărea întrebări salvate"
       ],
-      "%(prefix)s %(title)s": ["%(prefix) s %(titlu) s"],
-      "%(rows)d rows returned": ["%(rânduri) d rânduri returnate"],
+      "%(prefix)s %(title)s": ["%(prefix)s %(titlu)s"],
+      "%(rows)d rows returned": ["%(rows)d rânduri returnate"],
       "%(subtitle)s\nThis may be triggered by:\n %(issue)s": [
-        "%(subtitrare) s\nAcest lucru poate fi declanșat de: \n %(problemă) s"
+        "%(subtitle)s\nAcest lucru poate fi declanșat de: \n %(issue)s"
       ],
       "%(suggestion)s instead of \"%(undefinedParameter)s?\"": [
-        "%(sugestie) s în loc de „%(nedefinitparameter) s?”"
+        "%(suggestion)s în loc de „%(undefinedParameter)s?”"
       ],
       "%(user)s was granted the role %(role)s that gives access to the %(datasource)s": [
-        "%(utilizator) s a primit rolul %(rol) s care oferă acces la %(data de date) s"
+        "%(user)s a primit rolul %(role)s care oferă acces la %(datasource)s"
       ],
-      "%(user)s's profile": ["%(utilizator) profilul s"],
+      "%(user)s's profile": ["profilul %(user)s"],
       "%(validator)s was unable to check your query.\nPlease recheck your query.\nException: %(ex)s": [
-        "%(validator) s nu a putut să vă verifice interogarea.\nVă rugăm să verificați întrebarea dvs.\nExcepție: %(ex) s"
+        "%(validator) s nu a putut să vă verifice interogarea.\nVă rugăm să verificați întrebarea dvs.\nExcepție: %(ex)s"
       ],
       "%s Error": ["%s eroare"],
       "%s PASSWORD": ["%s parola"],
@@ -110,10 +110,10 @@
         "), și devin disponibile în SQL (Exemplu:"
       ],
       "*%(name)s*\n\n%(description)s\n\n<%(url)s|Explore in Superset>\n\n%(table)s\n": [
-        "*%(nume) s*\n\n%(descriere) s\n\n<%(url) s | explorați în superset> \n\n%(tabel) s\n"
+        "*%(nume)s*\n\n%(descriere)s\n\n<%(url)s | explorați în superset> \n\n%(tabel)s\n"
       ],
       "*%(name)s*\n\n%(description)s\n\nError: %(text)s\n": [
-        "*%(nume) s*\n\n%(descriere) s\n\nEroare: %(text) s\n"
+        "*%(nume)s*\n\n%(descriere)s\n\nEroare: %(text)s\n"
       ],
       "+ %s more": ["+ %s mai mult"],
       ",": [","],
@@ -247,7 +247,7 @@
         "O referire la configurația [timp], luând în considerare granularitatea"
       ],
       "A report named \"%(name)s\" already exists": [
-        "Există deja un raport numit „%(nume) s”"
+        "Există deja un raport numit „%(name)s”"
       ],
       "A reusable dataset will be saved with your chart.": [
         "Un set de date reutilizabil va fi salvat cu graficul dvs."
@@ -516,7 +516,7 @@
       "Altered": ["Modificat"],
       "An Error Occurred": ["A aparut o eroare"],
       "An alert named \"%(name)s\" already exists": [
-        "Există deja o alertă numită „%(nume) s”"
+        "Există deja o alertă numită „%(name)s”"
       ],
       "An enclosed time range (both start and end) must be specified when using a Time Comparison.": [
         "Un interval de timp închis (atât început, cât și sfârșit) trebuie specificat atunci când se utilizează o comparație de timp."
@@ -971,7 +971,7 @@
       "CSS templates": ["Șabloane CSS"],
       "CSV Upload": ["Încărcare CSV"],
       "CSV file \"%(csv_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\"": [
-        "Fișierul CSV \"%(CSV_FileName) s\" Încărcat în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\""
+        "Fișierul CSV \"%(csv_filename)s\" Încărcat în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\""
       ],
       "CSV to Database configuration": ["CSV la configurarea bazei de date"],
       "CSV upload": ["Încărcare CSV"],
@@ -1023,11 +1023,11 @@
         "Nu poate avea mai multe acreditări pentru tunelul SSH"
       ],
       "Cannot import dashboard: %(db_error)s.\nMake sure to create the database before importing the dashboard.": [
-        "Nu se poate importa tabloul de bord: %(db_error) s.\nAsigurați -vă că creați baza de date înainte de importul tabloului de bord."
+        "Nu se poate importa tabloul de bord: %(db_error)s.\nAsigurați -vă că creați baza de date înainte de importul tabloului de bord."
       ],
       "Cannot load filter": ["Nu se poate încărca filtrul"],
       "Cannot parse time string [%(human_readable)s]": [
-        "Nu se poate analiza șirul de timp [%(Human_Readable) S]"
+        "Nu se poate analiza șirul de timp [%(human_readable)s]"
       ],
       "Categorical": ["Categoric"],
       "Categorical Color": ["Culoare categorică"],
@@ -1096,7 +1096,7 @@
         "Personaj de interpretat ca punct zecimal."
       ],
       "Chart": ["Diagramă"],
-      "Chart %(id)s not found": ["Grafic %(ID) nu s -a găsit"],
+      "Chart %(id)s not found": ["Grafic %(id)s nu s-a găsit"],
       "Chart Cache Timeout": ["Chart Timeout cache"],
       "Chart Data: %s": ["Date grafic: %s"],
       "Chart ID": ["ID grafic"],
@@ -1276,7 +1276,7 @@
       "Colors": ["Culori"],
       "Column": ["Coloană"],
       "Column \"%(column)s\" is not numeric or does not exists in the query results.": [
-        "Coloana \"%(coloana) s\" nu este numerică sau nu există în rezultatele interogării."
+        "Coloana \"%(column)s\" nu este numerică sau nu există în rezultatele interogării."
       ],
       "Column Configuration": ["Configurare coloană"],
       "Column Data Types": ["Tipuri de date de coloană"],
@@ -1303,7 +1303,7 @@
       "Column name": ["Numele coloanei"],
       "Column name [%s] is duplicated": ["Numele coloanei [%s] este duplicat"],
       "Column referenced by aggregate is undefined: %(column)s": [
-        "Coloana la care se face referire de agregat este nedefinită: %(coloană) s"
+        "Coloana la care se face referire de agregat este nedefinită: %(column)s"
       ],
       "Column select": ["Coloana selectați"],
       "Column to use as the row labels of the dataframe. Leave empty if no index column": [
@@ -1314,7 +1314,7 @@
       ],
       "Columnar File": ["Fișier columnar"],
       "Columnar file \"%(columnar_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\"": [
-        "Fișier columnar \"%(columnar_filename) s\" încărcat în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\""
+        "Fișier columnar \"%(columnar_filename)s\" încărcat în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\""
       ],
       "Columnar to Database configuration": [
         "Columnar pentru configurarea bazei de date"
@@ -1325,10 +1325,10 @@
       ],
       "Columns To Read": ["Coloane de citit"],
       "Columns missing in dataset: %(invalid_columns)s": [
-        "Coloane care lipsesc în setul de date: %(Invalid_columns) s"
+        "Coloane care lipsesc în setul de date: %(invalid_columns)s"
       ],
       "Columns missing in datasource: %(invalid_columns)s": [
-        "Coloane care lipsesc în DataSource: %(Invalid_Columns) s"
+        "Coloane care lipsesc în DataSource: %(invalid_columns)s"
       ],
       "Columns subtotal position": ["Coloane Poziție subtotală"],
       "Columns to calculate distribution across.": [
@@ -1465,7 +1465,7 @@
       "Correlation": ["Corelație"],
       "Cost estimate": ["Cost estimat"],
       "Could not connect to database: \"%(database)s\"": [
-        "Nu s -a putut conecta la baza de date: \"%(baza de date) s\""
+        "Nu s -a putut conecta la baza de date: \"%(database)s\""
       ],
       "Could not determine datasource type": [
         "Nu a putut determina tipul de data de date"
@@ -1478,13 +1478,13 @@
         "Nu a putut încărca driverul bazei de date"
       ],
       "Could not load database driver: %(driver_name)s": [
-        "Nu s -a putut încărca driverul bazei de date: %(driver_name) s"
+        "Nu s -a putut încărca driverul bazei de date: %(driver_name)s"
       ],
       "Could not load database driver: {}": [
         "Nu s -a putut încărca driverul bazei de date: {}"
       ],
       "Could not resolve hostname: \"%(host)s\".": [
-        "Nu s -a putut rezolva numele de gazdă: \"%(gazdă) s\"."
+        "Nu s -a putut rezolva numele de gazdă: \"%(host)s\"."
       ],
       "Count": ["Numara"],
       "Count Unique Values": ["Numărați valori unice"],
@@ -1570,7 +1570,7 @@
       ],
       "DATETIME": ["DateTime"],
       "DB column %(col_name)s has unknown type: %(value_type)s": [
-        "Coloana DB %(Col_Name) s are un tip necunoscut: %(value_type) s"
+        "Coloana DB %(col_name)s are un tip necunoscut: %(value_type)s"
       ],
       "DEC": ["Dec"],
       "DELETE": ["ȘTERGE"],
@@ -1637,13 +1637,13 @@
       ],
       "Database": ["Bază de date"],
       "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for columnar uploads. Please contact your Superset Admin.": [
-        "Baza de date \"%(batabase_name) s\" schema \"%(schema_name) s\" nu este permisă pentru încărcarea coloanei. Vă rugăm să contactați administratorul superset."
+        "Baza de date \"%(batabase_name)s\" schema \"%(schema_name)s\" nu este permisă pentru încărcarea coloanei. Vă rugăm să contactați administratorul superset."
       ],
       "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for csv uploads. Please contact your Superset Admin.": [
-        "Baza de date \"%(batabase_name) s\" schema \"%(schema_name) s\" nu este permisă pentru încărcarea CSV. Vă rugăm să contactați administratorul superset."
+        "Baza de date \"%(batabase_name)s\" schema \"%(schema_name)s\" nu este permisă pentru încărcarea CSV. Vă rugăm să contactați administratorul superset."
       ],
       "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for excel uploads. Please contact your Superset Admin.": [
-        "Baza de date \"%(batabase_name) s\" schema \"%(schema_name) s\" nu este permisă pentru încărcări excelate. Vă rugăm să contactați administratorul superset."
+        "Baza de date \"%(batabase_name)s\" schema \"%(schema_name)s\" nu este permisă pentru încărcări excelate. Vă rugăm să contactați administratorul superset."
       ],
       "Database Connections": ["Conexiuni de bază de date"],
       "Database Creation Error": ["Eroare de creare a bazei de date"],
@@ -1674,7 +1674,7 @@
         "Baza de date nu este permisă să se schimbe"
       ],
       "Database not found.": ["Baza de date nu a fost găsită."],
-      "Database not found: %(id)s": ["Baza de date nu a fost găsită: %(ID) s"],
+      "Database not found: %(id)s": ["Baza de date nu a fost găsită: %(id)s"],
       "Database parameters are invalid.": [
         "Parametrii bazei de date nu sunt nevalide."
       ],
@@ -1684,7 +1684,7 @@
       "Databases": ["Baze de date"],
       "Dataframe Index": ["Indicele DataFrame"],
       "Dataset": ["Set de date"],
-      "Dataset %(name)s already exists": ["Set de date %(nume) s există deja"],
+      "Dataset %(name)s already exists": ["Set de date %(name)s există deja"],
       "Dataset Name": ["Numele setului de date"],
       "Dataset column delete failed.": ["Ștergerea coloanei de date a eșuat."],
       "Dataset column not found.": ["Coloana de date nu a fost găsită."],
@@ -1710,7 +1710,7 @@
         "Parametrii setului de date nu sunt invali."
       ],
       "Dataset schema is invalid, caused by: %(error)s": [
-        "Schema de date este nevalide, cauzată de: %(eroare) s"
+        "Schema de date este nevalide, cauzată de: %(error)s"
       ],
       "Dataset(s) could not be bulk deleted.": [
         "Seturile de date nu au putut fi șterse în vrac."
@@ -1834,15 +1834,15 @@
         "Ștergeți acest container și salvați pentru a elimina acest mesaj."
       ],
       "Deleted": ["Șters"],
-      "Deleted %(num)d annotation": ["Șters %(num) d Anotare"],
-      "Deleted %(num)d annotation layer": ["Șters %(NUM) D strat de adnotare"],
-      "Deleted %(num)d chart": ["Șters %(num) D grafic"],
-      "Deleted %(num)d css template": ["Ștergeți %(Num) D CSS șablon"],
-      "Deleted %(num)d dashboard": ["Tablou de bord șters %(Num) D"],
-      "Deleted %(num)d dataset": ["Șters %(num) D set de date"],
-      "Deleted %(num)d report schedule": ["Programul de raport șters %(Num) D"],
-      "Deleted %(num)d rules": ["Reguli șterse %(Num) D"],
-      "Deleted %(num)d saved query": ["Șters %(NUM) D interogare salvată"],
+      "Deleted %(num)d annotation": ["Șters %(num)d Anotare"],
+      "Deleted %(num)d annotation layer": ["Șters %(num)d strat de adnotare"],
+      "Deleted %(num)d chart": ["Șters %(num) grafic"],
+      "Deleted %(num)d css template": ["Ștergeți %(num) CSS șablon"],
+      "Deleted %(num)d dashboard": ["Tablou de bord șters %(num)d"],
+      "Deleted %(num)d dataset": ["Șters %(num)d set de date"],
+      "Deleted %(num)d report schedule": ["Programul de raport șters %(num)d"],
+      "Deleted %(num)d rules": ["Reguli șterse %(num)d"],
+      "Deleted %(num)d saved query": ["Șters %(num)d interogare salvată"],
       "Deleted %s": ["Șters %s"],
       "Deleted: %s": ["Șters: %s"],
       "Deleting a tab will remove all content within it. You may still reverse this action with the": [
@@ -1970,10 +1970,10 @@
       "Dual Line Chart": ["Diagrama de linie dublă"],
       "Duplicate": ["Duplicat"],
       "Duplicate column name(s): %(columns)s": [
-        "Numele (coloanele duplicat): %(coloane) s"
+        "Numele (coloanele duplicat): %(columns)s"
       ],
       "Duplicate column/metric labels: %(labels)s. Please make sure all columns and metrics have a unique label.": [
-        "Coloană duplicată/etichete metrice: %(etichete) s. Vă rugăm să vă asigurați că toate coloanele și valorile au o etichetă unică."
+        "Coloană duplicată/etichete metrice: %(labels)s. Vă rugăm să vă asigurați că toate coloanele și valorile au o etichetă unică."
       ],
       "Duplicate dataset": ["Set de date duplicat"],
       "Duplicate tab": ["Fila duplicată"],
@@ -2063,16 +2063,16 @@
         "Fie baza de date este scrisă incorect, fie nu există."
       ],
       "Either the username \"%(username)s\" or the password is incorrect.": [
-        "Fie numele de utilizator \"%(nume de utilizator) s\", fie parola este incorectă."
+        "Fie numele de utilizator \"%(username)s\", fie parola este incorectă."
       ],
       "Either the username \"%(username)s\", password, or database name \"%(database)s\" is incorrect.": [
-        "Fie numele de utilizator \"%(nume de utilizator) s\", parola sau numele bazei de date \"%(baza de date) s\" este incorectă."
+        "Fie numele de utilizator \"%(username)s\", parola sau numele bazei de date \"%(database)s\" este incorectă."
       ],
       "Either the username or the password is wrong.": [
         "Fie numele de utilizator, fie parola este greșită."
       ],
       "Elevation": ["Înălțime"],
-      "Email reports active": ["Rapoarte de e -mail active"],
+      "Email reports active": ["Rapoarte de e-mail active"],
       "Embed": ["Încorporare"],
       "Embed code": ["Cod ascuns"],
       "Embed dashboard": ["Încorpora tabloul de bord"],
@@ -2119,7 +2119,7 @@
         "Data de încheiere trebuie să fie după data începerii"
       ],
       "Engine \"%(engine)s\" cannot be configured through parameters.": [
-        "Motorul \"%(motor) s\" nu poate fi configurat prin parametri."
+        "Motorul \"%(engine)s\" nu poate fi configurat prin parametri."
       ],
       "Engine Parameters": ["Parametrii motorului"],
       "Engine spec \"InvalidEngine\" does not support being configured via individual parameters.": [
@@ -2137,7 +2137,7 @@
       "Enter duration in seconds": ["Introduceți durata în secunde"],
       "Enter fullscreen": ["Introduceți ecran complet"],
       "Enter the required %(dbModelName)s credentials": [
-        "Introduceți datele de acreditare la %(DBModelName))"
+        "Introduceți datele de acreditare la %(dbModelName)s)"
       ],
       "Entity": ["Entitate"],
       "Entity ID": ["ID de entitate"],
@@ -2145,16 +2145,16 @@
       "Equal to (=)": ["Egal cu (=)"],
       "Error": ["Eroare"],
       "Error in jinja expression in HAVING clause: %(msg)s": [
-        "Eroare în expresia Jinja în clauza: %(msg) s"
+        "Eroare în expresia Jinja în clauza: %(msg)s"
       ],
       "Error in jinja expression in RLS filters: %(msg)s": [
-        "Eroare în expresia Jinja în filtrele RLS: %(msg) s"
+        "Eroare în expresia Jinja în filtrele RLS: %(msg)s"
       ],
       "Error in jinja expression in WHERE clause: %(msg)s": [
-        "Eroare în expresia Jinja în Where Clauze: %(msg) s"
+        "Eroare în expresia Jinja în Where Clauze: %(msg)s"
       ],
       "Error in jinja expression in fetch values predicate: %(msg)s": [
-        "Eroare în expresia jinja în valorile preluatului predicat: %(msg) s"
+        "Eroare în expresia jinja în valorile preluatului predicat: %(msg)s"
       ],
       "Error loading chart datasources. Filters may not work correctly.": [
         "Eroare la încărcarea datelor de date. Este posibil ca filtrele să nu funcționeze corect."
@@ -2163,10 +2163,10 @@
       "Error while fetching charts": ["Eroare în timpul preluării graficelor"],
       "Error while fetching data: %s": ["Eroare în timp ce preiați date: %s"],
       "Error while rendering virtual dataset query: %(msg)s": [
-        "Eroare în timp ce redați interogarea setului de date virtual: %(msg) s"
+        "Eroare în timp ce redați interogarea setului de date virtual: %(msg)s"
       ],
-      "Error: %(error)s": ["Eroare: %(eroare) s"],
-      "Error: %(msg)s": ["Eroare: %(msg) s"],
+      "Error: %(error)s": ["Eroare: %(error)s"],
+      "Error: %(msg)s": ["Eroare: %(msg)s"],
       "Error: permalink state not found": [
         "Eroare: starea permanentă nu a fost găsită"
       ],
@@ -2190,7 +2190,7 @@
       "Examples": ["Exemple"],
       "Excel File": ["Fisier Excel"],
       "Excel file \"%(excel_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\"": [
-        "Fișierul Excel \"%(Excel_FileName) s\" încărcat în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\""
+        "Fișierul Excel \"%(excel_filename)s\" încărcat în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\""
       ],
       "Excel to Database configuration": [
         "Excel la configurația bazei de date"
@@ -2214,7 +2214,7 @@
       ],
       "Experimental": ["Experimental"],
       "Explore": ["Explora"],
-      "Explore - %(table)s": ["Explorați - %(tabel) s"],
+      "Explore - %(table)s": ["Explorați - %(table)s"],
       "Explore the result set in the data exploration view": [
         "Explorați rezultatul setat în vizualizarea explorării datelor"
       ],
@@ -2241,7 +2241,7 @@
         "Date suplimentare pentru a specifica metadatele tabelului. În prezent, acceptă metadatele formatului: `{\" certificare \": {\" certificat_by \":\" Echipa platformei de date \",\" Detalii \":\" Acest tabel este sursa adevărului. \" }, \"Warning_markdown\": \"Acesta este un avertisment.\" } `."
       ],
       "Extra field cannot be decoded by JSON. %(msg)s": [
-        "Câmpul suplimentar nu poate fi decodat de JSON. %(msg) s"
+        "Câmpul suplimentar nu poate fi decodat de JSON. %(msg)s"
       ],
       "Extra parameters for use in jinja templated queries": [
         "Parametri suplimentari pentru utilizare în interogările șablonate Jinja"
@@ -2264,7 +2264,7 @@
       "Failed at retrieving results": ["A eșuat la preluarea rezultatelor"],
       "Failed at stopping query. %s": ["A eșuat la oprirea interogării. %s"],
       "Failed to create report": ["Nu a reușit să creeze raport"],
-      "Failed to execute %(query)s": ["Nu a reușit să execute %(interogare) s"],
+      "Failed to execute %(query)s": ["Nu a reușit să execute %(query)s"],
       "Failed to generate chart edit URL": [
         "Nu a reușit să genereze URL -ul editarii graficului"
       ],
@@ -2294,10 +2294,10 @@
       "Fetched %s": ["A preluat %s"],
       "Fetching": ["FECTHING"],
       "Field cannot be decoded by JSON. %(json_error)s": [
-        "Câmpul nu poate fi decodat de JSON. %(json_error) s"
+        "Câmpul nu poate fi decodat de JSON. %(json_error)s"
       ],
       "Field cannot be decoded by JSON. %(msg)s": [
-        "Câmpul nu poate fi decodat de JSON. %(msg) s"
+        "Câmpul nu poate fi decodat de JSON. %(msg)s"
       ],
       "Field is required": ["Câmpul este obligatoriu"],
       "File": ["Fişier"],
@@ -2622,7 +2622,7 @@
       ],
       "Invalid JSON": ["JSON nevalid"],
       "Invalid advanced data type: %(advanced_data_type)s": [
-        "Tip de date avansat nevalid: %(avansat_data_type) s"
+        "Tip de date avansat nevalid: %(avansat_data_type)s"
       ],
       "Invalid certificate": ["Certificat nevalid"],
       "Invalid connection string, a valid string usually follows:\n'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'": [
@@ -2636,14 +2636,14 @@
       ],
       "Invalid cron expression": ["Expresie cron nevalide"],
       "Invalid cumulative operator: %(operator)s": [
-        "Operator cumulativ nevalid: %(operator) s"
+        "Operator cumulativ nevalid: %(operator)s"
       ],
       "Invalid date/timestamp format": ["Format de date nevalid/timestamp"],
       "Invalid filter configuration, please select a column": [
         "Configurare filtru nevalid, vă rugăm să selectați o coloană"
       ],
       "Invalid filter operation type: %(op)s": [
-        "Tipul de funcționare a filtrului nevalid: %(OP) S"
+        "Tipul de funcționare a filtrului nevalid: %(op)s"
       ],
       "Invalid geodetic string": ["Șir geodetic nevalid"],
       "Invalid geohash string": ["Șir de geohash nevalid"],
@@ -2651,29 +2651,27 @@
       "Invalid lat/long configuration.": ["Configurare nevalide lat/lungă."],
       "Invalid longitude/latitude": ["Longitudine/latitudine nevalide"],
       "Invalid metric object: %(metric)s": [
-        "Obiect metric nevalid: %(metrică) s"
+        "Obiect metric nevalid: %(metric)s"
       ],
       "Invalid numpy function: %(operator)s": [
-        "Funcție nevalide de numpy: %(operator) s"
+        "Funcție nevalide de numpy: %(operator)s"
       ],
       "Invalid options for %(rolling_type)s: %(options)s": [
-        "Opțiuni nevalide pentru %(Rolling_Type) S: %(Opțiuni) S"
+        "Opțiuni nevalide pentru %(rolling_type)s: %(options)s"
       ],
       "Invalid permalink key": ["Cheie permanentă nevalide"],
       "Invalid reference to column: \"%(column)s\"": [
-        "Referință nevalide la coloana: \"%(coloană) s\""
+        "Referință nevalide la coloana: \"%(column)s\""
       ],
       "Invalid result type: %(result_type)s": [
-        "Tip de rezultat nevalid: %(rezultat_type) s"
+        "Tip de rezultat nevalid: %(result_type)s"
       ],
-      "Invalid rolling_type: %(type)s": ["Rolling_type nevalid: %(tip) s"],
+      "Invalid rolling_type: %(type)s": ["Rolling_type nevalid: %(type)s"],
       "Invalid spatial point encountered: %s": [
         "Punct spațial nevalid întâlnit: %s"
       ],
       "Invalid state.": ["Stare nevalide."],
-      "Invalid tab ids: %s(tab_ids)": [
-        "ID -uri de file nevalide: %s (Tab_ids)"
-      ],
+      "Invalid tab ids: %s(tab_ids)": ["ID -uri de file nevalide: %s(tab_ids)"],
       "Inverse selection": ["Selecție inversă"],
       "Invert current page": ["Invertiți pagina curentă"],
       "Is certified": ["Este certificat"],
@@ -2930,9 +2928,7 @@
       "Metadata has been synced": ["Metadatele au fost sincronizate"],
       "Method": ["Metodă"],
       "Metric": ["Metric"],
-      "Metric '%(metric)s' does not exist": [
-        "Metrica „%(metrică) s” nu există"
-      ],
+      "Metric '%(metric)s' does not exist": ["Metrica „%(metric)s” nu există"],
       "Metric ascending": ["Metrică ascendentă"],
       "Metric assigned to the [X] axis": ["Metrică axată axei [x]"],
       "Metric assigned to the [Y] axis": ["Metrică atribuită axei [y]"],
@@ -3347,7 +3343,7 @@
       ],
       "Only single queries supported": ["Doar interogări unice acceptate"],
       "Only the following file extensions are allowed: %(allowed_extensions)s": [
-        "Sunt permise doar următoarele extensii de fișiere: %(permis_extensions) s"
+        "Sunt permise doar următoarele extensii de fișiere: %(allowed_extensions)s"
       ],
       "Oops! An error occurred!": ["! A aparut o eroare!"],
       "Opacity": ["Opacitate"],
@@ -3369,7 +3365,7 @@
       ],
       "Operator": ["Operator"],
       "Operator undefined for aggregator: %(name)s": [
-        "Operator nedefinit pentru agregator: %(nume) s"
+        "Operator nedefinit pentru agregator: %(name)s"
       ],
       "Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.": [
         "Conținut opțional CA_BUNDLE pentru a valida solicitările HTTPS. Disponibil numai pe anumite motoare ale bazei de date."
@@ -3556,10 +3552,10 @@
         "Vă rugăm să verificați întrebarea dvs. și să confirmați că toți parametrii șablonului sunt înconjurați de bretele duble, de exemplu, \"{{ds}}\". Apoi, încercați din nou să vă desfășurați interogarea."
       ],
       "Please check your query for syntax errors at or near \"%(syntax_error)s\". Then, try running your query again.": [
-        "Vă rugăm să verificați interogarea dvs. pentru erori de sintaxă la sau aproape „%(Syntax_error) s”. Apoi, încercați din nou să vă desfășurați interogarea."
+        "Vă rugăm să verificați interogarea dvs. pentru erori de sintaxă la sau aproape „%(syntax_error)s”. Apoi, încercați din nou să vă desfășurați interogarea."
       ],
       "Please check your query for syntax errors near \"%(server_error)s\". Then, try running your query again.": [
-        "Vă rugăm să verificați interogarea pentru erorile de sintaxă în apropierea „%(server_error) s”. Apoi, încercați din nou să vă desfășurați interogarea."
+        "Vă rugăm să verificați interogarea pentru erorile de sintaxă în apropierea „%(server_error)s”. Apoi, încercați din nou să vă desfășurați interogarea."
       ],
       "Please check your template parameters for syntax errors and make sure they match across your SQL query and Set Parameters. Then, try running your query again.": [
         "Vă rugăm să verificați parametrii șablonului pentru erori de sintaxă și asigurați -vă că se potrivesc cu interogarea SQL și setați parametrii. Apoi, încercați din nou să vă desfășurați interogarea."
@@ -3630,7 +3626,7 @@
       "Population age data": ["Datele privind vârsta populației"],
       "Port": ["Port"],
       "Port %(port)s on hostname \"%(hostname)s\" refused the connection.": [
-        "Port %(port) s pe numele gazdă \" %(hostname) s\" a refuzat conexiunea."
+        "Port %(port)s pe numele gazdă \" %(hostname)s\" a refuzat conexiunea."
       ],
       "Port out of range 0-65535": ["Port în afara razei 0-65535"],
       "Position JSON": ["Poziția JSON"],
@@ -3865,9 +3861,7 @@
       "Repulsion": ["Repulsie"],
       "Repulsion strength between nodes": ["Rezistența repulsiei între noduri"],
       "Request Permissions": ["Solicitați permisiuni"],
-      "Request is incorrect: %(error)s": [
-        "Cererea este incorectă: %(eroare) s"
-      ],
+      "Request is incorrect: %(error)s": ["Cererea este incorectă: %(error)s"],
       "Request is not JSON": ["Cererea nu este JSON"],
       "Request missing data field.": ["Solicitați câmpul de date lipsă."],
       "Request timed out": ["Cererea a expirat"],
@@ -3911,7 +3905,7 @@
       ],
       "Role": ["Rol"],
       "Role %(r)s was extended to provide the access to the datasource %(ds)s": [
-        "Rolul %(R) s a fost extins pentru a oferi accesul la data de date %(DS)"
+        "Rolul %(r)s s a fost extins pentru a oferi accesul la data de date %(ds)s"
       ],
       "Roles": ["Roluri"],
       "Roles is a list which defines access to the dashboard. Granting a role access to a dashboard will bypass dataset level checks. If no roles are defined, regular access permissions apply.": [
@@ -3965,7 +3959,7 @@
       "Run selection": ["Rulează selecția"],
       "Running": ["Alergare"],
       "Running statement %(statement_num)s out of %(statement_count)s": [
-        "Rularea declarației %(declarație_num) s din %(declarație_count) s"
+        "Rularea declarației %(statement_num)s din %(statement_count)s"
       ],
       "SAT": ["Sat"],
       "SEP": ["Sep"],
@@ -3976,7 +3970,7 @@
       "SQL Lab": ["SQL Lab"],
       "SQL Lab View": ["Vizualizare laborator SQL"],
       "SQL Lab uses your browser's local storage to store queries and results.\nCurrently, you are using %(currentUsage)s KB out of %(maxStorage)d KB storage space.\nTo keep SQL Lab from crashing, please delete some query tabs.\nYou can re-access these queries by using the Save feature before you delete the tab.\nNote that you will need to close other SQL Lab windows before you do this.": [
-        "SQL Lab folosește stocarea locală a browserului dvs. pentru a stoca întrebări și rezultate.\nÎn prezent, utilizați %(curentusage) s kb din %(maxstorage) D kb spațiu de stocare.\nPentru a împiedica SQL Lab să se prăbușească, vă rugăm să ștergeți unele file de interogare.\nPuteți re-accesa aceste întrebări folosind funcția de salvare înainte de a șterge fila\nRețineți că va trebui să închideți alte ferestre SQL Lab înainte de a face acest lucru."
+        "SQL Lab folosește stocarea locală a browserului dvs. pentru a stoca întrebări și rezultate.\nÎn prezent, utilizați %(curentUsage)s kb din %(maxStorage)d kb spațiu de stocare.\nPentru a împiedica SQL Lab să se prăbușească, vă rugăm să ștergeți unele file de interogare.\nPuteți re-accesa aceste întrebări folosind funcția de salvare înainte de a șterge fila\nRețineți că va trebui să închideți alte ferestre SQL Lab înainte de a face acest lucru."
       ],
       "SQL Query": ["Interogare SQL"],
       "SQL expression": ["Expresia SQL"],
@@ -4002,8 +3996,8 @@
         "Modul SSL „solicită” va fi utilizat."
       ],
       "START (INCLUSIVE)": ["Start (inclusiv)"],
-      "STEP %(stepCurr)s OF %(stepLast)s": [
-        "Etapa %(Stepcur) s de %(Steplast) s"
+      "STEP %(stepCurr)s OF %(stepCurr)s": [
+        "Etapa %(stepCurr)s de %(stepCurr)s"
       ],
       "STRING": ["ŞIR"],
       "SUN": ["SOARE"],
@@ -4117,7 +4111,7 @@
       "Secure extra": ["Sigur suplimentar"],
       "Security": ["Securitate"],
       "Security & Access": ["Securitate și acces"],
-      "See all %(tableName)s": ["Vezi toate %(tablename) s"],
+      "See all %(tableName)s": ["Vezi toate %(tableName)s"],
       "See less": ["Vezi mai puțin"],
       "See more": ["Vezi mai mult"],
       "See query details": ["Vezi detalii despre interogare"],
@@ -4496,7 +4490,7 @@
       "Started": ["A început"],
       "State": ["Stat"],
       "Statement %(statement_num)s out of %(statement_count)s": [
-        "Declarație %(declarație_num) s din %(declarație_count) s"
+        "Declarație %(statement_num)s din %(statement_count)s"
       ],
       "Statistical": ["Statistic"],
       "Status": ["stare"],
@@ -4586,7 +4580,7 @@
       "Sync columns from source": ["Sincronizați coloanele din sursă"],
       "Syntax": ["Sintaxă"],
       "Syntax Error: %(qualifier)s input \"%(input)s\" expecting \"%(expected)s": [
-        "Eroare de sintaxă:%(calificare) s intrare \"%(intrare) s\" așteptător \"%(așteptat) s"
+        "Eroare de sintaxă:%(qualifier)s intrare \"%(input)s\" așteptător \"%(expected)s"
       ],
       "TABLES": ["MESE"],
       "TEMPORAL X-AXIS": ["Axa X temporală"],
@@ -4597,16 +4591,16 @@
       "Tab title": ["Titlul filei"],
       "Table": ["Masa"],
       "Table %(table)s wasn't found in the database %(db)s": [
-        "Tabelul %(tabelul) nu a fost găsit în baza de date %(db) s"
+        "Tabelul %(table)s nu a fost găsit în baza de date %(db)s"
       ],
       "Table Exists": ["Tabelul există"],
       "Table Name": ["Numele mesei"],
       "Table View": ["Vizualizare tabel"],
       "Table [%(table_name)s] could not be found, please double check your database connection, schema, and table name": [
-        "Tabelul [%(table_name) s] nu a putut fi găsit, vă rugăm să verificați dublu conexiunea, schema și numele tabelului dvs. de bază de date"
+        "Tabelul [%(table_name)s] nu a putut fi găsit, vă rugăm să verificați dublu conexiunea, schema și numele tabelului dvs. de bază de date"
       ],
       "Table [%{table}s] could not be found, please double check your database connection, schema, and table name, error: {}": [
-        "Tabelul [%{tabel} s] nu a putut fi găsit, vă rugăm să verificați dublu conexiunea bazei de date, schema și numele tabelului, eroare: {}"
+        "Tabelul [%{tabel}s] nu a putut fi găsit, vă rugăm să verificați dublu conexiunea bazei de date, schema și numele tabelului, eroare: {}"
       ],
       "Table cache timeout": ["Timeout cache de masă"],
       "Table columns": ["Coloane de tabel"],
@@ -4616,7 +4610,7 @@
       ],
       "Table name undefined": ["Numele tabelului nedefinit"],
       "Table or View \"%(table)s\" does not exist.": [
-        "Tabelul sau vizualizarea „%(tabel) s” nu există."
+        "Tabelul sau vizualizarea „%(table)s” nu există."
       ],
       "Table that visualizes paired t-tests, which are used to understand statistical differences between groups.": [
         "Tabel care vizualizează testele T pereche, care sunt utilizate pentru a înțelege diferențele statistice între grupuri."
@@ -4767,22 +4761,22 @@
         "Obiectul motor_params este despachetat în apelul SQLalchemy.Create_Engine."
       ],
       "The following entries in `series_columns` are missing in `columns`: %(columns)s. ": [
-        "Următoarele înregistrări în `seria_columns` lipsesc în` coloane`: %(coloane) s."
+        "Următoarele înregistrări în `seria_columns` lipsesc în` coloane`: %(columns)s."
       ],
       "The function to use when aggregating points into groups": [
         "Funcția de utilizat atunci când agregerea punctelor în grupuri"
       ],
       "The host \"%(hostname)s\" might be down and can't be reached.": [
-        "Gazda „%(gazdă) s” s -ar putea să fie în scădere și nu poate fi atinsă."
+        "Gazda „%(hostname)s” s -ar putea să fie în scădere și nu poate fi atinsă."
       ],
       "The host \"%(hostname)s\" might be down, and can't be reached on port %(port)s.": [
-        "Gazda „ %(gazdă) s” s -ar putea scădea și nu poate fi accesată pe portul %(port) s."
+        "Gazda „ %(hostname)s”  s-ar putea scădea și nu poate fi accesată pe portul %(port)."
       ],
       "The host might be down, and can't be reached on the provided port.": [
         "Gazda ar putea fi în jos și nu poate fi accesată pe portul furnizat."
       ],
       "The hostname \"%(hostname)s\" cannot be resolved.": [
-        "Numele de gazdă \"%(gazdă) s\" nu poate fi rezolvat."
+        "Numele de gazdă \"%(hostname)s \" nu poate fi rezolvat."
       ],
       "The hostname provided can't be resolved.": [
         "Numele de gazdă furnizat nu poate fi rezolvat."
@@ -4801,10 +4795,10 @@
         "Valoarea maximă a valorilor. Este o configurație opțională"
       ],
       "The metadata_params in Extra field is not configured correctly. The key %(key)s is invalid.": [
-        "Metadata_params în câmpul suplimentar nu este configurat corect. Cheia %(cheie) s este nevalide."
+        "Metadata_params în câmpul suplimentar nu este configurat corect. Cheia %(key)s este nevalide."
       ],
       "The metadata_params in Extra field is not configured correctly. The key %{key}s is invalid.": [
-        "Metadata_params în câmpul suplimentar nu este configurat corect. Cheia %{cheie} s este nevalide."
+        "Metadata_params în câmpul suplimentar nu este configurat corect. Cheia %{key}s este nevalide."
       ],
       "The metadata_params object gets unpacked into the sqlalchemy.MetaData call.": [
         "Obiectul Metadata_Params este despachetat în apelul sqlalchemy.metadata."
@@ -4817,22 +4811,22 @@
         "Numărul de ore, negativ sau pozitiv, pentru a schimba coloana de timp. Aceasta poate fi folosită pentru a muta timpul UTC la ora locală."
       ],
       "The number of results displayed is limited to %(rows)d by the configuration DISPLAY_MAX_ROWS. Please add additional limits/filters or download to csv to see more rows up to the %(limit)d limit.": [
-        "Numărul de rezultate afișate este limitat la %(rânduri) D de configurația afișajului_max_rows. Vă rugăm să adăugați limite/filtre suplimentare sau descărcați la CSV pentru a vedea mai multe rânduri până la limita %(limită) D."
+        "Numărul de rezultate afișate este limitat la %(rows)d de configurația afișajului_max_rows. Vă rugăm să adăugați limite/filtre suplimentare sau descărcați la CSV pentru a vedea mai multe rânduri până la limita %(limită) D."
       ],
       "The number of results displayed is limited to %(rows)d. Please add additional limits/filters, download to csv, or contact an admin to see more rows up to the %(limit)d limit.": [
-        "Numărul de rezultate afișate este limitat la %(rânduri) d. Vă rugăm să adăugați limite/filtre suplimentare, descărcați la CSV sau contactați un administrator pentru a vedea mai multe rânduri până la limita %(limită) D."
+        "Numărul de rezultate afișate este limitat la %(rows)d. Vă rugăm să adăugați limite/filtre suplimentare, descărcați la CSV sau contactați un administrator pentru a vedea mai multe rânduri până la limita %(limită) D."
       ],
       "The number of rows displayed is limited to %(rows)d by the dropdown.": [
-        "Numărul de rânduri afișate este limitat la %(rânduri) D de dropdown."
+        "Numărul de rânduri afișate este limitat la %(rows)d de dropdown."
       ],
       "The number of rows displayed is limited to %(rows)d by the limit dropdown.": [
-        "Numărul de rânduri afișate este limitat la %(rânduri) D de meniul derulant."
+        "Numărul de rânduri afișate este limitat la %(rows)d de meniul derulant."
       ],
       "The number of rows displayed is limited to %(rows)d by the query": [
-        "Numărul de rânduri afișate este limitat la %(rânduri) D prin interogare"
+        "Numărul de rânduri afișate este limitat la %(rows)d prin interogare"
       ],
       "The number of rows displayed is limited to %(rows)d by the query and limit dropdown.": [
-        "Numărul de rânduri afișate este limitat la %(rânduri) D prin interogarea și derularea limită."
+        "Numărul de rânduri afișate este limitat la %(rows)d prin interogarea și derularea limită."
       ],
       "The number of seconds before expiring the cache": [
         "Numărul de secunde înainte de expirarea cache -ului"
@@ -4841,10 +4835,10 @@
         "Obiectul nu există în baza de date dată."
       ],
       "The parameter %(parameters)s in your query is undefined.": [
-        "Parametrul %(parametrii) din interogarea dvs. este nedefinit."
+        "Parametrul %(parameters)s din interogarea dvs. este nedefinit."
       ],
       "The password provided for username \"%(username)s\" is incorrect.": [
-        "Parola furnizată pentru numele de utilizator \"%(nume de utilizator) s\" este incorectă."
+        "Parola furnizată pentru numele de utilizator \"%(username)s \" este incorectă."
       ],
       "The password provided when connecting to a database is not valid.": [
         "Parola furnizată la conectarea la o bază de date nu este valabilă."
@@ -4893,12 +4887,12 @@
       ],
       "The query couldn't be loaded": ["Interogarea nu a putut fi încărcată"],
       "The query estimation was killed after %(sqllab_timeout)s seconds. It might be too complex, or the database might be under heavy load.": [
-        "Estimarea interogării a fost ucisă după %(SQLLAB_TIMEOUT) secunde. S -ar putea să fie prea complex, sau baza de date ar putea fi sub încărcare grea."
+        "Estimarea interogării a fost ucisă după %(sqllab_timeout) secunde. S -ar putea să fie prea complex, sau baza de date ar putea fi sub încărcare grea."
       ],
       "The query has a syntax error.": ["Interogarea are o eroare de sintaxă."],
       "The query returned no data": ["Interogarea nu a returnat nicio date"],
       "The query was killed after %(sqllab_timeout)s seconds. It might be too complex, or the database might be under heavy load.": [
-        "Interogarea a fost ucisă după %(SQLLAB_TIMEOUT) secunde. S -ar putea să fie prea complex, sau baza de date ar putea fi sub încărcare grea."
+        "Interogarea a fost ucisă după %(sqllab_timeout) secunde. S -ar putea să fie prea complex, sau baza de date ar putea fi sub încărcare grea."
       ],
       "The radius (in pixels) the algorithm uses to define a cluster. Choose 0 to turn off clustering, but beware that a large number of points (>1000) will cause lag.": [
         "Raza (în pixeli) algoritmul folosește pentru a defini un cluster. Alegeți 0 pentru a opri clusteringul, dar aveți grijă că un număr mare de puncte (> 1000) va provoca decalaj."
@@ -4917,10 +4911,10 @@
         "Bogatul Tooltip arată o listă cu toate seriile pentru acel moment în timp"
       ],
       "The schema \"%(schema)s\" does not exist. A valid schema must be used to run this query.": [
-        "Schema „%(schema) s” nu există. O schemă valabilă trebuie utilizată pentru a rula această interogare."
+        "Schema „%(schema)s” nu există. O schemă valabilă trebuie utilizată pentru a rula această interogare."
       ],
       "The schema \"%(schema_name)s\" does not exist. A valid schema must be used to run this query.": [
-        "Schema \"%(schema_name) s\" nu există. O schemă valabilă trebuie utilizată pentru a rula această interogare."
+        "Schema \"%(schema_name)s\" nu există. O schemă valabilă trebuie utilizată pentru a rula această interogare."
       ],
       "The schema was deleted or renamed in the database.": [
         "Schema a fost ștersă sau redenumită în baza de date."
@@ -4938,10 +4932,10 @@
         "Sarcina utilă depusă are schema incorectă."
       ],
       "The table \"%(table)s\" does not exist. A valid table must be used to run this query.": [
-        "Tabelul „%(tabelul) s” nu există. Un tabel valid trebuie utilizat pentru a rula această interogare."
+        "Tabelul „%(table)s” nu există. Un tabel valid trebuie utilizat pentru a rula această interogare."
       ],
       "The table \"%(table_name)s\" does not exist. A valid table must be used to run this query.": [
-        "Tabelul „%(table_name) s” nu există. Un tabel valid trebuie utilizat pentru a rula această interogare."
+        "Tabelul „%(table_name)s” nu există. Un tabel valid trebuie utilizat pentru a rula această interogare."
       ],
       "The table was created. As part of this two-phase configuration process, you should now click the edit button by the new table to configure it.": [
         "Masa a fost creată. Ca parte a acestui proces de configurare în două faze, acum ar trebui să faceți clic pe butonul Editare de către noul tabel pentru a-l configura."
@@ -4983,7 +4977,7 @@
         "Combinația de utilizator/parolă nu este valabilă (parolă incorectă pentru utilizator)."
       ],
       "The username \"%(username)s\" does not exist.": [
-        "Numele de utilizator \"%(nume de utilizator) s\" nu există."
+        "Numele de utilizator \"%(username)s\" nu există."
       ],
       "The username provided when connecting to a database is not valid.": [
         "Numele de utilizator furnizat la conectarea la o bază de date nu este valabilă."
@@ -5328,7 +5322,7 @@
       "Time Table View": ["Vizualizare a tabelului în timp"],
       "Time column": ["Coloană de timp"],
       "Time column \"%(col)s\" does not exist in dataset": [
-        "Coloana de timp \"%(col) s\" nu există în setul de date"
+        "Coloana de timp \"%(col)s\" nu există în setul de date"
       ],
       "Time column filter plugin": ["Plugin de filtrare a coloanelor de timp"],
       "Time column to apply dependent temporal filter to": [
@@ -5342,7 +5336,7 @@
         "Delta timpului în limbaj natural rămân\n                  (Exemplu: 24 de ore, 7 zile, 56 de săptămâni, 365 de zile)"
       ],
       "Time delta is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later].": [
-        "Timpul delta este ambiguu. Vă rugăm să specificați în urmă [%(Human_Readable) S] sau [%(Human_Readable) s mai târziu]."
+        "Timpul delta este ambiguu. Vă rugăm să specificați în urmă [%(human_readable)s] sau [%(human_readable)s mai târziu]."
       ],
       "Time filter": ["Filtru de timp"],
       "Time format": ["Format de timp"],
@@ -5359,7 +5353,7 @@
       "Time series columns": ["Coloane din seria de timp"],
       "Time shift": ["Schimbare de timp"],
       "Time string is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later].": [
-        "Șirul de timp este ambiguu. Vă rugăm să specificați în urmă [%(Human_Readable) S] sau [%(Human_Readable) s mai târziu]."
+        "Șirul de timp este ambiguu. Vă rugăm să specificați în urmă [%(human_readable)s] sau [%(human_readable)s mai târziu]."
       ],
       "Time-series Area Chart": ["Diagrama zonei de timp"],
       "Time-series Area chart are similar to line chart in that they represent variables with the same scale, but area charts stack the metrics on top of each other. An area chart in Superset can be stream, stack, or expand.": [
@@ -5421,8 +5415,8 @@
       "Top right": ["Sus în dreapta"],
       "Top to Bottom": ["De sus pana jos"],
       "Total": ["Total"],
-      "Total (%(aggfunc)s)": ["Total (%(Aggfunc) s) s)"],
-      "Total (%(aggregatorName)s)": ["Total (%(agregatoname) s) s)"],
+      "Total (%(aggfunc)s)": ["Total (%(aggfunc)s)"],
+      "Total (%(aggregatorName)s)": ["Total (%(aggregatorName)s)"],
       "Total value": ["Valoarea totală"],
       "Total: %s": ["Total: %s"],
       "Totals": ["Totaluri"],
@@ -5480,10 +5474,10 @@
         "Imposibil de adăugat o nouă filă la backend. Vă rugăm să contactați administratorul."
       ],
       "Unable to connect to catalog named \"%(catalog_name)s\".": [
-        "Imposibil de conectat la catalogul numit „%(catalog_name) s”."
+        "Imposibil de conectat la catalogul numit „%(catalog_name)s”."
       ],
       "Unable to connect to database \"%(database)s\".": [
-        "Imposibil de conectat la baza de date „%(baza de date) s”."
+        "Imposibil de conectat la baza de date „%(database)s”."
       ],
       "Unable to connect. Verify that the following roles are set on the service account: \"BigQuery Data Viewer\", \"BigQuery Metadata Viewer\", \"BigQuery Job User\" and the following permissions are set \"bigquery.readsessions.create\", \"bigquery.readsessions.getData\"": [
         "Imposibil de conectat. Verificați dacă următoarele roluri sunt setate pe contul de serviciu: „BigQuery Data Viewer”, „BigQuery Metadata Viewer”, „BigQuery Job User”, iar următoarele permisiuni sunt setate „BigQuery.Readsessions.Create”, „BigQuery.Readsessions.getData”"
@@ -5494,7 +5488,7 @@
       "Unable to decode value": ["Incapabil să decodeze valoarea"],
       "Unable to encode value": ["Incapabil să codifice valoarea"],
       "Unable to find such a holiday: [%(holiday)s]": [
-        "Imposibil de găsit o astfel de vacanță: [%(vacanță) s]"
+        "Imposibil de găsit o astfel de vacanță: [%(holiday)s]"
       ],
       "Unable to load columns for the selected table. Please select a different table.": [
         "Imposibil de încărcat coloane pentru tabelul selectat. Vă rugăm să selectați un alt tabel."
@@ -5512,13 +5506,13 @@
         "Incapabil să recupereze culorile tabloului de bord"
       ],
       "Unable to upload CSV file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\". Error message: %(error_msg)s": [
-        "Imposibil de încărcat fișierul CSV \"%(nume de fișier) s\" în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\". Mesaj de eroare: %(error_msg) s"
+        "Imposibil de încărcat fișierul CSV \"%(filename)s\" în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\". Mesaj de eroare: %(error_msg)s"
       ],
       "Unable to upload Columnar file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\". Error message: %(error_msg)s": [
-        "Imposibil de încărcat fișierul columnar \"%(nume de fișier) s\" în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\". Mesaj de eroare: %(error_msg) s"
+        "Imposibil de încărcat fișierul columnar \"%(filename)s\" în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\". Mesaj de eroare: %(error_msg)s"
       ],
       "Unable to upload Excel file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\". Error message: %(error_msg)s": [
-        "Imposibil de încărcat fișierul excel \"%(nume de fișier) s\" în tabel \"%(table_name) s\" în baza de date \"%(db_name) s\". Mesaj de eroare: %(error_msg) s"
+        "Imposibil de încărcat fișierul excel \"%(filename)s\" în tabel \"%(table_name)s\" în baza de date \"%(db_name)s\". Mesaj de eroare: %(error_msg)s"
       ],
       "Undefined": ["Nedefinit"],
       "Undefined window for rolling operation": [
@@ -5534,37 +5528,37 @@
       "Unexpected time range: %s": ["Interval de timp neașteptat: %s"],
       "Unknown": ["Necunoscut"],
       "Unknown MySQL server host \"%(hostname)s\".": [
-        "Gazda necunoscută a serverului MySQL \"%(gazdă) s\"."
+        "Gazda necunoscută a serverului MySQL \"%(hostname)s\"."
       ],
       "Unknown Presto Error": ["Eroare presto necunoscută"],
       "Unknown Status": ["Statut necunoscut"],
       "Unknown column used in orderby: %(col)s": [
-        "Coloană necunoscută folosită în ordin: %(col) s"
+        "Coloană necunoscută folosită în ordin: %(col)s"
       ],
       "Unknown error": ["Eroare necunoscută"],
       "Unknown input format": ["Format de intrare necunoscut"],
       "Unknown type": ["Tip necunoscut"],
       "Unknown value": ["Valoare necunoscută"],
       "Unsafe return type for function %(func)s: %(value_type)s": [
-        "Tip de retur nesigur pentru funcție %(func) s: %(value_type) s"
+        "Tip de retur nesigur pentru funcție %(func) s: %(value_type)s"
       ],
       "Unsafe template value for key %(key)s: %(value_type)s": [
-        "Valoare de șablon nesigură pentru cheie %(cheie) s: %(value_type) s"
+        "Valoare de șablon nesigură pentru cheie %(cheie) s: %(value_type)s"
       ],
       "Unsupported clause type: %(clause)s": [
-        "Tipul clauzei neacceptat: %(clauza) s"
+        "Tipul clauzei neacceptat: %(clause)s"
       ],
       "Unsupported post processing operation: %(operation)s": [
-        "Operația post -procesare neacceptată: %(operație) s"
+        "Operația post -procesare neacceptată: %(operation)s"
       ],
       "Unsupported return value for method %(name)s": [
-        "Valoarea de retur neacceptată pentru metoda %(nume) s"
+        "Valoarea de retur neacceptată pentru metoda %(name)s"
       ],
       "Unsupported template value for key %(key)s": [
-        "Valoarea șablonului neacceptat pentru cheia %(cheie) s"
+        "Valoarea șablonului neacceptat pentru cheia %(key)s"
       ],
       "Unsupported time grain: %(time_grain)s": [
-        "Cereale de timp neacceptate: %(Time_Grain) s"
+        "Cereale de timp neacceptate: %(time_grain)s"
       ],
       "Untitled Dataset": ["Set de date fără titlu"],
       "Untitled Query": ["Interogare fără titlu"],
@@ -5589,7 +5583,7 @@
       "Upload file to database": ["Încărcați fișierul în baza de date"],
       "Usage": ["Utilizare"],
       "Use \"%(menuName)s\" menu instead.": [
-        "Utilizați în schimb meniul „%(menuname) s”."
+        "Utilizați în schimb meniul „%(menuName)s”."
       ],
       "Use %s to open in a new tab.": [
         "Folosiți %s pentru a deschide într -o nouă filă."
@@ -5774,13 +5768,13 @@
         "Nu putem să ne conectăm la baza de date. Faceți clic pe „Vezi mai multe” pentru informații furnizate de baze de date care pot ajuta la rezolvarea problemei."
       ],
       "We can't seem to resolve column \"%(column)s\" at line %(location)s.": [
-        "Nu putem părea să rezolvăm coloana „ %(coloană) s” la linia %(locație) s."
+        "Nu putem părea să rezolvăm coloana „ %(column)s” la linia %(location)s."
       ],
       "We can't seem to resolve the column \"%(column_name)s\"": [
-        "Nu putem părea să rezolvăm coloana „%(nume de colț) s”"
+        "Nu putem părea să rezolvăm coloana „%(column_name)s”"
       ],
       "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
-        "Nu putem părea să rezolvăm coloana \" %(nume de colț) s\" la linia %(locație) s."
+        "Nu putem părea să rezolvăm coloana \" %(column_name)s\" la linia %(location)s."
       ],
       "We have the following keys: %s": ["Avem următoarele chei: %s"],
       "We were unable to active or deactivate this report.": [
@@ -5790,7 +5784,7 @@
         "Nu am putut să transmitem niciun control la trecerea la acest nou set de date."
       ],
       "We were unable to connect to your database named \"%(database)s\". Please verify your database name and try again.": [
-        "Nu am putut să ne conectăm la baza de date numită „%(baze de date) s”. Vă rugăm să verificați numele bazei de date și să încercați din nou."
+        "Nu am putut să ne conectăm la baza de date numită „%(database)s”. Vă rugăm să verificați numele bazei de date și să încercați din nou."
       ],
       "Web": ["Web"],
       "Wednesday": ["miercuri"],
@@ -6108,7 +6102,7 @@
         "Nu aveți permisiunea de a edita acest tablou de bord"
       ],
       "You do not have permissions to access the datasource(s): %(name)s.": [
-        "Nu aveți permisiuni pentru a accesa DataSource (e): %(nume) s."
+        "Nu aveți permisiuni pentru a accesa DataSource (e): %(name)s."
       ],
       "You do not have permissions to edit this dashboard.": [
         "Nu aveți permisiuni pentru a edita acest tablou de bord."
@@ -6130,7 +6124,7 @@
         "Nu aveți permisiunea de a modifica valoarea."
       ],
       "You don't have the rights to alter %(resource)s": [
-        "Nu aveți drepturile de a modifica %(resurse) s"
+        "Nu aveți drepturile de a modifica %(resource)s"
       ],
       "You don't have the rights to alter this chart": [
         "Nu aveți drepturile de a modifica acest grafic"
@@ -6156,7 +6150,7 @@
       "You have removed this filter.": ["Ați eliminat acest filtru."],
       "You have unsaved changes.": ["Aveți modificări nevăzute."],
       "You have used all %(historyLength)s undo slots and will not be able to fully undo subsequent actions. You may save your current state to reset the history.": [
-        "Ați utilizat toate sloturile de anulare (istoriclength) și nu veți putea anula pe deplin acțiunile ulterioare. Puteți salva starea actuală pentru a reseta istoricul."
+        "Ați utilizat toate sloturile de anulare %(historyLength)s și nu veți putea anula pe deplin acțiunile ulterioare. Puteți salva starea actuală pentru a reseta istoricul."
       ],
       "You must be a dataset owner in order to edit. Please reach out to a dataset owner to request modifications or edit access.": [
         "Trebuie să fiți un proprietar de set de date pentru a edita. Vă rugăm să contactați un proprietar de set de date pentru a solicita modificări sau pentru a edita accesul."
@@ -6211,7 +6205,7 @@
       ],
       "[Missing Dataset]": ["[Set de date lipsă]"],
       "[Superset] Access to the datasource %(name)s was granted": [
-        "[Superset] Accesul la DataSource %(nume) s a fost acordat"
+        "[Superset] Accesul la DataSource %(name)s a fost acordat"
       ],
       "[Untitled]": ["[Fără titlu]"],
       "[asc]": ["[ASC]"],
@@ -6292,7 +6286,7 @@
         "Cod Comitetul Olimpic Internațional (CIOC)"
       ],
       "column": ["coloană"],
-      "connecting to %(dbModelName)s.": ["conectarea la %(dbmodelname) s."],
+      "connecting to %(dbModelName)s.": ["conectarea la %(dbModelName)s."],
       "count": ["numara"],
       "create": ["crea"],
       "create a new chart": ["Creați un nou grafic"],
