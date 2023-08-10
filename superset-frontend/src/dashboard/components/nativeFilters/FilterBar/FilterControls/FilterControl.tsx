@@ -22,7 +22,7 @@ import {
   InPortal,
   OutPortal,
 } from 'react-reverse-portal';
-import { styled, SupersetTheme } from '@superset-ui/core';
+import { styled, SupersetTheme, t } from '@superset-ui/core';
 import { FormItem as StyledFormItem, Form } from 'src/components/Form';
 import { Tooltip } from 'src/components/Tooltip';
 import { FilterBarOrientation } from 'src/dashboard/types';
@@ -250,7 +250,7 @@ const FilterControl = ({
     () => (
       <FilterControlTitleBox>
         <FilterControlTitle data-test="filter-control-name">
-          {name}
+          {t(name)}
         </FilterControlTitle>
         {isRequired && <RequiredFieldIndicator />}
         {filter.description?.trim() && (

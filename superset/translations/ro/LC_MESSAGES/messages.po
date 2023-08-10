@@ -3201,6 +3201,14 @@ msgstr[0] "Proprietar grafic: %s"
 msgid "Chart Source"
 msgstr "Sursa grafică"
 
+#: superset-frontend/src/explore/components/ExploreViewContainer/index.jsx:617
+msgid "Years"
+msgstr "Ani"
+
+#: superset-frontend/src/explore/components/ExploreViewContainer/index.jsx:617
+msgid "Number of tenders"
+msgstr "Număr de licitații"
+
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:32
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/Bar/controlPanel.tsx:291
 msgid "Chart Title"
@@ -3383,7 +3391,7 @@ msgstr "Verificați pentru a include dropdown -ul coloanei de timp"
 
 #: superset-frontend/src/visualizations/FilterBox/controlPanel.jsx:76
 msgid "Check to include time grain dropdown"
-msgstr "Verificați pentru a include dropdown de cereale de timp"
+msgstr "Verificați pentru a include dropdown de unitate de timp"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:174
 msgid "Child label position"
@@ -10048,7 +10056,7 @@ msgstr "Suprapune o grilă hexagonală pe o hartă și agregă datele în limita
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:617
 msgid "Override time grain"
-msgstr "Înlocuiți cerealele de timp"
+msgstr "Înlocuiți unitățile de timp"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:599
 msgid "Override time range"
@@ -12512,6 +12520,35 @@ msgstr "Selectați prima valoare a filtrului în mod implicit"
 msgid "Select operator"
 msgstr "Selectați operator"
 
+#: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:362
+msgid "Currency"
+msgstr "Moneda"
+
+#: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:362
+msgid "Procuring Entity Name"
+msgstr "Numele Beneficiarului"
+
+#: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:362
+msgid "Classification"
+msgstr "Clasificare"
+
+#: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:362
+msgid "Main Procurement Category"
+msgstr "Categoria Principală de Achiziții"
+
+#: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:362
+msgid "Tender Status"
+msgstr "Starea licitației"
+
+#: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:362
+msgid "Award Criteria"
+msgstr "Criteriul de atribuire"
+
+#: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:362
+msgid "Award Status"
+msgstr "Starea atribuirii"
+
+
 #: superset-frontend/src/components/ListView/Filters/Select.tsx:99
 #: superset-frontend/src/components/ListView/Filters/Select.tsx:113
 msgid "Select or type a value"
@@ -12955,7 +12992,7 @@ msgstr "Afișați coloana de timp"
 
 #: superset-frontend/src/visualizations/FilterBox/controlPanel.jsx:74
 msgid "Show time grain dropdown"
-msgstr "Afișați dropdown de cereale de timp"
+msgstr "Afișați dropdown de unitate de timp"
 
 #: superset-frontend/plugins/plugin-chart-handlebars/src/plugin/controls/metrics.tsx:107
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:367
@@ -14481,7 +14518,7 @@ msgstr "Intervalul de timp pentru vizualizare. Toate timpurile relative, de ex. 
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:69
 msgid "The time unit for each block. Should be a smaller unit than domain_granularity. Should be larger or equal to Time Grain"
-msgstr "Unitatea de timp pentru fiecare bloc. Ar trebui să fie o unitate mai mică decât domeniul_granularitate. Ar trebui să fie mai mare sau egal cu cerealele de timp"
+msgstr "Unitatea de timp pentru fiecare bloc. Ar trebui să fie o unitate mai mică decât domeniul_granularitate. Ar trebui să fie mai mare sau egal cu unitățile de timp"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:53
 msgid "The time unit used for the grouping of blocks"
@@ -14830,7 +14867,7 @@ msgid ""
 "This controls whether the time grain field from the current\n"
 "                  view should be passed down to the chart containing the annotation data."
 msgstr ""
-"Acest lucru controlează dacă câmpul de cereale de timp din curent fu\n"
+"Acest lucru controlează dacă câmpul de unitate de timp din curent fu\n"
 "                  Vizualizarea trebuie transmisă în graficul care conține datele de adnotare."
 
 #: superset-frontend/src/dashboard/components/Header/index.jsx:320
@@ -15060,7 +15097,7 @@ msgstr "Format de timp"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:33
 msgid "Time Grain"
-msgstr "Cereale de timp"
+msgstr "Unitate de timp"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:34
 msgid "Time Granularity"
@@ -15191,15 +15228,15 @@ msgstr "Format de timp"
 #: superset-frontend/src/explore/constants.ts:134
 #: superset-frontend/src/filters/components/TimeGrain/index.ts:28
 msgid "Time grain"
-msgstr "Cereale de timp"
+msgstr "Unitate de timp"
 
 #: superset-frontend/src/filters/components/TimeGrain/index.ts:29
 msgid "Time grain filter plugin"
-msgstr "Plugin de filtru de cereale de timp"
+msgstr "Plugin de filtru de unitate de timp"
 
 #: superset/utils/pandas_postprocessing/prophet.py:114
 msgid "Time grain missing"
-msgstr "Lipsesc cereale de timp"
+msgstr "Lipsesc unitate de timp"
 
 #: superset-frontend/src/explore/constants.ts:135
 msgid "Time granularity"
@@ -15808,7 +15845,7 @@ msgstr "Valoarea șablonului neacceptat pentru cheia %(key)s"
 #: superset/utils/pandas_postprocessing/prophet.py:117
 #, python-format
 msgid "Unsupported time grain: %(time_grain)s"
-msgstr "Cereale de timp neacceptate: %(time_grain)s"
+msgstr "Unitate de timp neacceptată: %(time_grain)s"
 
 #: superset-frontend/src/SqlLab/components/SaveDatasetModal/index.tsx:148
 msgid "Untitled Dataset"
@@ -17124,6 +17161,42 @@ msgstr "Nu aveți drepturile de a modifica acest tablou de bord"
 #: superset-frontend/src/components/EditableTitle/index.tsx:213
 msgid "You don't have the rights to alter this title."
 msgstr "Nu aveți drepturile de a modifica acest titlu."
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Number of Tenders by Year and Status"
+msgstr "Numărul de licitații după an și stare"
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Tender Amount by Year and Classification Items"
+msgstr "Suma licitațiilor după an și clasificarea articolelor"
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Tender Amount By Status and Year"
+msgstr "Suma licitațiilor după stare și an"
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Awarded Amounts By Year and Award Status"
+msgstr "Suma atribuită după an și starea licitațiilor"
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Tenders By Status And Award Criteria"
+msgstr "Licitații după stare și criterii de atribuire"
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Top Suppliers By Year"
+msgstr "Top furnizori după an"
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Monthly Bids By Bid Status"
+msgstr "Oferte lunare după starea ofertei"
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Tenders"
+msgstr "Licitații"
+
+#: superset-frontend/src/components/EditableTitle/index.tsx:211
+msgid "Bids and Awards"
+msgstr "Oferte și Atribuiri"
 
 #: superset/views/core.py:951
 msgid "You don't have the rights to create a chart"

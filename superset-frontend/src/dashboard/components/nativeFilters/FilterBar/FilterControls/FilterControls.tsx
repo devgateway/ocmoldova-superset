@@ -193,8 +193,8 @@ const FilterControls: FC<FilterControlsProps> = ({
             : t(
                 'Applied filters: %s',
                 activeOverflowedFiltersInScope
-                  .map(filter => filter.name)
-                  .join(', '),
+                .map(filter => filter.name ? t(filter.name) : '')
+                .join(', '),
               )
         }
         dropdownContent={
