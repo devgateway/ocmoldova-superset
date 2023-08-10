@@ -1104,6 +1104,8 @@
       "Chart Orientation": ["Orientarea graficului"],
       "Chart Owner: %s": ["Proprietar grafic: %s"],
       "Chart Source": ["Sursa grafică"],
+      "Years": ["Ani"],
+      "Number of tenders": ["Număr de licitații"],
       "Chart Title": ["Titlul graficului"],
       "Chart [%s] has been overwritten": ["Graficul [%s] a fost suprascris"],
       "Chart [%s] has been saved": ["Graficul [%s] a fost salvat"],
@@ -1164,7 +1166,7 @@
         "Verificați pentru a include dropdown -ul coloanei de timp"
       ],
       "Check to include time grain dropdown": [
-        "Verificați pentru a include dropdown de cereale de timp"
+        "Verificați pentru a include dropdown de unitate de timp"
       ],
       "Child label position": ["Poziția etichetei pentru copii"],
       "Choice of [Label] must be present in [Group By]": [
@@ -3413,7 +3415,7 @@
       "Overlays a hexagonal grid on a map, and aggregates data within the boundary of each cell.": [
         "Suprapune o grilă hexagonală pe o hartă și agregă datele în limita fiecărei celule."
       ],
-      "Override time grain": ["Înlocuiți cerealele de timp"],
+      "Override time grain": ["Înlocuiți unitățile de timp"],
       "Override time range": ["Trecerea intervalului de timp"],
       "Overwrite": ["Suprascrie"],
       "Overwrite & Explore": ["Suprascrieți și explorați"],
@@ -4178,6 +4180,13 @@
         "Selectați prima valoare a filtrului în mod implicit"
       ],
       "Select operator": ["Selectați operator"],
+      "Currency": ["Moneda"],
+      "Procuring Entity Name": ["Numele Beneficiarului"],
+      "Classification": ["Clasificare"],
+      "Main Procurement Category": ["Categoria Principală de Achiziții"],
+      "Tender Status": ["Starea licitației"],
+      "Award Criteria": ["Criteriul de atribuire"],
+      "Award Status": ["Starea atribuirii"],
       "Select or type a value": ["Selectați sau tastați o valoare"],
       "Select or type dataset name": [
         "Selectați sau tastați numele setului de date"
@@ -4323,7 +4332,7 @@
       "Show split lines": ["Afișați linii împărțite"],
       "Show the value on top of the bar": ["Afișați valoarea deasupra barei"],
       "Show time column": ["Afișați coloana de timp"],
-      "Show time grain dropdown": ["Afișați dropdown de cereale de timp"],
+      "Show time grain dropdown": ["Afișați dropdown de unitate de timp"],
       "Show total aggregations of selected metrics. Note that row limit does not apply to the result.": [
         "Afișați agregări totale ale valorilor selectate. Rețineți că limita de rând nu se aplică rezultatului."
       ],
@@ -4959,7 +4968,7 @@
         "Intervalul de timp pentru vizualizare. Toate timpurile relative, de ex. „Luna trecută”, „ultimele 7 zile”, „acum”, etc. sunt evaluate pe server folosind ora locală a serverului (SANS Timezone). Toate tipurile de instrumente și timpii de deținător sunt exprimate în UTC (SANS orar orar). Timestamp -urile sunt apoi evaluate de baza de date folosind fusul orar local al motorului. Notă se poate seta explicit fusul orar conform formatului ISO 8601 dacă specificați fie timpul de pornire și/sau de sfârșit."
       ],
       "The time unit for each block. Should be a smaller unit than domain_granularity. Should be larger or equal to Time Grain": [
-        "Unitatea de timp pentru fiecare bloc. Ar trebui să fie o unitate mai mică decât domeniul_granularitate. Ar trebui să fie mai mare sau egal cu cerealele de timp"
+        "Unitatea de timp pentru fiecare bloc. Ar trebui să fie o unitate mai mică decât domeniul_granularitate. Ar trebui să fie mai mare sau egal cu unitățile de timp"
       ],
       "The time unit used for the grouping of blocks": [
         "Unitatea de timp utilizată pentru gruparea blocurilor"
@@ -5171,7 +5180,7 @@
         "Acest lucru controlează dacă câmpul „time_range” din curent fu\n                  Vizualizarea trebuie transmisă în graficul care conține datele de adnotare."
       ],
       "This controls whether the time grain field from the current\n                  view should be passed down to the chart containing the annotation data.": [
-        "Acest lucru controlează dacă câmpul de cereale de timp din curent fu\n                  Vizualizarea trebuie transmisă în graficul care conține datele de adnotare."
+        "Acest lucru controlează dacă câmpul de unitate de timp din curent fu\n                  Vizualizarea trebuie transmisă în graficul care conține datele de adnotare."
       ],
       "This dashboard is currently auto refreshing; the next auto refresh will be in %s.": [
         "Acest tablou de bord este în prezent răcoritor automat; Următoarea actualizare automată va fi în %s."
@@ -5296,7 +5305,7 @@
       "Time Column": ["Coloană de timp"],
       "Time Comparison": ["Comparație de timp"],
       "Time Format": ["Format de timp"],
-      "Time Grain": ["Cereale de timp"],
+      "Time Grain": ["Unitate de timp"],
       "Time Granularity": ["Granularitate de timp"],
       "Time Lag": ["Decalaj"],
       "Time Range": ["Interval de timp"],
@@ -5340,9 +5349,9 @@
       ],
       "Time filter": ["Filtru de timp"],
       "Time format": ["Format de timp"],
-      "Time grain": ["Cereale de timp"],
-      "Time grain filter plugin": ["Plugin de filtru de cereale de timp"],
-      "Time grain missing": ["Lipsesc cereale de timp"],
+      "Time grain": ["Unitate de timp"],
+      "Time grain filter plugin": ["Plugin de filtru de unitate de timp"],
+      "Time grain missing": ["Lipsesc unitate de timp"],
       "Time granularity": ["Granularitate de timp"],
       "Time in seconds": ["Timp în secunde"],
       "Time lag": ["Decalaj"],
@@ -5558,7 +5567,7 @@
         "Valoarea șablonului neacceptat pentru cheia %(key)s"
       ],
       "Unsupported time grain: %(time_grain)s": [
-        "Cereale de timp neacceptate: %(time_grain)s"
+        "Unitate de timp neacceptată: %(time_grain)s"
       ],
       "Untitled Dataset": ["Set de date fără titlu"],
       "Untitled Query": ["Interogare fără titlu"],
@@ -6135,6 +6144,25 @@
       "You don't have the rights to alter this title.": [
         "Nu aveți drepturile de a modifica acest titlu."
       ],
+      "Number of Tenders by Year and Status": [
+        "Numărul de licitații după an și stare"
+      ],
+      "Tender Amount by Year and Classification Items": [
+        "Suma licitațiilor după an și clasificarea articolelor"
+      ],
+      "Tender Amount By Status and Year": [
+        "Suma licitațiilor după stare și an"
+      ],
+      "Awarded Amounts By Year and Award Status": [
+        "Suma atribuită după an și starea licitațiilor"
+      ],
+      "Tenders By Status And Award Criteria": [
+        "Licitații după stare și criterii de atribuire"
+      ],
+      "Top Suppliers By Year": ["Top furnizori după an"],
+      "Monthly Bids By Bid Status": ["Oferte lunare după starea ofertei"],
+      "Tenders": ["Licitații"],
+      "Bids and Awards": ["Oferte și Atribuiri"],
       "You don't have the rights to create a chart": [
         "Nu aveți drepturile de a crea un grafic"
       ],
