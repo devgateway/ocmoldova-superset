@@ -54,9 +54,7 @@ import {
   getConnectionAlert,
   useImportResource,
 } from 'src/views/CRUD/hooks';
-import { useCommonConf } from 'src/features/databases/state';
-import Loading from 'src/components/Loading';
-import { isEmpty, pick } from 'lodash';
+import { useCommonConf } from 'src/views/CRUD/data/database/state';
 import {
   DatabaseObject,
   DatabaseForm,
@@ -64,7 +62,9 @@ import {
   CatalogObject,
   Engines,
   ExtraJson,
-} from '../types';
+} from 'src/views/CRUD/data/database/types';
+import Loading from 'src/components/Loading';
+import { isEmpty, pick } from 'lodash';
 import ExtraOptions from './ExtraOptions';
 import SqlAlchemyForm from './SqlAlchemyForm';
 import DatabaseConnectionForm from './DatabaseConnectionForm';
@@ -542,7 +542,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     'database',
     t('database'),
     addDangerToast,
-    'connection',
   );
 
   const [tabKey, setTabKey] = useState<string>(DEFAULT_TAB_KEY);
@@ -556,58 +555,24 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
   const [isLoading, setLoading] = useState<boolean>(false);
   const [testInProgress, setTestInProgress] = useState<boolean>(false);
   const [passwords, setPasswords] = useState<Record<string, string>>({});
-  const [sshTunnelPasswords, setSSHTunnelPasswords] = useState<
-    Record<string, string>
-  >({});
-  const [sshTunnelPrivateKeys, setSSHTunnelPrivateKeys] = useState<
-    Record<string, string>
-  >({});
-  const [sshTunnelPrivateKeyPasswords, setSSHTunnelPrivateKeyPasswords] =
-    useState<Record<string, string>>({});
   const [confirmedOverwrite, setConfirmedOverwrite] = useState<boolean>(false);
   const [fileList, setFileList] = useState<UploadFile[]>([]);
   const [importingModal, setImportingModal] = useState<boolean>(false);
   const [importingErrorMessage, setImportingErrorMessage] = useState<string>();
   const [passwordFields, setPasswordFields] = useState<string[]>([]);
-  const [sshTunnelPasswordFields, setSSHTunnelPasswordFields] = useState<
-    string[]
-  >([]);
-  const [sshTunnelPrivateKeyFields, setSSHTunnelPrivateKeyFields] = useState<
-    string[]
-  >([]);
-  const [
-    sshTunnelPrivateKeyPasswordFields,
-    setSSHTunnelPrivateKeyPasswordFields,
-  ] = useState<string[]>([]);
-  const [extraExtensionComponentState, setExtraExtensionComponentState] =
-    useState<object>({});
 
   const SSHTunnelSwitchComponent =
     extensionsRegistry.get('ssh_tunnel.form.switch') ?? SSHTunnelSwitch;
 
   const [useSSHTunneling, setUseSSHTunneling] = useState<boolean>(false);
 
-  let dbConfigExtraExtension = extensionsRegistry.get(
-    'databaseconnection.extraOption',
-  );
-
-  if (dbConfigExtraExtension) {
-    // add method for db modal to store data
-    dbConfigExtraExtension = {
-      ...dbConfigExtraExtension,
-      onEdit: componentState => {
-        setExtraExtensionComponentState({
-          ...extraExtensionComponentState,
-          ...componentState,
-        });
-      },
-    };
-  }
-
   const conf = useCommonConf();
   const dbImages = getDatabaseImages();
   const connectionAlert = getConnectionAlert();
   const isEditMode = !!databaseId;
+  const sslForced = isFeatureEnabled(
+    FeatureFlag.FORCE_DATABASE_CONNECTIONS_SSL,
+  );
   const disableSSHTunnelingForEngine = (
     availableDbs?.databases?.find(
       (DB: DatabaseObject) =>
@@ -692,13 +657,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     setImportingModal(false);
     setImportingErrorMessage('');
     setPasswordFields([]);
-    setSSHTunnelPasswordFields([]);
-    setSSHTunnelPrivateKeyFields([]);
-    setSSHTunnelPrivateKeyPasswordFields([]);
     setPasswords({});
-    setSSHTunnelPasswords({});
-    setSSHTunnelPrivateKeys({});
-    setSSHTunnelPrivateKeyPasswords({});
     setConfirmedOverwrite(false);
     setUseSSHTunneling(false);
     onHide();
@@ -719,9 +678,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     state: {
       alreadyExists,
       passwordsNeeded,
-      sshPasswordNeeded,
-      sshPrivateKeyNeeded,
-      sshPrivateKeyPasswordNeeded,
       loading: importLoading,
       failed: importErrored,
     },
@@ -735,19 +691,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
   };
 
   const onSave = async () => {
-    let dbConfigExtraExtensionOnSaveError;
-    dbConfigExtraExtension
-      ?.onSave(extraExtensionComponentState, db)
-      .then(({ error }: { error: any }) => {
-        if (error) {
-          dbConfigExtraExtensionOnSaveError = error;
-          addDangerToast(error);
-        }
-      });
-    if (dbConfigExtraExtensionOnSaveError) {
-      setLoading(false);
-      return;
-    }
     // Clone DB object
     const dbToUpdate = { ...(db || {}) };
 
@@ -763,18 +706,15 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
         });
       }
 
-      // only do validation for non ssh tunnel connections
-      if (!dbToUpdate?.ssh_tunnel) {
-        // make sure that button spinner animates
-        setLoading(true);
-        const errors = await getValidation(dbToUpdate, true);
-        if ((validationErrors && !isEmpty(validationErrors)) || errors) {
-          setLoading(false);
-          return;
-        }
-        // end spinner animation
+      // make sure that button spinner animates
+      setLoading(true);
+      const errors = await getValidation(dbToUpdate, true);
+      if ((validationErrors && !isEmpty(validationErrors)) || errors) {
         setLoading(false);
+        return;
       }
+      setLoading(false);
+      // end spinner animation
 
       const parameters_schema = isEditMode
         ? dbToUpdate.parameters_schema?.properties
@@ -839,18 +779,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
       );
       if (result) {
         if (onDatabaseAdd) onDatabaseAdd();
-        dbConfigExtraExtension
-          ?.onSave(extraExtensionComponentState, db)
-          .then(({ error }: { error: any }) => {
-            if (error) {
-              dbConfigExtraExtensionOnSaveError = error;
-              addDangerToast(error);
-            }
-          });
-        if (dbConfigExtraExtensionOnSaveError) {
-          setLoading(false);
-          return;
-        }
         if (!editNewDb) {
           onClose();
           addSuccessToast(t('Database settings updated'));
@@ -865,19 +793,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
       if (dbId) {
         setHasConnectedDb(true);
         if (onDatabaseAdd) onDatabaseAdd();
-        dbConfigExtraExtension
-          ?.onSave(extraExtensionComponentState, db)
-          .then(({ error }: { error: any }) => {
-            if (error) {
-              dbConfigExtraExtensionOnSaveError = error;
-              addDangerToast(error);
-            }
-          });
-        if (dbConfigExtraExtensionOnSaveError) {
-          setLoading(false);
-          return;
-        }
-
         if (useTabLayout) {
           // tab layout only has one step
           // so it should close immediately on save
@@ -896,9 +811,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
       const dbId = await importResource(
         fileList[0].originFileObj,
         passwords,
-        sshTunnelPasswords,
-        sshTunnelPrivateKeys,
-        sshTunnelPrivateKeyPasswords,
         confirmedOverwrite,
       );
       if (dbId) {
@@ -986,8 +898,8 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
           ?.sort((a: DatabaseForm, b: DatabaseForm) =>
             a.name.localeCompare(b.name),
           )
-          .map((database: DatabaseForm, index: number) => (
-            <AntdSelect.Option value={database.name} key={`database-${index}`}>
+          .map((database: DatabaseForm) => (
+            <AntdSelect.Option value={database.name} key={database.name}>
               {database.name}
             </AntdSelect.Option>
           ))}
@@ -1071,13 +983,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
       setImportingModal(false);
       setImportingErrorMessage('');
       setPasswordFields([]);
-      setSSHTunnelPasswordFields([]);
-      setSSHTunnelPrivateKeyFields([]);
-      setSSHTunnelPrivateKeyPasswordFields([]);
       setPasswords({});
-      setSSHTunnelPasswords({});
-      setSSHTunnelPrivateKeys({});
-      setSSHTunnelPrivateKeyPasswords({});
     }
     setDB({ type: ActionType.reset });
     setFileList([]);
@@ -1087,13 +993,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     if (
       importLoading ||
       (alreadyExists.length && !confirmedOverwrite) ||
-      (passwordsNeeded.length && JSON.stringify(passwords) === '{}') ||
-      (sshPasswordNeeded.length &&
-        JSON.stringify(sshTunnelPasswords) === '{}') ||
-      (sshPrivateKeyNeeded.length &&
-        JSON.stringify(sshTunnelPrivateKeys) === '{}') ||
-      (sshPrivateKeyPasswordNeeded.length &&
-        JSON.stringify(sshTunnelPrivateKeyPasswords) === '{}')
+      (passwordsNeeded.length && JSON.stringify(passwords) === '{}')
     )
       return true;
     return false;
@@ -1198,24 +1098,13 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
       !importLoading &&
       !alreadyExists.length &&
       !passwordsNeeded.length &&
-      !sshPasswordNeeded.length &&
-      !sshPrivateKeyNeeded.length &&
-      !sshPrivateKeyPasswordNeeded.length &&
       !isLoading && // This prevents a double toast for non-related imports
       !importErrored // This prevents a success toast on error
     ) {
       onClose();
       addSuccessToast(t('Database connected'));
     }
-  }, [
-    alreadyExists,
-    passwordsNeeded,
-    importLoading,
-    importErrored,
-    sshPasswordNeeded,
-    sshPrivateKeyNeeded,
-    sshPrivateKeyPasswordNeeded,
-  ]);
+  }, [alreadyExists, passwordsNeeded, importLoading, importErrored]);
 
   useEffect(() => {
     if (show) {
@@ -1265,18 +1154,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
   }, [passwordsNeeded]);
 
   useEffect(() => {
-    setSSHTunnelPasswordFields([...sshPasswordNeeded]);
-  }, [sshPasswordNeeded]);
-
-  useEffect(() => {
-    setSSHTunnelPrivateKeyFields([...sshPrivateKeyNeeded]);
-  }, [sshPrivateKeyNeeded]);
-
-  useEffect(() => {
-    setSSHTunnelPrivateKeyPasswordFields([...sshPrivateKeyPasswordNeeded]);
-  }, [sshPrivateKeyPasswordNeeded]);
-
-  useEffect(() => {
     if (db && isSSHTunneling) {
       setUseSSHTunneling(!isEmpty(db?.ssh_tunnel));
     }
@@ -1285,13 +1162,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
   const onDbImport = async (info: UploadChangeParam) => {
     setImportingErrorMessage('');
     setPasswordFields([]);
-    setSSHTunnelPasswordFields([]);
-    setSSHTunnelPrivateKeyFields([]);
-    setSSHTunnelPrivateKeyPasswordFields([]);
     setPasswords({});
-    setSSHTunnelPasswords({});
-    setSSHTunnelPrivateKeys({});
-    setSSHTunnelPrivateKeyPasswords({});
     setImportingModal(true);
     setFileList([
       {
@@ -1304,33 +1175,15 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     const dbId = await importResource(
       info.file.originFileObj,
       passwords,
-      sshTunnelPasswords,
-      sshTunnelPrivateKeys,
-      sshTunnelPrivateKeyPasswords,
       confirmedOverwrite,
     );
     if (dbId) onDatabaseAdd?.();
   };
 
   const passwordNeededField = () => {
-    if (
-      !passwordFields.length &&
-      !sshTunnelPasswordFields.length &&
-      !sshTunnelPrivateKeyFields.length &&
-      !sshTunnelPrivateKeyPasswordFields.length
-    )
-      return null;
+    if (!passwordFields.length) return null;
 
-    const files = [
-      ...new Set([
-        ...passwordFields,
-        ...sshTunnelPasswordFields,
-        ...sshTunnelPrivateKeyFields,
-        ...sshTunnelPrivateKeyPasswordFields,
-      ]),
-    ];
-
-    return files.map(database => (
+    return passwordFields.map(database => (
       <>
         <StyledAlertMargin>
           <Alert
@@ -1344,77 +1197,19 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
             )}
           />
         </StyledAlertMargin>
-        {passwordFields?.indexOf(database) >= 0 && (
-          <ValidatedInput
-            id="password_needed"
-            name="password_needed"
-            required
-            value={passwords[database]}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setPasswords({ ...passwords, [database]: event.target.value })
-            }
-            validationMethods={{ onBlur: () => {} }}
-            errorMessage={validationErrors?.password_needed}
-            label={t('%s PASSWORD', database.slice(10))}
-            css={formScrollableStyles}
-          />
-        )}
-        {sshTunnelPasswordFields?.indexOf(database) >= 0 && (
-          <ValidatedInput
-            id="ssh_tunnel_password_needed"
-            name="ssh_tunnel_password_needed"
-            required
-            value={sshTunnelPasswords[database]}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setSSHTunnelPasswords({
-                ...sshTunnelPasswords,
-                [database]: event.target.value,
-              })
-            }
-            validationMethods={{ onBlur: () => {} }}
-            errorMessage={validationErrors?.ssh_tunnel_password_needed}
-            label={t('%s SSH TUNNEL PASSWORD', database.slice(10))}
-            css={formScrollableStyles}
-          />
-        )}
-        {sshTunnelPrivateKeyFields?.indexOf(database) >= 0 && (
-          <ValidatedInput
-            id="ssh_tunnel_private_key_needed"
-            name="ssh_tunnel_private_key_needed"
-            required
-            value={sshTunnelPrivateKeys[database]}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setSSHTunnelPrivateKeys({
-                ...sshTunnelPrivateKeys,
-                [database]: event.target.value,
-              })
-            }
-            validationMethods={{ onBlur: () => {} }}
-            errorMessage={validationErrors?.ssh_tunnel_private_key_needed}
-            label={t('%s SSH TUNNEL PRIVATE KEY', database.slice(10))}
-            css={formScrollableStyles}
-          />
-        )}
-        {sshTunnelPrivateKeyPasswordFields?.indexOf(database) >= 0 && (
-          <ValidatedInput
-            id="ssh_tunnel_private_key_password_needed"
-            name="ssh_tunnel_private_key_password_needed"
-            required
-            value={sshTunnelPrivateKeyPasswords[database]}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setSSHTunnelPrivateKeyPasswords({
-                ...sshTunnelPrivateKeyPasswords,
-                [database]: event.target.value,
-              })
-            }
-            validationMethods={{ onBlur: () => {} }}
-            errorMessage={
-              validationErrors?.ssh_tunnel_private_key_password_needed
-            }
-            label={t('%s SSH TUNNEL PRIVATE KEY PASSWORD', database.slice(10))}
-            css={formScrollableStyles}
-          />
-        )}
+        <ValidatedInput
+          id="password_needed"
+          name="password_needed"
+          required
+          value={passwords[database]}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            setPasswords({ ...passwords, [database]: event.target.value })
+          }
+          validationMethods={{ onBlur: () => {} }}
+          errorMessage={validationErrors?.password_needed}
+          label={t('%s PASSWORD', database.slice(10))}
+          css={formScrollableStyles}
+        />
       </>
     ));
   };
@@ -1595,7 +1390,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
       <DatabaseConnectionForm
         isEditMode={isEditMode}
         db={db as DatabaseObject}
-        sslForced={false}
+        sslForced={sslForced}
         dbModel={dbModel}
         onAddTableCatalog={() => {
           setDB({ type: ActionType.addTableCatalogSheet });
@@ -1636,7 +1431,18 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
         validationErrors={validationErrors}
         getPlaceholder={getPlaceholder}
       />
-      {db?.parameters?.ssh && (
+      <SSHTunnelContainer>
+        <SSHTunnelSwitchComponent
+          isEditMode={isEditMode}
+          dbFetched={dbFetched}
+          disableSSHTunnelingForEngine={disableSSHTunnelingForEngine}
+          useSSHTunneling={useSSHTunneling}
+          setUseSSHTunneling={setUseSSHTunneling}
+          setDB={setDB}
+          isSSHTunneling={isSSHTunneling}
+        />
+      </SSHTunnelContainer>
+      {useSSHTunneling && (
         <SSHTunnelContainer>{renderSSHTunnelForm()}</SSHTunnelContainer>
       )}
     </>
@@ -1646,7 +1452,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     if (!editNewDb) {
       return (
         <ExtraOptions
-          extraExtension={dbConfigExtraExtension}
           db={db as DatabaseObject}
           onInputChange={({ target }: { target: HTMLInputElement }) =>
             onChange(ActionType.inputChange, {
@@ -1682,14 +1487,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     return renderDatabaseConnectionForm();
   };
 
-  if (
-    fileList.length > 0 &&
-    (alreadyExists.length ||
-      passwordFields.length ||
-      sshTunnelPasswordFields.length ||
-      sshTunnelPrivateKeyFields.length ||
-      sshTunnelPrivateKeyPasswordFields.length)
-  ) {
+  if (fileList.length > 0 && (alreadyExists.length || passwordFields.length)) {
     return (
       <Modal
         css={(theme: SupersetTheme) => [
@@ -1858,7 +1656,6 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
         </Tabs.TabPane>
         <Tabs.TabPane tab={<span>{t('Advanced')}</span>} key="2">
           <ExtraOptions
-            extraExtension={dbConfigExtraExtension}
             db={db as DatabaseObject}
             onInputChange={({ target }: { target: HTMLInputElement }) =>
               onChange(ActionType.inputChange, {

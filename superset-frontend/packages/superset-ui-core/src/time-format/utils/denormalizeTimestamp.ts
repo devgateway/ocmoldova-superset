@@ -19,10 +19,22 @@
 
 import { TS_REGEX } from './normalizeTimestamp';
 
+<<<<<<<< HEAD:superset-frontend/packages/superset-ui-core/src/time-format/utils/denormalizeTimestamp.ts
 export default function normalizeTimestamp(value: string): string {
   const match = value.match(TS_REGEX);
   if (match) {
     return `${match[1]}T${match[2]}`;
   }
   return value;
+========
+export const TS_REGEX = /(\d{4}-\d{2}-\d{2})[\sT](\d{2}:\d{2}:\d{2}\.?\d*).*/;
+
+export default function createMetadata(useLegacyApi = false) {
+  return new ChartMetadata({
+    description: '',
+    name: t('Line Chart'),
+    thumbnail,
+    useLegacyApi,
+  });
+>>>>>>>> 2.1.1rc3:superset-frontend/plugins/preset-chart-xy/src/Line/createMetadata.ts
 }

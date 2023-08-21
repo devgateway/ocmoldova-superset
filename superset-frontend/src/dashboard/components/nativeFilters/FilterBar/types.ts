@@ -47,7 +47,6 @@ interface VerticalBarConfig {
 }
 
 export interface FiltersBarProps {
-  hidden?: boolean;
   orientation: FilterBarOrientation;
   verticalConfig?: VerticalBarConfig;
 }

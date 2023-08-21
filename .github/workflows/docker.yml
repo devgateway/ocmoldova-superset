@@ -27,13 +27,12 @@ jobs:
           fi
 
   docker-build:
-    needs: config
-    if: needs.config.outputs.has-secrets
+    if: github.event.pull_request.draft == false
     name: docker-build
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout ${{ github.ref }} ( ${{ github.sha }} )"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           persist-credentials: false
 
@@ -50,12 +49,12 @@ jobs:
           mkdir -p ./build
           echo ${{ github.sha }} > ./build/SHA
           echo ${{ github.event.pull_request.number }} > ./build/PR-NUM
-          DOCKER_BUILDKIT=1 docker build --target ci -t ${{ github.sha }} -t "pr-${{ github.event.pull_request.number }}" .
+          docker build --target ci -t ${{ github.sha }} -t "pr-${{ github.event.pull_request.number }}" .
           docker save ${{ github.sha }} | gzip > ./build/${{ github.sha }}.tar.gz
 
       - name: Upload build artifacts
         if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: build
           path: build/

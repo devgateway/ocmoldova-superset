@@ -19,6 +19,7 @@ under the License.
 
 ## Change Log
 
+- [2.1.1](#211-sun-apr-23-154421-2023-0100)
 - [2.1.0](#210-thu-mar-16-211305-2023--0700)
 - [2.0.1](#201-fri-nov-4-103402-2022--0400)
 - [2.0.0](#200-tue-jun-28-085302-2022--0400)
@@ -29,10 +30,53 @@ under the License.
 - [1.4.2](#142-sat-mar-19-000806-2022-0200)
 - [1.4.1](#141)
 
-### 2.1.0 (Thu Mar 16 21:13:05 2023 -0700)
+
+### 2.1.1 (Sun Apr 23 15:44:21 2023 +0100)
 
 **Database Migrations**
+- [#23980](https://github.com/apache/superset/pull/23980) fix(migration): handle permalink edge cases correctly (@villebro)
+- [#23888](https://github.com/apache/superset/pull/23888) chore(key-value): use json serialization for main resources (@villebro)
 
+**Fixes**
+- [#23723](https://github.com/apache/superset/pull/23723) fix: add enforce URI query params with a specific for MySQL (@dpgaspar)
+- [#24970](https://github.com/apache/superset/pull/24970) fix: update permalink schema (@eschutho)
+- [#24995](https://github.com/apache/superset/pull/24995) fix: Revert "fix(chart): Time Series set showMaxLabel as null for time xAxis (#20627) (@eschutho)
+- [#24513](https://github.com/apache/superset/pull/24513) fix(sqllab): normalize changedOn timestamp (@villebro)
+- [#23512](https://github.com/apache/superset/pull/23512) fix: Dashboard not loading with default first value in filter (@geido)
+- [#24482](https://github.com/apache/superset/pull/24482) fix(permalink): Incorrect component schema reference (@Nisden)
+- [#24166](https://github.com/apache/superset/pull/24166) fix(permalink): migrate to marshmallow codec (@villebro)
+- [#24697](https://github.com/apache/superset/pull/24697) fix: import database engine validation (@dpgaspar)
+- [#24390](https://github.com/apache/superset/pull/24390) fix: FAB CSS on Superset (@dpgaspar)
+- [#24249](https://github.com/apache/superset/pull/24249) fix: dashboard ownership check (@betodealmeida)
+- [#23801](https://github.com/apache/superset/pull/23801) fix(plugin-chart-handlebars): Fix TypeError when using handlebars columns raw mode (@fmannhardt)
+- [#23566](https://github.com/apache/superset/pull/23566) fix: Filter values are not updating when dependencies are set (@michael-s-molina)
+- [#23400](https://github.com/apache/superset/pull/23400) fix: Select all issue with "Dynamically search all filter values" in FilterBar (@geido)
+- [#23865](https://github.com/apache/superset/pull/23865) fix: Native time range filter in legacy charts (@kgabryje)
+- [#24054](https://github.com/apache/superset/pull/24054) fix: handle temporal columns in presto partitions (@giftig)
+- [#23882](https://github.com/apache/superset/pull/23882) fix: handle comments in `has_table_query` (@betodealmeida)
+- [#24137](https://github.com/apache/superset/pull/24137) fix: disable SHOW_STACKTRACE by default (@dpgaspar)
+- [#24185](https://github.com/apache/superset/pull/24185) fix: db validate parameters permission (@dpgaspar)
+- [#23769](https://github.com/apache/superset/pull/23769) fix: allow db driver distinction on enforced URI params (@dpgaspar)
+- [#23600](https://github.com/apache/superset/pull/23600) fix: load examples as anon user (@betodealmeida)
+- [#23200](https://github.com/apache/superset/pull/23200) fix: permission checks on import (@betodealmeida)
+- [#23901](https://github.com/apache/superset/pull/23901) fix: check sqlalchemy_uri (@dpgaspar)
+- [#23751](https://github.com/apache/superset/pull/23751) fix(mssql): apply top after distinct (@villebro)
+- [#23586](https://github.com/apache/superset/pull/23586) fix(dashboard-rbac): use normal rbac when no roles chosen (@villebro)
+- [#23582](https://github.com/apache/superset/pull/23582) fix(dash import): Ensure old datasource ids are not referenced in imported charts (@jfrag1)
+- [#23506](https://github.com/apache/superset/pull/23506) fix(generic-x-axis): skip initial time filter for legacy charts (@villebro)
+- [#23507](https://github.com/apache/superset/pull/23507) fix(legacy-plugin-chart-heatmap): fix adhoc column tooltip (@villebro)
+- [#23441](https://github.com/apache/superset/pull/23441) fix(chart): non existent time grain no longer breaks the application (@rdubois)
+- [#23393](https://github.com/apache/superset/pull/23393) fix(Pivot Table v2): resolved full width issue (@AkashBoora)
+- [#22851](https://github.com/apache/superset/pull/22851) fix: Validate jinja rendered query (@geido)
+
+**Others**
+- [#24586](https://github.com/apache/superset/pull/24586) chore(metastore-cache): add codec support (@villebro)
+- [#23113](https://github.com/apache/superset/pull/23113) chore(sqla): Address performance tradeoff with eager loading (@john-bodley)
+- [#24294](https://github.com/apache/superset/pull/24294) chore: update UPDATING for 2.1.0 (@eschutho)
+- [#24056](https://github.com/apache/superset/pull/24056) chore: Remove unnecessary information from response (@geido)
+
+### 2.1.0 (Thu Mar 16 21:13:05 2023 -0700)
+**Database Migrations**
 - [#23139](https://github.com/apache/superset/pull/23139) fix: memoized decorator memory leak (@dpgaspar)
 - [#19676](https://github.com/apache/superset/pull/19676) chore(frontend): Spelling (@jsoref)
 - [#22852](https://github.com/apache/superset/pull/22852) chore: removing unnecessary double spaces, a.k.a. "shotgun holes" (@rusackas)
@@ -63,7 +107,6 @@ under the License.
 - [#20432](https://github.com/apache/superset/pull/20432) feat: add name, description and non null tables to RLS (@dpgaspar)
 
 **Features**
-
 - [#22713](https://github.com/apache/superset/pull/22713) feat(helm): allow persisting nodePort for services (@rajan123456)
 - [#23040](https://github.com/apache/superset/pull/23040) feat(sqllab): Add event logger (@justinpark)
 - [#22670](https://github.com/apache/superset/pull/22670) feat(datasets): Populate Usage tab in Edit Dataset view (@codyml)
@@ -259,7 +302,6 @@ under the License.
 - [#20412](https://github.com/apache/superset/pull/20412) feat: allow setting db UUID (@betodealmeida)
 
 **Fixes**
-
 - [#23388](https://github.com/apache/superset/pull/23388) fix: update default WEBDRIVER_OPTION_ARGS and add Firefox libs to Dockerfile (@nytai)
 - [#23299](https://github.com/apache/superset/pull/23299) fix(dashboard): Infinite load when filter with default first value is out of scope (@kgabryje)
 - [#23238](https://github.com/apache/superset/pull/23238) fix(dashboard): Charts crashing when cross filter on adhoc column is applied (@kgabryje)
@@ -1302,7 +1344,7 @@ under the License.
 - [#20392](https://github.com/apache/superset/pull/20392) feat: setting limit value when Pie chart switches (@zhaoyongjie)
 - [#20373](https://github.com/apache/superset/pull/20373) feat: adding truncate metric control on timeseries charts (@zhaoyongjie)
 - [#20248](https://github.com/apache/superset/pull/20248) feat(explore): Implement viz switcher redesign (@kgabryje)
-- [#20113](https://github.com/apache/superset/pull/20113) feat(api): Added "kind" to dataset/<pk> endpoint (@reesercollins)
+- [#20113](https://github.com/apache/superset/pull/20113) feat(api): Added "kind" to dataset/`<pk>` endpoint (@reesercollins)
 - [#20299](https://github.com/apache/superset/pull/20299) feat(explore): Dataset Panel Options when Source = Query II (@lyndsiWilliams)
 - [#20320](https://github.com/apache/superset/pull/20320) feat: Databricks native driver (@betodealmeida)
 - [#20313](https://github.com/apache/superset/pull/20313) feat(explore): Denormalize form data in echarts, world map and nvd3 bar and line charts (@kgabryje)
@@ -2050,7 +2092,7 @@ under the License.
 - [#19242](https://github.com/apache/superset/pull/19242) fix: allow subquery in ad-hoc SQL (@lilykuang)
 - [#18926](https://github.com/apache/superset/pull/18926) fix(explore comma): make that the comma can be added by removing it from token separators… (@prosdev0107)
 - [#19234](https://github.com/apache/superset/pull/19234) fix: adhoc column in legacy chart (@zhaoyongjie)
-- [#19076](https://github.com/apache/superset/pull/19076) fix: allow to select <NULL> in a native filter single mode (@diegomedina248)
+- [#19076](https://github.com/apache/superset/pull/19076) fix: allow to select `<NULL>` in a native filter single mode (@diegomedina248)
 - [#19159](https://github.com/apache/superset/pull/19159) fix(select): make to consider the case sensitive in case of d3 format selector (@prosdev0107)
 - [#19139](https://github.com/apache/superset/pull/19139) fix: Popovers in Explore not attached to the fields they are triggered by (@diegomedina248)
 - [#19152](https://github.com/apache/superset/pull/19152) fix: auto-complete of tables and names are not working in SQL lab (@diegomedina248)

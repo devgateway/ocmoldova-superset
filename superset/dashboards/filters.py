@@ -14,7 +14,8 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-from typing import Any, Optional
+import uuid
+from typing import Any, Optional, Union
 
 from flask import g
 from flask_appbuilder.security.sqla.models import Role
@@ -25,14 +26,14 @@ from sqlalchemy.orm.query import Query
 from superset import db, is_feature_enabled, security_manager
 from superset.connectors.sqla.models import SqlaTable
 from superset.models.core import Database, FavStar
-from superset.models.dashboard import Dashboard, is_uuid
+from superset.models.dashboard import Dashboard
 from superset.models.embedded_dashboard import EmbeddedDashboard
 from superset.models.slice import Slice
 from superset.security.guest_token import GuestTokenResourceType, GuestUser
 from superset.utils.core import get_user_id
 from superset.utils.filters import get_dataset_access_filters
 from superset.views.base import BaseFilter
-from superset.views.base_api import BaseFavoriteFilter, BaseTagFilter
+from superset.views.base_api import BaseFavoriteFilter
 
 
 class DashboardTitleOrSlugFilter(BaseFilter):  # pylint: disable=too-few-public-methods
@@ -78,14 +79,12 @@ class DashboardFavoriteFilter(  # pylint: disable=too-few-public-methods
     model = Dashboard
 
 
-class DashboardTagFilter(BaseTagFilter):  # pylint: disable=too-few-public-methods
-    """
-    Custom filter for the GET list that filters all dashboards that a user has favored
-    """
-
-    arg_name = "dashboard_tags"
-    class_name = "Dashboard"
-    model = Dashboard
+def is_uuid(value: Union[str, int]) -> bool:
+    try:
+        uuid.UUID(str(value))
+        return True
+    except ValueError:
+        return False
 
 
 class DashboardAccessFilter(BaseFilter):  # pylint: disable=too-few-public-methods
