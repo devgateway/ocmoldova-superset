@@ -34,6 +34,7 @@ RUN /frontend-mem-nag.sh
 WORKDIR /app/superset-frontend/
 
 COPY superset-frontend/package*.json ./
+RUN npm install
 RUN npm ci
 
 COPY ./superset-frontend .
@@ -64,6 +65,7 @@ RUN mkdir -p ${PYTHONPATH} \
             libsasl2-dev \
             libsasl2-modules-gssapi-mit \
             libpq-dev \
+            libldap-dev \
             libecpg-dev \
         && rm -rf /var/lib/apt/lists/*
 
@@ -121,6 +123,7 @@ RUN apt-get update -y \
           libx11-xcb1 \
           libasound2 \
           libxtst6 \
+          libldap-dev \
           wget
 
 # Install GeckoDriver WebDriver
