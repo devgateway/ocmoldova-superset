@@ -34,8 +34,7 @@ RUN /frontend-mem-nag.sh
 WORKDIR /app/superset-frontend/
 
 COPY superset-frontend/package*.json ./
-RUN npm install
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 
 COPY ./superset-frontend .
 
