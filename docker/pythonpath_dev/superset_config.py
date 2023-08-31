@@ -130,6 +130,8 @@ LANGUAGES = {
     "ro": {"flag": "ro", "name": "Romanian"}
 }
 
+BABEL_DEFAULT_LOCALE = "ro"
+
 #
 # Optionally import superset_config_docker.py (which will have been included on
 # the PYTHONPATH) in order to allow for local settings to be overridden
