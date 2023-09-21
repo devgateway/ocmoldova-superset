@@ -27,6 +27,8 @@ from typing import Optional
 
 from cachelib.file import FileSystemCache
 from celery.schedules import crontab
+from superset.superset_typing import CacheConfig
+from datetime import timedelta
 
 logger = logging.getLogger()
 
@@ -66,19 +68,58 @@ REDIS_HOST = get_env_variable("REDIS_HOST")
 REDIS_PORT = get_env_variable("REDIS_PORT")
 REDIS_CELERY_DB = get_env_variable("REDIS_CELERY_DB", "0")
 REDIS_RESULTS_DB = get_env_variable("REDIS_RESULTS_DB", "1")
+REDIS_DATA_DB = get_env_variable("REDIS_DATA_DB", "2")
+REDIS_FILTER_DB = get_env_variable("REDIS_FILTER_DB", "3")
+REDIS_EXPLORE_DB = get_env_variable("REDIS_EXPLORE_DB", "4")
 
 RESULTS_BACKEND = FileSystemCache("/app/superset_home/sqllab")
 
-CACHE_CONFIG = {
-    "CACHE_TYPE": "redis",
-    "CACHE_DEFAULT_TIMEOUT": 300,
-    "CACHE_KEY_PREFIX": "superset_",
-    "CACHE_REDIS_HOST": REDIS_HOST,
-    "CACHE_REDIS_PORT": REDIS_PORT,
-    "CACHE_REDIS_DB": REDIS_RESULTS_DB,
-}
-DATA_CACHE_CONFIG = CACHE_CONFIG
+# CACHE_CONFIG = {
+#     "CACHE_TYPE": "redis",
+#     "CACHE_DEFAULT_TIMEOUT": 300,
+#     "CACHE_KEY_PREFIX": "superset_",
+#     "CACHE_REDIS_HOST": REDIS_HOST,
+#     "CACHE_REDIS_PORT": REDIS_PORT,
+#     "CACHE_REDIS_DB": REDIS_RESULTS_DB,
+# }
+# DATA_CACHE_CONFIG = CACHE_CONFIG
 
+CACHE_CONFIG: CacheConfig = {
+    'CACHE_TYPE': 'RedisCache',
+    'CACHE_DEFAULT_TIMEOUT': int(timedelta(days=1).total_seconds()),
+    'CACHE_KEY_PREFIX': 'superset_cache_',
+    'CACHE_REDIS_HOST': REDIS_HOST,
+    'CACHE_REDIS_PORT': REDIS_PORT,
+    'CACHE_REDIS_DB': REDIS_RESULTS_DB
+}
+
+# Cache for datasource metadata and query results
+DATA_CACHE_CONFIG: CacheConfig = {
+    'CACHE_TYPE': 'RedisCache',
+    'CACHE_DEFAULT_TIMEOUT': int(timedelta(days=1).total_seconds()),
+    'CACHE_KEY_PREFIX': 'superset_data_',
+    'CACHE_REDIS_HOST': REDIS_HOST,
+    'CACHE_REDIS_PORT': REDIS_PORT,
+    'CACHE_REDIS_DB': REDIS_DATA_DB
+}
+
+FILTER_STATE_CACHE_CONFIG: CacheConfig = {
+    'CACHE_TYPE': 'RedisCache',
+    'CACHE_DEFAULT_TIMEOUT': int(timedelta(days=1).total_seconds()),
+    'CACHE_KEY_PREFIX': 'superset_filter_',
+    'CACHE_REDIS_HOST': REDIS_HOST,
+    'CACHE_REDIS_PORT': REDIS_PORT,
+    'CACHE_REDIS_DB': REDIS_FILTER_DB
+}
+
+EXPLORE_FORM_DATA_CACHE_CONFIG: CacheConfig = {
+    'CACHE_TYPE': 'RedisCache',
+    'CACHE_DEFAULT_TIMEOUT': int(timedelta(days=1).total_seconds()),
+    'CACHE_KEY_PREFIX': 'superset_explore_',
+    'CACHE_REDIS_HOST': REDIS_HOST,
+    'CACHE_REDIS_PORT': REDIS_PORT,
+    'CACHE_REDIS_DB': REDIS_EXPLORE_DB
+}
 
 class CeleryConfig(object):
     broker_url = f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_CELERY_DB}"
