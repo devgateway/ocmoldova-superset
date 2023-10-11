@@ -56,6 +56,20 @@ msgstr ""
 "            Eroare: %(text)s\n"
 "            "
 
+msgid "cancelled"
+msgstr "anulat"
+
+
+msgid "active"
+msgstr "activ"
+
+msgid "planning"
+msgstr "planificat"
+
+
+msgid "unsuccessful"
+msgstr "nereușit"
+
 #: superset-frontend/src/filters/components/Select/SelectFilterPlugin.tsx:130
 msgid " (excluded)"
 msgstr " (exclus)"

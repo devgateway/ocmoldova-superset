@@ -17,9 +17,8 @@
  * under the License.
  */
 
-import { validateNumber } from '@superset-ui/core';
+import { t, TimeseriesDataRecord, validateNumber } from '@superset-ui/core';
 
-// eslint-disable-next-line import/prefer-default-export
 export function parseYAxisBound(
   bound?: string | number | null,
 ): number | undefined {
@@ -28,6 +27,22 @@ export function parseYAxisBound(
   }
   return Number(bound);
 }
+
+export function smartTranslateMeta(key: string): string {
+  return String(key.split(', ').map(t).join(', '));
+}
+
+export const renameKeysTrnTimeseriesDataRecord = (obj: TimeseriesDataRecord) =>
+  Object.entries(obj).reduce<TimeseriesDataRecord>((acc, [key, value]) => {
+    acc[smartTranslateMeta(key)] = value;
+    return acc;
+  }, {} as TimeseriesDataRecord);
+
+export const renameKeysTrnRecord = (obj: Record<string, string[]>) =>
+  Object.entries(obj).reduce<Record<string, string[]>>((acc, [key, value]) => {
+    acc[smartTranslateMeta(key)] = value;
+    return acc;
+  }, {} as Record<string, string[]>);
 
 export function parseNumbersList(value: string, delim = ';') {
   if (!value || !value.trim()) return [];

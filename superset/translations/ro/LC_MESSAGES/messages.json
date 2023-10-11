@@ -14,6 +14,10 @@
       "\n            Error: %(text)s\n            ": [
         "\n            Eroare: %(text)s\n            "
       ],
+      "cancelled": ["anulat"],
+      "active": ["activ"],
+      "planning": ["planificat"],
+      "unsuccessful": ["nereușit"],
       " (excluded)": [" (exclus)"],
       " Set the opacity to 0 if you do not want to override the color specified in the GeoJSON": [
         " Setați opacitatea la 0 dacă nu doriți să treceți peste culoarea specificată în Geojson"
