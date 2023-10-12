@@ -48,6 +48,7 @@ import {
   mapValues,
   mapOptions,
   hasCustomLabels,
+  tRawValue,
 } from './utils';
 import { SelectOptionsType, SelectProps } from './types';
 import {
@@ -398,8 +399,7 @@ const Select = forwardRef(
 
     const selectAllLabel = useMemo(
       () => () =>
-        // TODO: localize
-        `${SELECT_ALL_VALUE} (${formatNumber(
+        `${tRawValue(SELECT_ALL_VALUE)} (${formatNumber(
           NumberFormats.INTEGER,
           selectAllEligible.length,
         )})`,

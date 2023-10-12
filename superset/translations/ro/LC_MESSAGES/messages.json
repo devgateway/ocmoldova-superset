@@ -14,10 +14,26 @@
       "\n            Error: %(text)s\n            ": [
         "\n            Eroare: %(text)s\n            "
       ],
+      "Last month": ["Luna trecută"],
+      "Last day": ["Ziua trecută"],
+      "Last week": ["Săptămâna trecută"],
+      "Last quarter": ["Ultimul trimestru"],
+      "Last year": ["Ultimul an"],
+      "goods": ["bunuri"],
+      "services": ["servicii"],
+      "works": ["lucrări"],
       "cancelled": ["anulat"],
+      "Select All": ["Selectați Tot"],
+      "Supplier Name": ["Nume Companie"],
       "active": ["activ"],
       "planning": ["planificat"],
+      "disqualified": ["descalificat"],
       "unsuccessful": ["nereușit"],
+      "Tender Amount": ["Suma licitații"],
+      "qualityOnly": ["doarCalitativ"],
+      "priceOnly": ["doarPreț"],
+      "ratedCriteria": ["criteriuEvaluare"],
+      "costOnly": ["doarCost"],
       " (excluded)": [" (exclus)"],
       " Set the opacity to 0 if you do not want to override the color specified in the GeoJSON": [
         " Setați opacitatea la 0 dacă nu doriți să treceți peste culoarea specificată în Geojson"
@@ -95,7 +111,7 @@
       "%s aggregates(s)": ["%s agregate (e)"],
       "%s column(s)": ["%s coloană (e)"],
       "%s operator(s)": ["%s operator (e)"],
-      "%s option": ["%s opțiune"],
+      "%s option": ["%s opțiune", "%s opțiuni", "%s de opțiuni"],
       "%s option(s)": ["%s opțiune (e)"],
       "%s row": ["%s rând"],
       "%s saved metric(s)": ["%s salvate metrică"],
@@ -6474,7 +6490,8 @@
       "page_size.all": ["page_size.all"],
       "page_size.entries": ["page_size.entries"],
       "page_size.show": ["page_size.show"],
-      "pending": ["in asteptarea"],
+      "pending": ["in așteptare"],
+      "withdrawn": ["retras"],
       "percentile (exclusive)": ["Procentu (exclusiv)"],
       "percentiles must be a list or tuple with two numeric values, of which the first is lower than the second value": [
         "Procentile trebuie să fie o listă sau un tuple cu două valori numerice, dintre care prima este mai mică decât a doua valoare"

@@ -49,6 +49,10 @@ export function getValue(
   return isLabeledValue(option) ? option.value : option;
 }
 
+export function tRawValue(input: RawValue, ...args: unknown[]) {
+  return typeof input === 'string' ? t(input, ...args) : input;
+}
+
 export function hasOption(
   value: V,
   options?: V | LabeledValue | (V | LabeledValue)[],
@@ -200,7 +204,7 @@ export const renderSelectOptions = (options: SelectOptionsType) =>
     const { customLabel, ...optProps } = opt;
     return (
       <Option {...optProps} key={value} label={label} value={value}>
-        {isOptObject && customLabel ? customLabel : label}
+        {isOptObject && customLabel ? t(customLabel) : t(label)}
       </Option>
     );
   });
