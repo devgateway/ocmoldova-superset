@@ -60,15 +60,35 @@ msgid "cancelled"
 msgstr "anulat"
 
 
+msgid "Supplier Name"
+msgstr "Nume Companie"
+
 msgid "active"
 msgstr "activ"
 
 msgid "planning"
 msgstr "planificat"
 
+msgid "disqualified"
+msgstr "descalificat"
 
 msgid "unsuccessful"
 msgstr "nereușit"
+
+msgid "Tender Amount"
+msgstr "Suma licitații"
+
+msgid "qualityOnly"
+msgstr "doarCalitativ"
+
+msgid "priceOnly"
+msgstr "doarPreț"
+
+msgid "ratedCriteria"
+msgstr "criteriuEvaluare"
+
+msgid "costOnly"
+msgstr "doarCost"
 
 #: superset-frontend/src/filters/components/Select/SelectFilterPlugin.tsx:130
 msgid " (excluded)"
@@ -18192,7 +18212,7 @@ msgstr "page_size.show"
 #: superset-frontend/src/SqlLab/constants.ts:34
 #: superset-frontend/src/SqlLab/constants.ts:54
 msgid "pending"
-msgstr "in asteptarea"
+msgstr "in așteptare"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/Histogram.jsx:125
 msgid "percentile (exclusive)"

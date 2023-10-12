@@ -17,7 +17,12 @@
  * under the License.
  */
 
-import { t, TimeseriesDataRecord, validateNumber } from '@superset-ui/core';
+import {
+  DataRecord,
+  t,
+  TimeseriesDataRecord,
+  validateNumber,
+} from '@superset-ui/core';
 
 export function parseYAxisBound(
   bound?: string | number | null,
@@ -28,9 +33,24 @@ export function parseYAxisBound(
   return Number(bound);
 }
 
+const IGNORE_TRN_KEYS = ['date'];
+
 export function smartTranslateMeta(key: string): string {
-  return String(key.split(', ').map(t).join(', '));
+  return IGNORE_TRN_KEYS.includes(key)
+    ? key
+    : key.split(', ').map(t).join(', ');
 }
+
+export const renameTrnDataRecordValues = (obj: DataRecord) =>
+  Object.entries(obj).reduce<DataRecord>((acc, [key, value]) => {
+    if (typeof value === 'string' && value !== '') {
+      acc[key] = smartTranslateMeta(value);
+    } else {
+      acc[key] = value;
+    }
+
+    return acc;
+  }, {} as DataRecord);
 
 export const renameKeysTrnTimeseriesDataRecord = (obj: TimeseriesDataRecord) =>
   Object.entries(obj).reduce<TimeseriesDataRecord>((acc, [key, value]) => {

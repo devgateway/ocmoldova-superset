@@ -48,6 +48,7 @@ import { convertInteger } from '../utils/convertInteger';
 import { getDefaultTooltip } from '../utils/tooltip';
 import { Refs } from '../types';
 import { getValueFormatter } from '../utils/valueFormatter';
+import { renameTrnDataRecordValues } from '../utils/controls';
 
 const percentFormatter = getNumberFormatter(NumberFormats.PERCENT_2_POINT);
 
@@ -150,6 +151,9 @@ export default function transformProps(
   } = chartProps;
   const { columnFormats = {}, currencyFormats = {} } = datasource;
   const { data = [] } = queriesData[0];
+
+  const trnData = data.map(x => renameTrnDataRecordValues(x));
+
   const coltypeMapping = getColtypesMapping(queriesData[0]);
 
   const {
@@ -182,7 +186,7 @@ export default function transformProps(
   const groupbyLabels = groupby.map(getColumnLabel);
   const minShowLabelAngle = (showLabelsThreshold || 0) * 3.6;
 
-  const keys = data.map(datum =>
+  const keys = trnData.map(datum =>
     extractGroupbyLabel({
       datum,
       groupby: groupbyLabels,
@@ -190,7 +194,7 @@ export default function transformProps(
       timeFormatter: getTimeFormatter(dateFormat),
     }),
   );
-  const labelMap = data.reduce((acc: Record<string, string[]>, datum) => {
+  const labelMap = trnData.reduce((acc: Record<string, string[]>, datum) => {
     const label = extractGroupbyLabel({
       datum,
       groupby: groupbyLabels,
@@ -215,7 +219,7 @@ export default function transformProps(
 
   let totalValue = 0;
 
-  const transformedData: PieSeriesOption[] = data.map(datum => {
+  const transformedData: PieSeriesOption[] = trnData.map(datum => {
     const name = extractGroupbyLabel({
       datum,
       groupby: groupbyLabels,
