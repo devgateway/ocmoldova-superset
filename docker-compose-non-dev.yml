@@ -97,7 +97,7 @@ services:
   ocdsdata:
     image: ocdsdata:${TAG:-latest}
     container_name: ocdsdata
-    restart: unless-stopped
+    restart: no
     depends_on:
       - db
     build:
@@ -107,8 +107,6 @@ services:
       - scraper  
     environment:
       - DATABASE_URL=postgresql://superset:superset@superset_db:5432/ocmoldova_scrape
-    volumes:
-      - ./ocdsdata:/app
     command: ["python", "ocdsdata.py", "import-scraper", "moldova", "moldova"]     
 
   superset-embed:
