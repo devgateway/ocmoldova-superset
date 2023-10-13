@@ -18,7 +18,13 @@
  */
 import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { css, SupersetTheme, useTheme, useTruncation } from '@superset-ui/core';
+import {
+  css,
+  SupersetTheme,
+  t,
+  useTheme,
+  useTruncation,
+} from '@superset-ui/core';
 import Icons from 'src/components/Icons';
 import { RootState } from 'src/dashboard/types';
 import { Row, FilterName, InternalRow } from './Styles';
@@ -54,8 +60,10 @@ export const NameRow = ({
             margin-right: ${theme.gridUnit}px;
           `}
         />
-        <TooltipWithTruncation title={elementsTruncated ? filter.name : null}>
-          <FilterName ref={filterNameRef}>{filter.name}</FilterName>
+        <TooltipWithTruncation
+          title={elementsTruncated ? t(filter.name) : null}
+        >
+          <FilterName ref={filterNameRef}>{t(filter.name)}</FilterName>
         </TooltipWithTruncation>
       </InternalRow>
       {canEdit && (

@@ -55,7 +55,11 @@ import {
 } from './types';
 import { DEFAULT_FORM_DATA } from './constants';
 import { ForecastSeriesEnum, ForecastValue, Refs } from '../types';
-import { parseYAxisBound } from '../utils/controls';
+import {
+  parseYAxisBound,
+  renameKeysTrnRecord,
+  renameKeysTrnTimeseriesDataRecord,
+} from '../utils/controls';
 import {
   calculateLowerLogTick,
   dedupSeries,
@@ -151,6 +155,8 @@ export default function transformProps(
   const [queryData] = queriesData;
   const { data = [], label_map = {} } =
     queryData as TimeseriesChartDataResponseResult;
+  const trnData = data.map(x => renameKeysTrnTimeseriesDataRecord(x));
+  const trn_label_map = renameKeysTrnRecord(label_map);
 
   const dataTypes = getColtypesMapping(queryData);
   const annotationData = getAnnotationData(chartProps);
@@ -203,7 +209,7 @@ export default function transformProps(
   }: EchartsTimeseriesFormData = { ...DEFAULT_FORM_DATA, ...formData };
   const refs: Refs = {};
 
-  const labelMap = Object.entries(label_map).reduce((acc, entry) => {
+  const labelMap = Object.entries(trn_label_map).reduce((acc, entry) => {
     if (
       entry[1].length > groupby.length &&
       Array.isArray(timeCompare) &&
@@ -215,7 +221,7 @@ export default function transformProps(
   }, {});
 
   const colorScale = CategoricalColorNamespace.getScale(colorScheme as string);
-  const rebasedData = rebaseForecastDatum(data, verboseMap);
+  const rebasedData = rebaseForecastDatum(trnData, verboseMap);
   let xAxisLabel = getXAxisLabel(chartProps.rawFormData) as string;
   if (
     isPhysicalColumn(chartProps.rawFormData?.x_axis) &&
@@ -366,7 +372,7 @@ export default function transformProps(
         series.push(
           transformFormulaAnnotation(
             layer,
-            data,
+            trnData,
             xAxisLabel,
             xAxisType,
             colorScale,
@@ -377,7 +383,7 @@ export default function transformProps(
         series.push(
           ...transformIntervalAnnotation(
             layer,
-            data,
+            trnData,
             annotationData,
             colorScale,
             theme,
@@ -388,7 +394,7 @@ export default function transformProps(
         series.push(
           ...transformEventAnnotation(
             layer,
-            data,
+            trnData,
             annotationData,
             colorScale,
             theme,
@@ -400,7 +406,7 @@ export default function transformProps(
           ...transformTimeseriesAnnotation(
             layer,
             markerSize,
-            data,
+            trnData,
             annotationData,
             colorScale,
             sliceId,
