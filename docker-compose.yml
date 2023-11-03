@@ -65,8 +65,10 @@ services:
     profiles:
       - scraper  
     environment:
+      - PG_DATABASE_URL=postgresql://superset:superset@superset_db:5432/postgres
       - DATABASE_URL=postgresql://superset:superset@superset_db:5432/ocmoldova_scrape
-    command: ["python", "ocdsdata.py", "import-scraper", "moldova", "moldova"]      
+    #command: ["python", "ocdsdata.py", "import-scraper", "moldova", "moldova"]      
+    command: ["python", "import-moldova.py"]
 
   superset:
     env_file: docker/.env
