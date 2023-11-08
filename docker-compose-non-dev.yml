@@ -95,6 +95,7 @@ services:
   #     - superset
 
   ocdsdata:
+    env_file: docker/.env_ocdsdata
     image: ocdsdata:${TAG:-latest}
     container_name: ocdsdata
     restart: no
@@ -104,10 +105,9 @@ services:
       context: ocdsdata
     working_dir: /app
     profiles:
-      - scraper  
-    environment:
-      - DATABASE_URL=postgresql://superset:superset@superset_db:5432/ocmoldova_scrape
-    command: ["python", "ocdsdata.py", "import-scraper", "moldova", "moldova"]     
+      - scraper      
+    command: ["python", "import-moldova.py"]
+    #command: tail -F anything 
 
   superset-embed:
     image: superset-embed:${TAG:-latest}

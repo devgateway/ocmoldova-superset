@@ -54,6 +54,7 @@ services:
       - db_home:/var/lib/postgresql/data
 
   ocdsdata:
+    env_file: docker/.env_ocdsdata
     image: ocdsdata:${TAG:-latest-dev}
     container_name: ocdsdata
     restart: no
@@ -63,12 +64,9 @@ services:
       context: ocdsdata
     working_dir: /app
     profiles:
-      - scraper  
-    environment:
-      - PG_DATABASE_URL=postgresql://superset:superset@superset_db:5432/postgres
-      - DATABASE_URL=postgresql://superset:superset@superset_db:5432/ocmoldova_scrape
-    #command: ["python", "ocdsdata.py", "import-scraper", "moldova", "moldova"]      
+      - scraper      
     command: ["python", "import-moldova.py"]
+    #command: tail -F anything
 
   superset:
     env_file: docker/.env
